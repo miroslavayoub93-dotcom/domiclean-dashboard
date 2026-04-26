@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOMICLEAN â€“ Dashboard Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07090F;--bg2:#0D1017;--bg3:#111824;--card:#0F1520;
+  --blue:#1866FF;--blue2:#0a50e0;--cyan:#00C8FF;
+  --green:#00D07A;--gold:#FFB800;--red:#FF4444;--orange:#FF8C00;--purple:#9B59B6;
+  --text:#EEF2FF;--text2:#7A8CA8;--text3:#4a5a72;
+  --border:rgba(255,255,255,.07);--t:.3s cubic-bezier(.4,0,.2,1);
+}
+/* LIGHT MODE */
+body.light{
+  --bg:#F0F5FC;--bg2:#E4EDF8;--bg3:#FFFFFF;--card:#FFFFFF;
+  --text:#0A1628;--text2:#4A6080;--text3:#8099B8;
+  --border:rgba(24,102,255,.12);
+}
+body.light::before{display:none}
+body.light .sidebar{background:var(--bg2);border-color:var(--border)}
+body.light .sb-btn:hover{background:rgba(24,102,255,.08)}
+body.light .sb-btn.on{background:rgba(24,102,255,.14)}
+body.light .main{background:var(--bg)}
+body.light .orders-wrap,.body.light .chart-wrap,.body.light .lav-card,.body.light .add-form,.body.light .facture-wrap{box-shadow:0 2px 16px rgba(24,102,255,.06)}
+body.light .order-row:hover{background:rgba(24,102,255,.03)}
+body.light .bar{background:linear-gradient(180deg,var(--blue),var(--blue2))}
+body.light .lh{background:var(--bg2)}
+body.light .lav-ocard,.body.light .lav-report-bar,.body.light .lms,.body.light .lav-rev-banner{box-shadow:0 2px 12px rgba(24,102,255,.06)}
+body.light .pin-btn{background:rgba(24,102,255,.06);border-color:rgba(24,102,255,.15)}
+body.light .login-box{box-shadow:0 8px 40px rgba(24,102,255,.12)}
+/* Arabic RTL */
+body.ar{font-family:'Noto Naskh Arabic','Outfit',sans-serif}
+html[dir=rtl] .sidebar{border-right:none;border-left:1px solid var(--border)}
+html[dir=rtl] .main-header,.html[dir=rtl] .sec-head,.html[dir=rtl] .top-actions{flex-direction:row-reverse}
+html[dir=rtl] .sb-btn{flex-direction:row-reverse;text-align:right}
+html[dir=rtl] .sb-notif{margin-right:auto;margin-left:0}
+html[dir=rtl] .lh{flex-direction:row-reverse}
+html[dir=rtl] .lh-right{flex-direction:row-reverse}
+html[dir=rtl] .order-row{direction:rtl}
+html[dir=rtl] .act-row{flex-direction:row-reverse}
+html[dir=rtl] .lav-top{flex-direction:row-reverse}
+html[dir=rtl] .lav-rev{flex-direction:row-reverse}
+html[dir=rtl] .loc-top{flex-direction:row-rezerse}
+html[dir=rtl] .status-btns{direction:rtl}
+html[dir=rtl] .lm-stats{direction:rtl}
+html[dir=rtl] .filters{direction:rtl}
+/* LANG/THEME CONTROLS */
+.ctrl-bar{display:flex;align-items:center;gap:8px;margin-top:4px}
+.lang-sw{display:flex;gap:3px;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:24px;padding:3px}
+body.light .lang-sw{background:rgba(24,102,255,.07)}
+.lb{border:none;background:transparent;color:var(--text2);font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:16px;cursor:pointer;font-family:inherit;transition:all .2s}
+.lb.on{background:var(--blue);color:#fff}
+.theme-tog{width:40px;height:22px;background:rgba(255,255,255,.08);border:1px solid var(--border);border-radius:20px;cursor:pointer;position:relative;flex-shrink:0;transition:background .3s}
+body.light .theme-tog{background:rgba(24,102,255,.12)}
+.theme-tog::after{content:'ğŸŒ™';position:absolute;top:50%;left:3px;transform:translateY(-50%);font-size:.7rem;transition:all .3s}
+body.light .theme-tog::after{content:'â˜€ï¸';left:auto;right:2px}
+/* LOGIN CTRL */
+.login-ctrl{display:flex;justify-content:center;gap:8px;margin-bottom:20px;flex-wrap:wrap;align-items:center}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;transition:background .35s,color .35s}
+.page{display:none;min-height:100vh}.page.active{display:flex}
+::-webkit-scrollbar{width:5px}-½±½ÈéÙ…È ´µÉ••¸¥ô¹ÍŒµÉ•€¹ÍÑ…ĞµÙ…±í½±½ÈéÙ…È ´µÉ•¥ô¹ÍŒµ½É…¹”€¹ÍÑ…ĞµÙ…±í½±½ÈéÙ…È ´µ½É…¹”¥ô¹ÍŒµÁÕÉÁ±”€¹ÍÑ…ĞµÙ…±í½±½ÈéÙ…È ´µÁÕÉÁ±”¥õÉ¥íÉ¥µÑ•µÁ±…Ñ”µ½±Õµ¹ÌèÅ™È€Å™Èí…ÀèÄÁÁàíµ…É¥¸µÑ½ÀèÈÁÁáô(¹´µ…¹•±íÁ…‘‘¥¹œèÄÉÁàí‰½É‘•ÈµÉ…‘¥ÕÌèÔÁÁàí‰½É‘•ÈèÄ¸ÕÁàÍ½±¥Ù…È ´µ‰½É‘•È¤í‰…­É½Õ¹éÑÉ…¹ÍÁ…É•¹Ğí½±½ÈéÙ…È ´µÑ•áĞÈ¤í™½¹Ğµİ•¥¡ĞèÜÀÀíÕÉÍ½ÈéÁ½¥¹Ñ•Èí™½¹Ğµ™…µ¥±äè=ÕÑ™¥Ğœ±Í…¹ÌµÍ•É¥˜íÑÉ…¹Í¥Ñ¥½¸é…±°€¸ÉÍô(¹´µ…¹•°é¡½Ù•Éí‰½É‘•Èµ½±½ÈéÙ…È ´µÑ•áĞ¤í½±½ÈéÙ…È ´µÑ•áĞ¥ô(¹´µ½¹™¥ÉµíÁ…‘‘¥¹œèÄÉÁàí‰½É‘•ÈµÉ…‘¥ÕÌèÔÁÁàí‰½É‘•Èé¹½¹”í‰…­É½Õ¹é±¥¹•…ÈµÉ…‘¥•¹Ğ ÄÌÕ‘•œ±Ù…È ´µ‰±Õ”¤±Ù…È ´µ‰±Õ”È¤¤í½±½Èè™™˜í™½¹Ğµİ•¥¡ĞèÜÀÀíÕÉÍ½ÈéÁ½¥¹Ñ•Èí™½¹Ğµ™…µ¥±äè=ÕÑ™¥Ğœ±Í…¹ÌµÍ•É¥˜íÑÉ…¹Í¥Ñ¥½¸é…±°€¸ÉÌí‰½àµÍ¡…‘½ÜèÀ€ÑÁà€ÈÁÁàÉ‰„ ÈĞ°ÄÀÈ°ÈÔÔ°¸Ì¥ô(¹´µ½¹™¥É´é¡½Ù•ÉíÑÉ…¹Í™½É´éÑÉ…¹Í±…Ñ•d ´ÉÁà¥ô(¹´µ™¥•±‘íµ…É¥¸µ‰½ÑÑ½´èÄÑÁáô(¹´µ™¥•±±…‰•±í‘¥ÍÁ±…äé‰±½¬í™½¹ĞµÍ¥é”è¸ÜÍÉ•´í™½¹Ğµİ•¥¡ĞèÜÀÀí½±½ÈéÙ…È ´µÑ•áĞÌ¤í±•ÑÑ•ÈµÍÁ…¥¹œè¸Àá•´íÑ•áĞµÑÉ…¹Í™½É´éÕÁÁ•É…Í”íµ…É¥¸µ‰½ÑÑ½´èÙÁáô

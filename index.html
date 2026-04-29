@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DOMICLEAN – Dashboard Pro</title>
+<title>DOMICLEAN â Dashboard Pro</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -55,8 +55,8 @@ body.light .lang-sw{background:rgba(24,102,255,.07)}
 .lb.on{background:var(--blue);color:#fff}
 .theme-tog{width:40px;height:22px;background:rgba(255,255,255,.08);border:1px solid var(--border);border-radius:20px;cursor:pointer;position:relative;flex-shrink:0;transition:background .3s}
 body.light .theme-tog{background:rgba(24,102,255,.12)}
-.theme-tog::after{content:'🌙';position:absolute;top:50%;left:3px;transform:translateY(-50%);font-size:.7rem;transition:all .3s}
-body.light .theme-tog::after{content:'☀️';left:auto;right:2px}
+.theme-tog::after{content:'ð';position:absolute;top:50%;left:3px;transform:translateY(-50%);font-size:.7rem;transition:all .3s}
+body.light .theme-tog::after{content:'âï¸';left:auto;right:2px}
 /* LOGIN CTRL */
 .login-ctrl{display:flex;justify-content:center;gap:8px;margin-bottom:20px;flex-wrap:wrap;align-items:center}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -64,7 +64,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-
 .page{display:none;min-height:100vh}.page.active{display:flex}
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--blue);border-radius:10px}
 
-/* ── LOGIN ── */
+/* ââ LOGIN ââ */
 #loginPage{align-items:center;justify-content:center;position:relative;overflow:hidden}
 #loginPage::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 0%,rgba(24,102,255,.15),transparent 70%)}
 .login-box{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:48px 40px;width:100%;max-width:420px;position:relative;z-index:1;animation:fadeUp .5s ease both}
@@ -88,7 +88,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-
 .pin-btn:hover{background:rgba(24,102,255,.15);border-color:var(--blue)}
 .pin-btn:active{transform:scale(.95)}
 
-/* ── ADMIN LAYOUT ── */
+/* ââ ADMIN LAYOUT ââ */
 #adminPage{flex-direction:row}
 .sidebar{width:240px;flex-shrink:0;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;padding:24px 16px;position:sticky;top:0;height:100vh;overflow-y:auto}
 .sb-logo{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.06em;padding:8px 12px;margin-bottom:28px}
@@ -239,7 +239,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-
 .ni-time{font-size:.7rem;color:var(--text3);margin-top:2px}
 .nd-empty{padding:32px;text-align:center;color:var(--text3);font-size:.85rem}
 
-/* ── MODALS ── */
+/* ââ MODALS ââ */
 .ov{display:none;position:fixed;inset:0;z-index:1000;background:rgba(2,4,10,.9);backdrop-filter:blur(12px);align-items:center;justify-content:center;padding:16px}
 .ld-tab{padding:7px 14px;border-radius:50px;border:1.5px solid var(--border);background:transparent;color:var(--text2);font-size:.78rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s;white-space:nowrap}
 .ld-tab.on{background:var(--blue);border-color:var(--blue);color:#fff}
@@ -283,7 +283,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-
 .lo-ck{margin-left:auto;color:var(--blue);opacity:0}
 .lav-opt.sel .lo-ck{opacity:1}
 
-/* ── LAVEUR PAGE ── */
+/* ââ LAVEUR PAGE ââ */
 #laveurPage{flex-direction:column;height:100vh;overflow:hidden}
 .lh{background:var(--bg2);border-bottom:1px solid var(--border);padding:12px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;flex-shrink:0}
 .lh-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.05em}
@@ -451,35 +451,35 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
 <div class="page active" id="loginPage">
   <div class="login-box">
     <div class="login-logo">DOMI<span>CLEAN</span></div>
-    <p class="login-sub" data-i="login_sub">Dashboard de gestion des réservations</p>
+    <p class="login-sub" data-i="login_sub">Dashboard de gestion des rÃ©servations</p>
     <!-- LANG + THEME on login -->
     <div class="login-ctrl">
       <div class="lang-sw">
         <button class="lb on" onclick="setLang('fr')">FR</button>
-        <button class="lb" onclick="setLang('ar')">ع</button>
+        <button class="lb" onclick="setLang('ar')">Ø¹</button>
       </div>
-      <button class="theme-tog" onclick="toggleTheme()" title="Thème"></button>
+      <button class="theme-tog" onclick="toggleTheme()" title="ThÃ¨me"></button>
     </div>
     <div class="login-tabs">
-      <button class="ltab on" onclick="switchTab('admin')" data-i="ltab_admin">👑 Admin</button>
-      <button class="ltab" onclick="switchTab('laveur')" data-i="ltab_laveur">🧹 Laveur / Washman</button>
+      <button class="ltab on" onclick="switchTab('admin')" data-i="ltab_admin">ð Admin</button>
+      <button class="ltab" onclick="switchTab('laveur')" data-i="ltab_laveur">ð§¹ Laveur / Washman</button>
     </div>
     <div id="fAdmin">
       <div class="lfield"><label>Email</label><input type="email" id="iEmail" value="admin@domiclean.ma"></div>
-      <div class="lfield"><label>Mot de passe</label><input type="password" id="iPass" placeholder="••••••••"></div>
-      <button class="login-btn" onclick="loginAdmin()">Connexion Admin →</button>
+      <div class="lfield"><label>Mot de passe</label><input type="password" id="iPass" placeholder="â¢â¢â¢â¢â¢â¢â¢â¢"></div>
+      <button class="login-btn" onclick="loginAdmin()">Connexion Admin â</button>
     </div>
     <div id="fLaveur" style="display:none">
-      <div class="lfield"><label>📧 Email</label><input type="email" id="iLavEmail" placeholder="votre@email.com" autocomplete="username"></div>
-      <div class="lfield"><label>🔒 Mot de passe</label><input type="password" id="iLavPass" placeholder="••••••••" autocomplete="current-password"></div>
-      <button class="login-btn" onclick="loginLaveur()" style="background:linear-gradient(135deg,#00d07a,#00a85d)">Connexion Laveur →</button>
+      <div class="lfield"><label>ð§ Email</label><input type="email" id="iLavEmail" placeholder="votre@email.com" autocomplete="username"></div>
+      <div class="lfield"><label>ð Mot de passe</label><input type="password" id="iLavPass" placeholder="â¢â¢â¢â¢â¢â¢â¢â¢" autocomplete="current-password"></div>
+      <button class="login-btn" onclick="loginLaveur()" style="background:linear-gradient(135deg,#00d07a,#00a85d)">Connexion Laveur â</button>
     </div>
     <div class="login-err" id="loginErr"></div>
   </div>
 </div>
 
 <!-- MOBILE HAMBURGER + OVERLAY -->
-<button class="hamburger-btn" id="hamburgerBtn" onclick="toggleSidebar()" aria-label="Menu">☰</button>
+<button class="hamburger-btn" id="hamburgerBtn" onclick="toggleSidebar()" aria-label="Menu">â°</button>
 <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
 
 <!-- ADMIN -->
@@ -487,22 +487,22 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
   <div class="sidebar" id="mainSidebar">
     <div class="sb-logo">DOMI<span>CLEAN</span></div>
     <div class="sb-section">MENU</div>
-    <button class="sb-btn on" onclick="panel('overview')" id="pb-overview"><span class="sb-ico">📊</span><span data-i="sb_dashboard">Dashboard</span></button>
-    <button class="sb-btn" onclick="panel('orders')" id="pb-orders"><span class="sb-ico">📋</span><span data-i="sb_orders">Commandes</span><span class="sb-notif" id="pendBadge">0</span></button>
-    <button class="sb-btn" onclick="panel('revenue')" id="pb-revenue"><span class="sb-ico">💰</span><span data-i="sb_revenue">Revenus</span></button>
-    <button class="sb-btn" onclick="panel('factures')" id="pb-factures"><span class="sb-ico">🧾</span><span data-i="sb_factures">Factures Laveurs</span></button>
-    <button class="sb-btn" onclick="panel('laveurs')" id="pb-laveurs"><span class="sb-ico">👷</span><span data-i="sb_laveurs">Laveurs</span></button>
+    <button class="sb-btn on" onclick="panel('overview')" id="pb-overview"><span class="sb-ico">ð</span><span data-i="sb_dashboard">Dashboard</span></button>
+    <button class="sb-btn" onclick="panel('orders')" id="pb-orders"><span class="sb-ico">ð</span><span data-i="sb_orders">Commandes</span><span class="sb-notif" id="pendBadge">0</span></button>
+    <button class="sb-btn" onclick="panel('revenue')" id="pb-revenue"><span class="sb-ico">ð°</span><span data-i="sb_revenue">Revenus</span></button>
+    <button class="sb-btn" onclick="panel('factures')" id="pb-factures"><span class="sb-ico">ð§¾</span><span data-i="sb_factures">Factures Laveurs</span></button>
+    <button class="sb-btn" onclick="panel('laveurs')" id="pb-laveurs"><span class="sb-ico">ð·</span><span data-i="sb_laveurs">Laveurs</span></button>
     <div class="sb-bottom">
       <div class="sb-user"><div class="sb-avatar">A</div><div><div class="sb-uname" data-i="sb_admin">Admin</div><div class="sb-urole">DOMICLEAN</div></div></div>
       <div class="ctrl-bar" style="padding:4px 12px;margin-bottom:8px">
         <div class="lang-sw">
           <button class="lb on" onclick="setLang('fr')">FR</button>
-          <button class="lb" onclick="setLang('ar')">ع</button>
+          <button class="lb" onclick="setLang('ar')">Ø¹</button>
         </div>
         <button class="theme-tog" onclick="toggleTheme()"></button>
       </div>
-      <button style="width:100%;margin-top:6px;padding:10px;border-radius:12px;border:1px solid rgba(24,102,255,.25);background:rgba(24,102,255,.08);color:var(--blue);font-size:.82rem;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s" onclick="document.getElementById('changePassOv').classList.add('open');document.getElementById('cpCurrent').value='';document.getElementById('cpNew').value='';document.getElementById('cpConfirm').value=''">🔐 Changer mot de passe</button>
-<button class="logout-btn" onclick="logout()" data-i="logout_btn">🚪 Déconnexion</button>
+      <button style="width:100%;margin-top:6px;padding:10px;border-radius:12px;border:1px solid rgba(24,102,255,.25);background:rgba(24,102,255,.08);color:var(--blue);font-size:.82rem;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s" onclick="document.getElementById('changePassOv').classList.add('open');document.getElementById('cpCurrent').value='';document.getElementById('cpNew').value='';document.getElementById('cpConfirm').value=''">ð Changer mot de passe</button>
+<button class="logout-btn" onclick="logout()" data-i="logout_btn">ðª DÃ©connexion</button>
     </div>
   </div>
 
@@ -510,10 +510,10 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
     <div class="main-header">
       <div><div class="main-title" id="mainTitle">DASHBOARD</div><div class="main-sub" id="mainSub">Vue d'ensemble</div></div>
       <div class="top-actions">
-        <button class="refresh-btn" onclick="loadOrders()" id="refBtn" data-i="btn_refresh">🔄 Actualiser</button>
-        <button class="refresh-btn" onclick="openNewOrder()" style="background:rgba(0,208,122,.1);border-color:rgba(0,208,122,.3);color:var(--green)" data-i="btn_new">➕ Nouvelle commande</button>
-        <button class="refresh-btn" onclick="requestNotifPermission()" id="notifPermBtn" title="Activer les notifications push" style="font-size:1rem;padding:9px 12px">🔔</button>
-        <div class="notif-bell" onclick="toggleNotif()">🔔<div class="notif-dot" id="nDot"></div></div>
+        <button class="refresh-btn" onclick="loadOrders()" id="refBtn" data-i="btn_refresh">ð Actualiser</button>
+        <button class="refresh-btn" onclick="openNewOrder()" style="background:rgba(0,208,122,.1);border-color:rgba(0,208,122,.3);color:var(--green)" data-i="btn_new">â Nouvelle commande</button>
+        <button class="refresh-btn" onclick="requestNotifPermission()" id="notifPermBtn" title="Activer les notifications push" style="font-size:1rem;padding:9px 12px">ð</button>
+        <div class="notif-bell" onclick="toggleNotif()">ð<div class="notif-dot" id="nDot"></div></div>
       </div>
     </div>
 
@@ -525,19 +525,19 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
     <!-- OVERVIEW -->
     <div class="panel active" id="panel-overview">
       <div class="stats-row">
-        <div class="stat-card sc-blue"><div class="stat-ico">📋</div><div class="stat-val" id="sTot">0</div><div class="stat-lbl" data-i="stat_tot">Total commandes</div></div>
-        <div class="stat-card sc-gold"><div class="stat-ico">⏳</div><div class="stat-val" id="sWait">0</div><div class="stat-lbl" data-i="stat_wait">En attente</div></div>
-        <div class="stat-card sc-orange"><div class="stat-ico">🔵</div><div class="stat-val" id="sProg">0</div><div class="stat-lbl" data-i="stat_prog">En cours</div></div>
-        <div class="stat-card sc-green"><div class="stat-ico">✅</div><div class="stat-val" id="sDone">0</div><div class="stat-lbl" data-i="stat_done">Terminées</div></div>
-        <div class="stat-card sc-purple2"><div class="stat-ico">📅</div><div class="stat-val" id="sReport">0</div><div class="stat-lbl" data-i="stat_report">Reportées</div></div>
-        <div class="stat-card sc-red"><div class="stat-ico">❌</div><div class="stat-val" id="sCancel">0</div><div class="stat-lbl" data-i="stat_cancel">Annulées</div></div>
-        <div class="stat-card sc-green"><div class="stat-ico">💰</div><div class="stat-val" id="sRev">0</div><div class="stat-lbl" data-i="stat_rev">Revenu total DH</div></div>
-        <div class="stat-card sc-blue"><div class="stat-ico">☀️</div><div class="stat-val" id="sToday">0</div><div class="stat-lbl" data-i="stat_today">Aujourd'hui DH</div></div>
+        <div class="stat-card sc-blue"><div class="stat-ico">ð</div><div class="stat-val" id="sTot">0</div><div class="stat-lbl" data-i="stat_tot">Total commandes</div></div>
+        <div class="stat-card sc-gold"><div class="stat-ico">â³</div><div class="stat-val" id="sWait">0</div><div class="stat-lbl" data-i="stat_wait">En attente</div></div>
+        <div class="stat-card sc-orange"><div class="stat-ico">ðµ</div><div class="stat-val" id="sProg">0</div><div class="stat-lbl" data-i="stat_prog">En cours</div></div>
+        <div class="stat-card sc-green"><div class="stat-ico">â</div><div class="stat-val" id="sDone">0</div><div class="stat-lbl" data-i="stat_done">TerminÃ©es</div></div>
+        <div class="stat-card sc-purple2"><div class="stat-ico">ð</div><div class="stat-val" id="sReport">0</div><div class="stat-lbl" data-i="stat_report">ReportÃ©es</div></div>
+        <div class="stat-card sc-red"><div class="stat-ico">â</div><div class="stat-val" id="sCancel">0</div><div class="stat-lbl" data-i="stat_cancel">AnnulÃ©es</div></div>
+        <div class="stat-card sc-green"><div class="stat-ico">ð°</div><div class="stat-val" id="sRev">0</div><div class="stat-lbl" data-i="stat_rev">Revenu total DH</div></div>
+        <div class="stat-card sc-blue"><div class="stat-ico">âï¸</div><div class="stat-val" id="sToday">0</div><div class="stat-lbl" data-i="stat_today">Aujourd'hui DH</div></div>
       </div>
       <!-- DAILY CHART -->
       <div class="chart-wrap">
         <div class="chart-head">
-          <div class="chart-title">📈 Revenus journaliers</div>
+          <div class="chart-title">ð Revenus journaliers</div>
           <div class="chart-filters">
             <button class="cf-btn on" onclick="chartPeriod(7,this)">7j</button>
             <button class="cf-btn" onclick="chartPeriod(14,this)">14j</button>
@@ -547,29 +547,29 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
         <div class="chart-bars" id="chartBars"></div>
         <div class="chart-total" id="chartTotal"></div>
       </div>
-      <div class="sec-head"><div class="sec-title" data-i="recent_title">🕐 Dernières commandes</div><button class="filt-btn on" onclick="panel('orders')">Voir tout →</button></div>
+      <div class="sec-head"><div class="sec-title" data-i="recent_title">ð DerniÃ¨res commandes</div><button class="filt-btn on" onclick="panel('orders')">Voir tout â</button></div>
       <div class="orders-wrap" id="recentList"><div class="loading-state"><div class="ld-spin"></div>Chargement...</div></div>
 
       <!-- MEILLEUR LAVEUR -->
-      <div class="sec-head" style="margin-top:24px"><div class="sec-title" data-i="best_title">🏆 Meilleur laveur du moment</div></div>
-      <div id="bestLavCard"><div class="empty-state">Aucune donnée</div></div>
+      <div class="sec-head" style="margin-top:24px"><div class="sec-title" data-i="best_title">ð Meilleur laveur du moment</div></div>
+      <div id="bestLavCard"><div class="empty-state">Aucune donnÃ©e</div></div>
     </div>
 
     <!-- ORDERS -->
     <div class="panel" id="panel-orders">
       <div class="filters">
         <button class="filt-btn on" onclick="filterBy('all',this)" data-i="filt_all">Tous</button>
-        <button class="filt-btn" onclick="filterBy('En attente',this)" data-i="filt_wait">⏳ En attente</button>
-        <button class="filt-btn" onclick="filterBy('En cours',this)" data-i="filt_prog">🔵 En cours</button>
-        <button class="filt-btn" onclick="filterBy('Terminé',this)" data-i="filt_done">✅ Terminé</button>
-        <button class="filt-btn" onclick="filterBy('Reporté',this)" data-i="filt_report">📅 Reporté</button>
-        <button class="filt-btn" onclick="filterBy('Annulé',this)" data-i="filt_cancel">❌ Annulé</button>
+        <button class="filt-btn" onclick="filterBy('En attente',this)" data-i="filt_wait">â³ En attente</button>
+        <button class="filt-btn" onclick="filterBy('En cours',this)" data-i="filt_prog">ðµ En cours</button>
+        <button class="filt-btn" onclick="filterBy('TerminÃ©',this)" data-i="filt_done">â TerminÃ©</button>
+        <button class="filt-btn" onclick="filterBy('ReportÃ©',this)" data-i="filt_report">ð ReportÃ©</button>
+        <button class="filt-btn" onclick="filterBy('AnnulÃ©',this)" data-i="filt_cancel">â AnnulÃ©</button>
       </div>
       <div class="date-filter">
         <label>Du</label><input type="date" class="date-input" id="fDateFrom">
         <label>au</label><input type="date" class="date-input" id="fDateTo">
         <button class="filt-btn on" onclick="applyDateFilter()">Filtrer</button>
-        <button class="filt-btn" onclick="resetDateFilter()">Réinitialiser</button>
+        <button class="filt-btn" onclick="resetDateFilter()">RÃ©initialiser</button>
       </div>
       <div class="orders-wrap">
         <div class="order-row hdr"><div>CLIENT</div><div>ARTICLES</div><div>TOTAL</div><div>STATUT</div><div class="o-laveur">LAVEUR</div><div>ACTIONS</div></div>
@@ -580,14 +580,14 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
     <!-- REVENUE -->
     <div class="panel" id="panel-revenue">
       <div class="stats-row">
-        <div class="stat-card sc-green"><div class="stat-ico">📅</div><div class="stat-val" id="revToday">0</div><div class="stat-lbl">Aujourd'hui (DH)</div></div>
-        <div class="stat-card sc-blue"><div class="stat-ico">📆</div><div class="stat-val" id="revWeek">0</div><div class="stat-lbl">Cette semaine (DH)</div></div>
-        <div class="stat-card sc-gold"><div class="stat-ico">🗓️</div><div class="stat-val" id="revMonth">0</div><div class="stat-lbl">Ce mois (DH)</div></div>
-        <div class="stat-card sc-purple"><div class="stat-ico">💎</div><div class="stat-val" id="revTotal">0</div><div class="stat-lbl">Total (DH)</div></div>
+        <div class="stat-card sc-green"><div class="stat-ico">ð</div><div class="stat-val" id="revToday">0</div><div class="stat-lbl">Aujourd'hui (DH)</div></div>
+        <div class="stat-card sc-blue"><div class="stat-ico">ð</div><div class="stat-val" id="revWeek">0</div><div class="stat-lbl">Cette semaine (DH)</div></div>
+        <div class="stat-card sc-gold"><div class="stat-ico">ðï¸</div><div class="stat-val" id="revMonth">0</div><div class="stat-lbl">Ce mois (DH)</div></div>
+        <div class="stat-card sc-purple"><div class="stat-ico">ð</div><div class="stat-val" id="revTotal">0</div><div class="stat-lbl">Total (DH)</div></div>
       </div>
       <div class="chart-wrap">
         <div class="chart-head">
-          <div class="chart-title">📈 Revenus journaliers (commandes terminées)</div>
+          <div class="chart-title">ð Revenus journaliers (commandes terminÃ©es)</div>
           <div class="chart-filters">
             <button class="cf-btn on" onclick="chartPeriod2(7,this)">7j</button>
             <button class="cf-btn" onclick="chartPeriod2(14,this)">14j</button>
@@ -598,9 +598,9 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
         <div class="chart-total" id="chartTotal2"></div>
       </div>
       <!-- Revenue by laveur -->
-      <div class="sec-head"><div class="sec-title">👷 Revenus par laveur</div></div>
+      <div class="sec-head"><div class="sec-title">ð· Revenus par laveur</div></div>
       <div class="facture-wrap">
-        <div class="fac-row fhdr"><div>LAVEUR</div><div>COMMANDES</div><div>TERMINÉES</div><div>ANNULÉES</div><div>REVENU (DH)</div></div>
+        <div class="fac-row fhdr"><div>LAVEUR</div><div>COMMANDES</div><div>TERMINÃES</div><div>ANNULÃES</div><div>REVENU (DH)</div></div>
         <div id="revByLav"></div>
       </div>
     </div>
@@ -609,40 +609,40 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
     <!-- FACTURES PANEL -->
     <div class="panel" id="panel-factures">
 
-      <!-- TABS: MES FACTURES / CRÉER -->
+      <!-- TABS: MES FACTURES / CRÃER -->
       <div style="display:flex;gap:8px;margin-bottom:20px">
-        <button class="filt-btn on" id="ftab-list" onclick="switchFacTab('list',this)">📋 Mes factures</button>
-        <button class="filt-btn" id="ftab-create" onclick="switchFacTab('create',this)">➕ Créer une facture</button>
-        <button class="filt-btn" id="ftab-view" onclick="switchFacTab('view',this)">🔍 Aperçu commandes</button>
+        <button class="filt-btn on" id="ftab-list" onclick="switchFacTab('list',this)">ð Mes factures</button>
+        <button class="filt-btn" id="ftab-create" onclick="switchFacTab('create',this)">â CrÃ©er une facture</button>
+        <button class="filt-btn" id="ftab-view" onclick="switchFacTab('view',this)">ð AperÃ§u commandes</button>
       </div>
 
       <!-- SUB-PANEL: LISTE FACTURES -->
       <div id="fac-sub-list">
         <div class="sec-head">
-          <div class="sec-title">🧾 Toutes les factures</div>
+          <div class="sec-title">ð§¾ Toutes les factures</div>
           <select class="m-select" id="facFilterLav" onchange="renderFacList()" style="width:auto;padding:7px 12px;font-size:.82rem">
             <option value="">Tous les laveurs</option>
           </select>
         </div>
-        <div id="facListContent"><div class="empty-state">Aucune facture créée</div></div>
+        <div id="facListContent"><div class="empty-state">Aucune facture crÃ©Ã©e</div></div>
       </div>
 
-      <!-- SUB-PANEL: CRÉER FACTURE -->
+      <!-- SUB-PANEL: CRÃER FACTURE -->
       <div id="fac-sub-create" style="display:none">
         <div class="add-form">
-          <div class="add-title">➕ Créer une nouvelle facture</div>
+          <div class="add-title">â CrÃ©er une nouvelle facture</div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
             <div class="af-field"><label>Laveur *</label>
               <select class="m-select" id="facNewLav" onchange="autoFillFac()">
                 <option value="">-- Choisir --</option>
               </select>
             </div>
-            <div class="af-field"><label>Période</label>
+            <div class="af-field"><label>PÃ©riode</label>
               <select class="m-select" id="facNewPeriod" onchange="autoFillFac()">
                 <option value="month">Ce mois</option>
                 <option value="week">Cette semaine</option>
                 <option value="all">Tout</option>
-                <option value="custom">Personnalisée</option>
+                <option value="custom">PersonnalisÃ©e</option>
               </select>
             </div>
           </div>
@@ -655,17 +655,17 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
           </div>
           <!-- PREVIEW -->
           <div id="facPreview" style="background:rgba(24,102,255,.06);border:1px solid rgba(24,102,255,.15);border-radius:12px;padding:14px;margin-bottom:14px;display:none">
-            <div style="font-size:.78rem;font-weight:700;color:var(--blue);margin-bottom:8px">📋 APERÇU</div>
+            <div style="font-size:.78rem;font-weight:700;color:var(--blue);margin-bottom:8px">ð APERÃU</div>
             <div id="facPreviewContent"></div>
           </div>
           <div style="display:flex;gap:10px">
-            <button class="add-sbtn" onclick="autoFillFac()" style="background:rgba(24,102,255,.15);color:var(--blue);box-shadow:none;border:1px solid rgba(24,102,255,.3)">👁️ Aperçu</button>
-            <button class="add-sbtn" onclick="createFacture()">✅ Créer et envoyer au laveur</button>
+            <button class="add-sbtn" onclick="autoFillFac()" style="background:rgba(24,102,255,.15);color:var(--blue);box-shadow:none;border:1px solid rgba(24,102,255,.3)">ðï¸ AperÃ§u</button>
+            <button class="add-sbtn" onclick="createFacture()">â CrÃ©er et envoyer au laveur</button>
           </div>
         </div>
       </div>
 
-      <!-- SUB-PANEL: APERÇU COMMANDES -->
+      <!-- SUB-PANEL: APERÃU COMMANDES -->
       <div id="fac-sub-view" style="display:none">
         <div class="m-field" style="margin-bottom:12px">
           <label style="font-size:.74rem;font-weight:700;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:7px">Laveur</label>
@@ -676,9 +676,9 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
         <div class="date-filter">
           <label>Du</label><input type="date" class="date-input" id="facDateFrom">
           <label>au</label><input type="date" class="date-input" id="facDateTo">
-          <button class="filt-btn on" onclick="renderFacture()">Générer</button>
+          <button class="filt-btn on" onclick="renderFacture()">GÃ©nÃ©rer</button>
         </div>
-        <div id="factureContent"><div class="empty-state">Sélectionnez un laveur</div></div>
+        <div id="factureContent"><div class="empty-state">SÃ©lectionnez un laveur</div></div>
       </div>
     </div>
 
@@ -686,20 +686,20 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
     <!-- LAVEURS -->
     <div class="panel" id="panel-laveurs">
       <div class="add-form">
-        <div class="add-title">➕ Ajouter un compte laveur</div>
+        <div class="add-title">â Ajouter un compte laveur</div>
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr auto;gap:12px;align-items:end;flex-wrap:wrap">
-          <div class="af-field"><label>👤 Nom</label><input class="af-input" id="nNom" placeholder="Ex: Ahmed"></div>
-          <div class="af-field"><label>📧 Email</label><input class="af-input" id="nEmail" type="email" placeholder="ahmed@domiclean.ma"></div>
-          <div class="af-field"><label>🔒 Mot de passe</label><input class="af-input" id="nPass" type="password" placeholder="Min. 6 caractères"></div>
-          <div class="af-field"><label>📱 WhatsApp</label><input class="af-input" id="nPhone" type="tel" placeholder="212612345678"></div>
-          <button class="add-sbtn" onclick="addLaveur()">➕ Ajouter</button>
+          <div class="af-field"><label>ð¤ Nom</label><input class="af-input" id="nNom" placeholder="Ex: Ahmed"></div>
+          <div class="af-field"><label>ð§ Email</label><input class="af-input" id="nEmail" type="email" placeholder="ahmed@domiclean.ma"></div>
+          <div class="af-field"><label>ð Mot de passe</label><input class="af-input" id="nPass" type="password" placeholder="Min. 6 caractÃ¨res"></div>
+          <div class="af-field"><label>ð± WhatsApp</label><input class="af-input" id="nPhone" type="tel" placeholder="212612345678"></div>
+          <button class="add-sbtn" onclick="addLaveur()">â Ajouter</button>
         </div>
       </div>
       <div class="sec-head">
-  <div class="sec-title">👷 Mon équipe</div>
+  <div class="sec-title">ð· Mon Ã©quipe</div>
   <div style="display:flex;gap:8px;align-items:center">
     <span class="badge-count" id="lavCount">0 laveur(s)</span>
-    <button onclick="syncLaveursFromSheets()" style="padding:5px 12px;border-radius:20px;border:1px solid rgba(24,102,255,.3);background:rgba(24,102,255,.08);color:var(--blue);font-size:.76rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif">🔄 Sync</button><button onclick="cleanLaveursWithoutPass()" style="padding:5px 12px;border-radius:20px;border:1px solid rgba(255,68,68,.3);background:rgba(255,68,68,.08);color:var(--red);font-size:.78rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;margin-left:6px">🧹 Nettoyer</button>
+    <button onclick="syncLaveursFromSheets()" style="padding:5px 12px;border-radius:20px;border:1px solid rgba(24,102,255,.3);background:rgba(24,102,255,.08);color:var(--blue);font-size:.76rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif">ð Sync</button><button onclick="cleanLaveursWithoutPass()" style="padding:5px 12px;border-radius:20px;border:1px solid rgba(255,68,68,.3);background:rgba(255,68,68,.08);color:var(--red);font-size:.78rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;margin-left:6px">ð§¹ Nettoyer</button>
   </div>
 </div>
       <div class="lav-grid" id="lavList"></div>
@@ -715,13 +715,13 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
     <div class="lh-right">
       <div class="lang-sw">
         <button class="lb on" onclick="setLang('fr')">FR</button>
-        <button class="lb" onclick="setLang('ar')">ع</button>
+        <button class="lb" onclick="setLang('ar')">Ø¹</button>
       </div>
       <button class="theme-tog" onclick="toggleTheme()"></button>
       <span class="lh-tag" id="lavTag">Laveur</span>
       <!-- CLOCHE NOTIFICATION LAVEUR -->
       <div style="position:relative;display:inline-flex;align-items:center" id="lavNotifBell" onclick="toggleLavNotif()">
-        <button style="background:transparent;border:1.5px solid var(--border);border-radius:10px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.1rem;position:relative">🔔
+        <button style="background:transparent;border:1.5px solid var(--border);border-radius:10px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.1rem;position:relative">ð
           <span id="lavNotifCount" style="display:none;position:absolute;top:-6px;right:-6px;background:var(--red);color:#fff;font-size:.6rem;font-weight:800;border-radius:50%;width:16px;height:16px;align-items:center;justify-content:center">0</span>
         </button>
         <div id="lavNotifDot" style="display:none;position:absolute;top:2px;right:2px;width:8px;height:8px;background:var(--red);border-radius:50%;border:2px solid var(--bg)"></div>
@@ -729,7 +729,7 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
       <!-- DROPDOWN NOTIFICATIONS LAVEUR -->
       <div id="lavNotifDrop" style="display:none;position:fixed;top:60px;right:10px;width:320px;max-height:380px;overflow-y:auto;background:var(--bg2);border:1px solid var(--border);border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,.3);z-index:2000">
         <div style="padding:14px 16px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center">
-          <span style="font-weight:800;font-size:.88rem">🔔 Notifications</span>
+          <span style="font-weight:800;font-size:.88rem">ð Notifications</span>
           <button onclick="clearLavNotifs()" style="background:transparent;border:none;color:var(--red);font-size:.75rem;cursor:pointer;font-weight:700">Effacer tout</button>
         </div>
         <div id="lavNotifList"></div>
@@ -750,9 +750,9 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
         <div class="lav-hero-card">
           <div class="lhc-top">
             <div>
-              <div class="lhc-label" data-i="lav_rev">💰 Mes revenus totaux</div>
+              <div class="lhc-label" data-i="lav_rev">ð° Mes revenus totaux</div>
               <div class="lhc-rev" id="lavRevBanner">0 DH</div>
-              <div class="lhc-rate" id="lavRateDisp">Taux de réussite : —</div>
+              <div class="lhc-rate" id="lavRateDisp">Taux de rÃ©ussite : â</div>
             </div>
             <div class="lhc-avatar" id="lavAvatarLetter">A</div>
           </div>
@@ -762,18 +762,18 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
             <div class="lhc-divider"></div>
             <div class="lhcs"><div class="lhcs-val" style="color:var(--blue)" id="lmP">0</div><div class="lhcs-lbl">En cours</div></div>
             <div class="lhc-divider"></div>
-            <div class="lhcs"><div class="lhcs-val" style="color:var(--green)" id="lmD">0</div><div class="lhcs-lbl">Terminées</div></div>
+            <div class="lhcs"><div class="lhcs-val" style="color:var(--green)" id="lmD">0</div><div class="lhcs-lbl">TerminÃ©es</div></div>
             <div class="lhc-divider"></div>
-            <div class="lhcs"><div class="lhcs-val" style="color:var(--purple)" id="lmR">0</div><div class="lhcs-lbl">Reportées</div></div>
+            <div class="lhcs"><div class="lhcs-val" style="color:var(--purple)" id="lmR">0</div><div class="lhcs-lbl">ReportÃ©es</div></div>
             <div class="lhc-divider"></div>
-            <div class="lhcs"><div class="lhcs-val" style="color:var(--red)" id="lmA">0</div><div class="lhcs-lbl">Annulées</div></div>
+            <div class="lhcs"><div class="lhcs-val" style="color:var(--red)" id="lmA">0</div><div class="lhcs-lbl">AnnulÃ©es</div></div>
           </div>
         </div>
 
         <!-- PERFORMANCE CHART -->
         <div class="lav-perf-card">
           <div class="lpc-head">
-            <div class="lpc-title">📈 Performance d'exécution</div>
+            <div class="lpc-title">ð Performance d'exÃ©cution</div>
             <div class="lpc-filters">
               <button class="cf-btn on" onclick="lavChartPeriod(7,this)">7j</button>
               <button class="cf-btn" onclick="lavChartPeriod(14,this)">14j</button>
@@ -789,21 +789,21 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
               <circle class="donut-cancel" cx="60" cy="60" r="50" fill="none" stroke-width="14" id="donutCancel"/>
             </svg>
             <div class="lpc-donut-center">
-              <div class="lpc-donut-pct" id="lavDonutPct">—</div>
-              <div class="lpc-donut-lbl">Réussite</div>
+              <div class="lpc-donut-pct" id="lavDonutPct">â</div>
+              <div class="lpc-donut-lbl">RÃ©ussite</div>
             </div>
           </div>
           <div class="lpc-legend">
-            <div class="lpc-leg"><span style="background:var(--green)"></span><span id="legDone">Terminées : 0</span></div>
-            <div class="lpc-leg"><span style="background:var(--purple)"></span><span id="legReport">Reportées : 0</span></div>
-            <div class="lpc-leg"><span style="background:var(--red)"></span><span id="legCancel">Annulées : 0</span></div>
+            <div class="lpc-leg"><span style="background:var(--green)"></span><span id="legDone">TerminÃ©es : 0</span></div>
+            <div class="lpc-leg"><span style="background:var(--purple)"></span><span id="legReport">ReportÃ©es : 0</span></div>
+            <div class="lpc-leg"><span style="background:var(--red)"></span><span id="legCancel">AnnulÃ©es : 0</span></div>
           </div>
         </div>
 
         <!-- REVENUE BAR CHART -->
         <div class="lav-perf-card">
           <div class="lpc-head">
-            <div class="lpc-title">💰 Revenus journaliers</div>
+            <div class="lpc-title">ð° Revenus journaliers</div>
             <div class="lpc-filters">
               <button class="cf-btn on" onclick="lavRevChart(7,this)">7j</button>
               <button class="cf-btn" onclick="lavRevChart(14,this)">14j</button>
@@ -816,7 +816,7 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
 
         <!-- RAPPORT PERIODE -->
         <div class="lav-report-bar">
-          <div class="lrb-title" data-i="lav_report_title">📊 Rapport par période</div>
+          <div class="lrb-title" data-i="lav_report_title">ð Rapport par pÃ©riode</div>
           <div class="lrb-filters">
             <button class="filt-btn on" onclick="lavReport('today',this)" data-i="rep_today">Aujourd'hui</button>
             <button class="filt-btn" onclick="lavReport('week',this)" data-i="rep_week">Cette semaine</button>
@@ -829,8 +829,8 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
             <button class="filt-btn" onclick="lavReportCustom()">Appliquer</button>
           </div>
           <div class="lrb-stats">
-            <div class="lrb-stat"><div class="lrb-stat-val" style="color:var(--green)" id="repDone">0</div><div class="lrb-stat-lbl">Terminées</div></div>
-            <div class="lrb-stat"><div class="lrb-stat-val" style="color:var(--blue)" id="repRev">0 DH</div><div class="lrb-stat-lbl">Revenu période</div></div>
+            <div class="lrb-stat"><div class="lrb-stat-val" style="color:var(--green)" id="repDone">0</div><div class="lrb-stat-lbl">TerminÃ©es</div></div>
+            <div class="lrb-stat"><div class="lrb-stat-val" style="color:var(--blue)" id="repRev">0 DH</div><div class="lrb-stat-lbl">Revenu pÃ©riode</div></div>
           </div>
         </div>
 
@@ -841,8 +841,8 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
     <div class="ltab-panel" id="lt-nouvelles">
       <div class="lav-body">
         <div class="lav-orders-title">
-          <span>🆕 Nouvelles commandes</span>
-          <button class="refresh-btn" onclick="renderLaveurOrders()">🔄</button>
+          <span>ð Nouvelles commandes</span>
+          <button class="refresh-btn" onclick="renderLaveurOrders()">ð</button>
         </div>
         <div id="lavNouvellesList"></div>
       </div>
@@ -853,18 +853,18 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
       <div class="lav-body">
         <div class="lav-orders-title">
           <span data-i="lav_orders">Mes commandes</span>
-          <button class="refresh-btn" onclick="renderLaveurOrders()">🔄</button>
+          <button class="refresh-btn" onclick="renderLaveurOrders()">ð</button>
         </div>
         <div id="lavOrdersList"></div>
       </div>
     </div>
 
-    <!-- TAB: TERMINÉES -->
+    <!-- TAB: TERMINÃES -->
     <div class="ltab-panel" id="lt-terminees">
       <div class="lav-body">
         <div class="lav-orders-title">
-          <span>✅ Commandes terminées</span>
-          <button class="refresh-btn" onclick="renderLaveurOrders()">🔄</button>
+          <span>â Commandes terminÃ©es</span>
+          <button class="refresh-btn" onclick="renderLaveurOrders()">ð</button>
         </div>
         <!-- Revenue summary for done -->
         <div id="lavTermineeSummary"></div>
@@ -872,23 +872,23 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
       </div>
     </div>
 
-    <!-- TAB: REPORTÉES -->
+    <!-- TAB: REPORTÃES -->
     <div class="ltab-panel" id="lt-reporter">
       <div class="lav-body">
         <div class="lav-orders-title">
-          <span data-i="tab_reporter">📅 Reportées</span>
-          <button class="refresh-btn" onclick="renderLaveurOrders()">🔄</button>
+          <span data-i="tab_reporter">ð ReportÃ©es</span>
+          <button class="refresh-btn" onclick="renderLaveurOrders()">ð</button>
         </div>
         <div id="lavReporterList"></div>
       </div>
     </div>
 
-    <!-- TAB: ANNULÉES -->
+    <!-- TAB: ANNULÃES -->
     <div class="ltab-panel" id="lt-annuler">
       <div class="lav-body">
         <div class="lav-orders-title">
-          <span data-i="tab_annuler">❌ Annulées</span>
-          <button class="refresh-btn" onclick="renderLaveurOrders()">🔄</button>
+          <span data-i="tab_annuler">â AnnulÃ©es</span>
+          <button class="refresh-btn" onclick="renderLaveurOrders()">ð</button>
         </div>
         <div id="lavAnnulerList"></div>
       </div>
@@ -898,48 +898,48 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
     <div class="ltab-panel" id="lt-factures">
       <div class="lav-body">
         <div class="lav-orders-title">
-          <span>🧾 Mes factures</span>
-          <button class="refresh-btn" onclick="renderLavFactures()">🔄</button>
+          <span>ð§¾ Mes factures</span>
+          <button class="refresh-btn" onclick="renderLavFactures()">ð</button>
         </div>
-        <div id="lavFacturesList"><div class="no-orders"><div class="no-ico">🧾</div><p style="font-size:.85rem;color:var(--text3)">Aucune facture reçue</p></div></div>
+        <div id="lavFacturesList"><div class="no-orders"><div class="no-ico">ð§¾</div><p style="font-size:.85rem;color:var(--text3)">Aucune facture reÃ§ue</p></div></div>
       </div>
     </div>
 
   </div>
 
-  <!-- BOTTOM NAV BAR — 7 tabs -->
+  <!-- BOTTOM NAV BAR â 7 tabs -->
   <nav class="lav-nav">
     <button class="lnav-btn active" id="lnb-dashboard" onclick="lavTab('dashboard')">
-      <span class="lnav-ico">📊</span>
+      <span class="lnav-ico">ð</span>
       <span class="lnav-lbl">Dashboard</span>
     </button>
     <button class="lnav-btn" id="lnb-nouvelles" onclick="lavTab('nouvelles')">
-      <span class="lnav-ico">🆕</span>
+      <span class="lnav-ico">ð</span>
       <span class="lnav-badge lnav-badge-green" id="lnav-badge-new">0</span>
       <span class="lnav-lbl">Nouvelles</span>
     </button>
     <button class="lnav-btn" id="lnb-commandes" onclick="lavTab('commandes')">
-      <span class="lnav-ico">📋</span>
+      <span class="lnav-ico">ð</span>
       <span class="lnav-badge" id="lnav-badge-cmd">0</span>
       <span class="lnav-lbl" data-i="tab_commandes">En cours</span>
     </button>
     <button class="lnav-btn" id="lnb-terminees" onclick="lavTab('terminees')">
-      <span class="lnav-ico">✅</span>
+      <span class="lnav-ico">â</span>
       <span class="lnav-badge lnav-badge-done" id="lnav-badge-done">0</span>
-      <span class="lnav-lbl">Terminées</span>
+      <span class="lnav-lbl">TerminÃ©es</span>
     </button>
     <button class="lnav-btn" id="lnb-reporter" onclick="lavTab('reporter')">
-      <span class="lnav-ico">📅</span>
+      <span class="lnav-ico">ð</span>
       <span class="lnav-badge lnav-badge-gold" id="lnav-badge-rpt">0</span>
-      <span class="lnav-lbl" data-i="tab_reporter">Reportées</span>
+      <span class="lnav-lbl" data-i="tab_reporter">ReportÃ©es</span>
     </button>
     <button class="lnav-btn" id="lnb-annuler" onclick="lavTab('annuler')">
-      <span class="lnav-ico">❌</span>
+      <span class="lnav-ico">â</span>
       <span class="lnav-badge lnav-badge-red" id="lnav-badge-ann">0</span>
-      <span class="lnav-lbl" data-i="tab_annuler">Annulées</span>
+      <span class="lnav-lbl" data-i="tab_annuler">AnnulÃ©es</span>
     </button>
     <button class="lnav-btn" id="lnb-factures" onclick="lavTab('factures');renderLavFactures()">
-      <span class="lnav-ico">🧾</span>
+      <span class="lnav-ico">ð§¾</span>
       <span class="lnav-badge lnav-badge-gold" id="lnav-badge-fac">0</span>
       <span class="lnav-lbl">Factures</span>
     </button>
@@ -949,32 +949,32 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
 <!-- EDIT ORDER MODAL -->
 <div class="ov" id="editOv">
   <div class="modal-box">
-    <div class="modal-title">✏️ Modifier la commande</div>
-    <div class="modal-sub" id="editOrderInfo">—</div>
+    <div class="modal-title">âï¸ Modifier la commande</div>
+    <div class="modal-sub" id="editOrderInfo">â</div>
     <div class="m-field"><label>Nom client</label><input class="m-input" id="eNom"></div>
-    <div class="m-field"><label>Téléphone</label><input class="m-input" id="eTel"></div>
+    <div class="m-field"><label>TÃ©lÃ©phone</label><input class="m-input" id="eTel"></div>
     <div class="m-field"><label>Adresse</label><input class="m-input" id="eAddr"></div>
     <div class="m-field"><label>Date RDV</label><input type="date" class="m-input" id="eDate"></div>
-    <div class="m-field"><label>Créneau</label>
+    <div class="m-field"><label>CrÃ©neau</label>
       <select class="m-select" id="eCreneau">
-        <option>08h00 – 10h00</option><option>10h00 – 12h00</option>
-        <option>12h00 – 14h00</option><option>14h00 – 16h00</option>
-        <option>16h00 – 18h00</option>
+        <option>08h00 â 10h00</option><option>10h00 â 12h00</option>
+        <option>12h00 â 14h00</option><option>14h00 â 16h00</option>
+        <option>16h00 â 18h00</option>
       </select>
     </div>
     <div class="m-field"><label>Articles / Panier</label><textarea class="m-textarea" id="eArticles"></textarea></div>
     <div class="m-field"><label>Total (DH)</label><input class="m-input" id="eTotal" type="number"></div>
     <div class="m-field"><label>Statut</label>
       <select class="m-select" id="eStatus">
-        <option>En attente</option><option>En cours</option><option>Terminé</option><option>Annulé</option>
+        <option>En attente</option><option>En cours</option><option>TerminÃ©</option><option>AnnulÃ©</option>
       </select>
     </div>
-    <div class="m-field"><label>Laveur assigné</label>
-      <select class="m-select" id="eLaveur"><option value="">— Non assigné —</option></select>
+    <div class="m-field"><label>Laveur assignÃ©</label>
+      <select class="m-select" id="eLaveur"><option value="">â Non assignÃ© â</option></select>
     </div>
     <div class="modal-btns">
       <button class="m-cancel" onclick="closeEdit()">Annuler</button>
-      <button class="m-confirm" onclick="saveEdit()">💾 Enregistrer</button>
+      <button class="m-confirm" onclick="saveEdit()">ð¾ Enregistrer</button>
     </div>
   </div>
 </div>
@@ -992,18 +992,18 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
             <div id="lavDetailSub" style="font-size:.8rem;color:var(--text2)"></div>
           </div>
         </div>
-        <button onclick="closeLavDetail()" style="background:rgba(255,255,255,.08);border:1px solid var(--border);border-radius:10px;width:36px;height:36px;color:var(--text2);font-size:1.1rem;cursor:pointer;flex-shrink:0">✕</button>
+        <button onclick="closeLavDetail()" style="background:rgba(255,255,255,.08);border:1px solid var(--border);border-radius:10px;width:36px;height:36px;color:var(--text2);font-size:1.1rem;cursor:pointer;flex-shrink:0">â</button>
       </div>
       <!-- MINI STATS -->
       <div id="lavDetailStats" style="display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:16px"></div>
       <!-- FILTER TABS -->
       <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
         <button class="ld-tab on" onclick="filterLavDetail('all',this)">Toutes</button>
-        <button class="ld-tab" onclick="filterLavDetail('En attente',this)">⏳ Attente</button>
-        <button class="ld-tab" onclick="filterLavDetail('En cours',this)">🔵 En cours</button>
-        <button class="ld-tab" onclick="filterLavDetail('Terminé',this)">✅ Terminées</button>
-        <button class="ld-tab" onclick="filterLavDetail('Reporté',this)">📅 Reportées</button>
-        <button class="ld-tab" onclick="filterLavDetail('Annulé',this)">❌ Annulées</button>
+        <button class="ld-tab" onclick="filterLavDetail('En attente',this)">â³ Attente</button>
+        <button class="ld-tab" onclick="filterLavDetail('En cours',this)">ðµ En cours</button>
+        <button class="ld-tab" onclick="filterLavDetail('TerminÃ©',this)">â TerminÃ©es</button>
+        <button class="ld-tab" onclick="filterLavDetail('ReportÃ©',this)">ð ReportÃ©es</button>
+        <button class="ld-tab" onclick="filterLavDetail('AnnulÃ©',this)">â AnnulÃ©es</button>
       </div>
     </div>
     <!-- COMMANDES LIST -->
@@ -1014,12 +1014,12 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
 <!-- LAVEUR DETAIL MODAL -->
 <div class="ov" id="assignOv">
   <div class="modal-box">
-    <div class="modal-title">👷 Assigner un laveur</div>
-    <div class="modal-sub" id="assignInfo">—</div>
+    <div class="modal-title">ð· Assigner un laveur</div>
+    <div class="modal-sub" id="assignInfo">â</div>
     <div class="lav-opts" id="lavOpts"></div>
     <div class="modal-btns">
       <button class="m-cancel" onclick="closeAssign()">Annuler</button>
-      <button class="m-confirm" onclick="confirmAssign()">✓ Assigner</button>
+      <button class="m-confirm" onclick="confirmAssign()">â Assigner</button>
     </div>
   </div>
 </div>
@@ -1027,8 +1027,8 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
 <!-- CANCEL REASON MODAL -->
 <div class="ov" id="cancelOv">
   <div class="modal-box" style="max-width:360px">
-    <div class="modal-title">❌ Raison d'annulation</div>
-    <div class="modal-sub">Précisez la raison pour le client</div>
+    <div class="modal-title">â Raison d'annulation</div>
+    <div class="modal-sub">PrÃ©cisez la raison pour le client</div>
     <div class="m-field"><textarea class="m-textarea" id="cancelReason" placeholder="Ex: Client absent, adresse introuvable..."></textarea></div>
     <div class="modal-btns">
       <button class="m-cancel" onclick="closeCancelOv()">Retour</button>
@@ -1040,32 +1040,32 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
 <!-- REPORTER MODAL -->
 <div class="ov" id="reporterOv">
   <div class="modal-box" style="max-width:400px">
-    <div class="modal-title">📅 Reporter la commande</div>
-    <div class="modal-sub" id="reporterInfo">Choisissez une nouvelle date et un créneau</div>
+    <div class="modal-title">ð Reporter la commande</div>
+    <div class="modal-sub" id="reporterInfo">Choisissez une nouvelle date et un crÃ©neau</div>
     <div class="m-field">
       <label>Nouvelle date *</label>
       <input type="date" class="m-input" id="reporterDate">
     </div>
     <div class="m-field">
-      <label>Nouveau créneau *</label>
+      <label>Nouveau crÃ©neau *</label>
       <select class="m-select" id="reporterCreneau">
-        <option>08h00 – 10h00</option>
-        <option>10h00 – 12h00</option>
-        <option>12h00 – 14h00</option>
-        <option>14h00 – 16h00</option>
-        <option>16h00 – 18h00</option>
+        <option>08h00 â 10h00</option>
+        <option>10h00 â 12h00</option>
+        <option>12h00 â 14h00</option>
+        <option>14h00 â 16h00</option>
+        <option>16h00 â 18h00</option>
       </select>
     </div>
     <div class="m-field">
       <label>Raison du report (optionnel)</label>
-      <input class="m-input" id="reporterRaison" placeholder="Ex: Client non disponible, météo...">
+      <input class="m-input" id="reporterRaison" placeholder="Ex: Client non disponible, mÃ©tÃ©o...">
     </div>
     <div style="background:rgba(255,184,0,.07);border:1px solid rgba(255,184,0,.2);border-radius:12px;padding:12px 14px;margin-bottom:4px;font-size:.82rem;color:var(--gold)">
-      ⚠️ Le statut sera remis à <strong>En attente</strong> avec le nouveau créneau
+      â ï¸ Le statut sera remis Ã  <strong>En attente</strong> avec le nouveau crÃ©neau
     </div>
     <div class="modal-btns">
       <button class="m-cancel" onclick="closeReporterOv()">Annuler</button>
-      <button class="m-confirm" style="background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000" onclick="confirmReporter()">📅 Confirmer le report</button>
+      <button class="m-confirm" style="background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000" onclick="confirmReporter()">ð Confirmer le report</button>
     </div>
   </div>
 </div>
@@ -1073,107 +1073,107 @@ body.light .lav-perf-card{box-shadow:0 2px 16px rgba(24,102,255,.06)}
 <!-- EDIT LAVEUR MODAL -->
 <div class="ov" id="editLavOv">
   <div class="modal-box" style="max-width:400px">
-    <div class="modal-title">✏️ Modifier le laveur</div>
+    <div class="modal-title">âï¸ Modifier le laveur</div>
     <div class="modal-sub">Modifiez les informations du compte</div>
-    <div class="m-field"><label>👤 Nom *</label><input class="m-input" id="elNom" placeholder="Nom du laveur"></div>
-    <div class="m-field"><label>📧 Email *</label><input class="m-input" id="elEmail" type="email" placeholder="email@domiclean.ma"></div>
+    <div class="m-field"><label>ð¤ Nom *</label><input class="m-input" id="elNom" placeholder="Nom du laveur"></div>
+    <div class="m-field"><label>ð§ Email *</label><input class="m-input" id="elEmail" type="email" placeholder="email@domiclean.ma"></div>
     <div class="m-field">
-      <label>🔒 Nouveau mot de passe <span style="font-weight:400;color:var(--text3)">(laisser vide = pas de changement)</span></label>
+      <label>ð Nouveau mot de passe <span style="font-weight:400;color:var(--text3)">(laisser vide = pas de changement)</span></label>
       <input class="m-input" id="elPass" type="password" placeholder="Nouveau mot de passe...">
     </div>
-    <div class="m-field"><label>📱 WhatsApp (avec indicatif, ex: 212612345678)</label><input class="m-input" id="elPhone" type="tel" placeholder="212612345678"></div>
+    <div class="m-field"><label>ð± WhatsApp (avec indicatif, ex: 212612345678)</label><input class="m-input" id="elPhone" type="tel" placeholder="212612345678"></div>
     <div class="modal-btns">
       <button class="m-cancel" onclick="closeEditLaveur()">Annuler</button>
-      <button class="m-confirm" onclick="saveEditLaveur()">💾 Enregistrer</button>
+      <button class="m-confirm" onclick="saveEditLaveur()">ð¾ Enregistrer</button>
     </div>
   </div>
 </div>
 <div class="ov" id="newOrderOv">
   <div class="modal-box">
-    <div class="modal-title">➕ Nouvelle commande</div>
-    <div class="modal-sub">Saisie manuelle d'une réservation client</div>
+    <div class="modal-title">â Nouvelle commande</div>
+    <div class="modal-sub">Saisie manuelle d'une rÃ©servation client</div>
     <div class="m-field"><label>Nom client *</label><input class="m-input" id="noNom" placeholder="Mohamed Amine"></div>
-    <div class="m-field"><label>Téléphone *</label><input class="m-input" id="noTel" placeholder="+212 6 00 00 00 00"></div>
+    <div class="m-field"><label>TÃ©lÃ©phone *</label><input class="m-input" id="noTel" placeholder="+212 6 00 00 00 00"></div>
     <div class="m-field"><label>Adresse *</label><input class="m-input" id="noAddr" placeholder="Quartier, Ville..."></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
       <div class="m-field"><label>Date RDV *</label><input type="date" class="m-input" id="noDate"></div>
-      <div class="m-field"><label>Créneau *</label>
+      <div class="m-field"><label>CrÃ©neau *</label>
         <select class="m-select" id="noCreneau">
-          <option>08h00 – 10h00</option><option>10h00 – 12h00</option>
-          <option>12h00 – 14h00</option><option>14h00 – 16h00</option>
-          <option>16h00 – 18h00</option>
+          <option>08h00 â 10h00</option><option>10h00 â 12h00</option>
+          <option>12h00 â 14h00</option><option>14h00 â 16h00</option>
+          <option>16h00 â 18h00</option>
         </select>
       </div>
     </div>
-    <div class="m-field"><label>Articles / Service *</label><textarea class="m-textarea" id="noArticles" placeholder="Ex: Canapé L, Tapis 6m²..."></textarea></div>
+    <div class="m-field"><label>Articles / Service *</label><textarea class="m-textarea" id="noArticles" placeholder="Ex: CanapÃ© L, Tapis 6mÂ²..."></textarea></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
       <div class="m-field"><label>Total (DH) *</label><input class="m-input" id="noTotal" type="number" placeholder="349"></div>
-      <div class="m-field"><label>Assigner à</label>
-        <select class="m-select" id="noLaveur"><option value="">— Non assigné —</option></select>
+      <div class="m-field"><label>Assigner Ã </label>
+        <select class="m-select" id="noLaveur"><option value="">â Non assignÃ© â</option></select>
       </div>
     </div>
     <div class="m-field"><label>Source</label>
       <select class="m-select" id="noSource">
-        <option>WhatsApp</option><option>Téléphone</option><option>Site Web</option><option>Autre</option>
+        <option>WhatsApp</option><option>TÃ©lÃ©phone</option><option>Site Web</option><option>Autre</option>
       </select>
     </div>
     <div class="modal-btns">
       <button class="m-cancel" onclick="closeNewOrder()">Annuler</button>
-      <button class="m-confirm" style="background:linear-gradient(135deg,var(--green),#00a860)" onclick="saveNewOrder()">✅ Enregistrer la commande</button>
+      <button class="m-confirm" style="background:linear-gradient(135deg,var(--green),#00a860)" onclick="saveNewOrder()">â Enregistrer la commande</button>
     </div>
   </div>
 </div>
 
 <script>
-// ════════════════════ TRANSLATIONS ════════════════════
+// ââââââââââââââââââââ TRANSLATIONS ââââââââââââââââââââ
 const TR={
 fr:{
-  login_sub:'Dashboard de gestion des réservations',
-  ltab_admin:'👑 Admin',ltab_laveur:'🧹 Laveur / Washman',
-  lbl_email:'Email',lbl_pass:'Mot de passe',login_btn:'Connexion Admin →',
-  sb_admin:'Admin',logout_btn:'🚪 Déconnexion',lav_quit:'Quitter',
+  login_sub:'Dashboard de gestion des rÃ©servations',
+  ltab_admin:'ð Admin',ltab_laveur:'ð§¹ Laveur / Washman',
+  lbl_email:'Email',lbl_pass:'Mot de passe',login_btn:'Connexion Admin â',
+  sb_admin:'Admin',logout_btn:'ðª DÃ©connexion',lav_quit:'Quitter',
   sb_dashboard:'Dashboard',sb_orders:'Commandes',sb_revenue:'Revenus',
   sb_factures:'Factures Laveurs',sb_laveurs:'Laveurs',
-  btn_refresh:'🔄 Actualiser',btn_new:'➕ Nouvelle commande',
+  btn_refresh:'ð Actualiser',btn_new:'â Nouvelle commande',
   stat_tot:'Total commandes',stat_wait:'En attente',stat_prog:'En cours',
-  stat_done:'Terminées',stat_report:'Reportées',stat_cancel:'Annulées',
+  stat_done:'TerminÃ©es',stat_report:'ReportÃ©es',stat_cancel:'AnnulÃ©es',
   stat_rev:'Revenu total DH',stat_today:'Aujourd\'hui DH',
-  filt_all:'Tous',filt_wait:'⏳ En attente',filt_prog:'🔵 En cours',
-  filt_done:'✅ Terminé',filt_report:'📅 Reporté',filt_cancel:'❌ Annulé',
-  lav_wait:'En attente',lav_prog:'En cours',lav_done:'Terminées',lav_cancel:'Annulées',
-  lav_orders:'Mes commandes',lav_rev:'💰 Mes revenus totaux',
-  lav_report_title:'📊 Mon rapport',
+  filt_all:'Tous',filt_wait:'â³ En attente',filt_prog:'ðµ En cours',
+  filt_done:'â TerminÃ©',filt_report:'ð ReportÃ©',filt_cancel:'â AnnulÃ©',
+  lav_wait:'En attente',lav_prog:'En cours',lav_done:'TerminÃ©es',lav_cancel:'AnnulÃ©es',
+  lav_orders:'Mes commandes',lav_rev:'ð° Mes revenus totaux',
+  lav_report_title:'ð Mon rapport',
   rep_today:'Aujourd\'hui',rep_week:'Cette semaine',rep_month:'Ce mois',rep_all:'Tout',
-  btn_stw:'⏳ Attente',btn_stp:'🔵 En cours',btn_std:'✅ Terminé',btn_sta:'❌ Annulé',
-  btn_reporter:'📅 Reporter à un autre créneau',
-  best_title:'🏆 Meilleur laveur du moment',
-  recent_title:'🕐 Dernières commandes',
-  tab_revenus:'Revenus',tab_commandes:'Commandes',tab_reporter:'Reportées',tab_annuler:'Annulées',
+  btn_stw:'â³ Attente',btn_stp:'ðµ En cours',btn_std:'â TerminÃ©',btn_sta:'â AnnulÃ©',
+  btn_reporter:'ð Reporter Ã  un autre crÃ©neau',
+  best_title:'ð Meilleur laveur du moment',
+  recent_title:'ð DerniÃ¨res commandes',
+  tab_revenus:'Revenus',tab_commandes:'Commandes',tab_reporter:'ReportÃ©es',tab_annuler:'AnnulÃ©es',
   empty_orders:'Aucune commande',
 },
 ar:{
-  login_sub:'لوحة إدارة الحجوزات',
-  ltab_admin:'👑 المدير',ltab_laveur:'🧹 الغسّال',
-  lbl_email:'البريد الإلكتروني',lbl_pass:'كلمة المرور',login_btn:'تسجيل الدخول ←',
-  sb_admin:'المدير',logout_btn:'🚪 خروج',lav_quit:'خروج',
-  sb_dashboard:'الرئيسية',sb_orders:'الطلبات',sb_revenue:'الإيرادات',
-  sb_factures:'فواتير الغسّالين',sb_laveurs:'الفريق',
-  btn_refresh:'🔄 تحديث',btn_new:'➕ طلب جديد',
-  stat_tot:'إجمالي الطلبات',stat_wait:'قيد الانتظار',stat_prog:'جارية',
-  stat_done:'مكتملة',stat_report:'مؤجّلة',stat_cancel:'ملغاة',
-  stat_rev:'إجمالي الإيرادات (DH)',stat_today:'اليوم (DH)',
-  filt_all:'الكل',filt_wait:'⏳ انتظار',filt_prog:'🔵 جارية',
-  filt_done:'✅ مكتملة',filt_report:'📅 مؤجّلة',filt_cancel:'❌ ملغاة',
-  lav_wait:'انتظار',lav_prog:'جارية',lav_done:'مكتملة',lav_cancel:'ملغاة',
-  lav_orders:'طلباتي',lav_rev:'💰 إيراداتي الإجمالية',
-  lav_report_title:'📊 تقريري',
-  rep_today:'اليوم',rep_week:'هذا الأسبوع',rep_month:'هذا الشهر',rep_all:'الكل',
-  btn_stw:'⏳ انتظار',btn_stp:'🔵 جارية',btn_std:'✅ مكتملة',btn_sta:'❌ إلغاء',
-  btn_reporter:'📅 تأجيل إلى موعد آخر',
-  best_title:'🏆 أفضل غسّال',
-  recent_title:'🕐 آخر الطلبات',
-  tab_revenus:'إيراداتي',tab_commandes:'طلباتي',tab_reporter:'المؤجّلة',tab_annuler:'الملغاة',
-  empty_orders:'لا توجد طلبات',
+  login_sub:'ÙÙØ­Ø© Ø¥Ø¯Ø§Ø±Ø© Ø§ÙØ­Ø¬ÙØ²Ø§Øª',
+  ltab_admin:'ð Ø§ÙÙØ¯ÙØ±',ltab_laveur:'ð§¹ Ø§ÙØºØ³ÙØ§Ù',
+  lbl_email:'Ø§ÙØ¨Ø±ÙØ¯ Ø§ÙØ¥ÙÙØªØ±ÙÙÙ',lbl_pass:'ÙÙÙØ© Ø§ÙÙØ±ÙØ±',login_btn:'ØªØ³Ø¬ÙÙ Ø§ÙØ¯Ø®ÙÙ â',
+  sb_admin:'Ø§ÙÙØ¯ÙØ±',logout_btn:'ðª Ø®Ø±ÙØ¬',lav_quit:'Ø®Ø±ÙØ¬',
+  sb_dashboard:'Ø§ÙØ±Ø¦ÙØ³ÙØ©',sb_orders:'Ø§ÙØ·ÙØ¨Ø§Øª',sb_revenue:'Ø§ÙØ¥ÙØ±Ø§Ø¯Ø§Øª',
+  sb_factures:'ÙÙØ§ØªÙØ± Ø§ÙØºØ³ÙØ§ÙÙÙ',sb_laveurs:'Ø§ÙÙØ±ÙÙ',
+  btn_refresh:'ð ØªØ­Ø¯ÙØ«',btn_new:'â Ø·ÙØ¨ Ø¬Ø¯ÙØ¯',
+  stat_tot:'Ø¥Ø¬ÙØ§ÙÙ Ø§ÙØ·ÙØ¨Ø§Øª',stat_wait:'ÙÙØ¯ Ø§ÙØ§ÙØªØ¸Ø§Ø±',stat_prog:'Ø¬Ø§Ø±ÙØ©',
+  stat_done:'ÙÙØªÙÙØ©',stat_report:'ÙØ¤Ø¬ÙÙØ©',stat_cancel:'ÙÙØºØ§Ø©',
+  stat_rev:'Ø¥Ø¬ÙØ§ÙÙ Ø§ÙØ¥ÙØ±Ø§Ø¯Ø§Øª (DH)',stat_today:'Ø§ÙÙÙÙ (DH)',
+  filt_all:'Ø§ÙÙÙ',filt_wait:'â³ Ø§ÙØªØ¸Ø§Ø±',filt_prog:'ðµ Ø¬Ø§Ø±ÙØ©',
+  filt_done:'â ÙÙØªÙÙØ©',filt_report:'ð ÙØ¤Ø¬ÙÙØ©',filt_cancel:'â ÙÙØºØ§Ø©',
+  lav_wait:'Ø§ÙØªØ¸Ø§Ø±',lav_prog:'Ø¬Ø§Ø±ÙØ©',lav_done:'ÙÙØªÙÙØ©',lav_cancel:'ÙÙØºØ§Ø©',
+  lav_orders:'Ø·ÙØ¨Ø§ØªÙ',lav_rev:'ð° Ø¥ÙØ±Ø§Ø¯Ø§ØªÙ Ø§ÙØ¥Ø¬ÙØ§ÙÙØ©',
+  lav_report_title:'ð ØªÙØ±ÙØ±Ù',
+  rep_today:'Ø§ÙÙÙÙ',rep_week:'ÙØ°Ø§ Ø§ÙØ£Ø³Ø¨ÙØ¹',rep_month:'ÙØ°Ø§ Ø§ÙØ´ÙØ±',rep_all:'Ø§ÙÙÙ',
+  btn_stw:'â³ Ø§ÙØªØ¸Ø§Ø±',btn_stp:'ðµ Ø¬Ø§Ø±ÙØ©',btn_std:'â ÙÙØªÙÙØ©',btn_sta:'â Ø¥ÙØºØ§Ø¡',
+  btn_reporter:'ð ØªØ£Ø¬ÙÙ Ø¥ÙÙ ÙÙØ¹Ø¯ Ø¢Ø®Ø±',
+  best_title:'ð Ø£ÙØ¶Ù ØºØ³ÙØ§Ù',
+  recent_title:'ð Ø¢Ø®Ø± Ø§ÙØ·ÙØ¨Ø§Øª',
+  tab_revenus:'Ø¥ÙØ±Ø§Ø¯Ø§ØªÙ',tab_commandes:'Ø·ÙØ¨Ø§ØªÙ',tab_reporter:'Ø§ÙÙØ¤Ø¬ÙÙØ©',tab_annuler:'Ø§ÙÙÙØºØ§Ø©',
+  empty_orders:'ÙØ§ ØªÙØ¬Ø¯ Ø·ÙØ¨Ø§Øª',
 }};
 
 let curLang='fr';
@@ -1189,7 +1189,7 @@ function setLang(lang){
   // Sync all lang buttons across all 3 pages
   document.querySelectorAll('.lb').forEach(b=>{
     const txt=b.textContent.trim();
-    b.classList.toggle('on',(txt==='FR'&&lang==='fr')||(txt==='ع'&&lang==='ar'));
+    b.classList.toggle('on',(txt==='FR'&&lang==='fr')||(txt==='Ø¹'&&lang==='ar'));
   });
   const isAr=lang==='ar';
   document.documentElement.lang=lang;
@@ -1211,7 +1211,7 @@ const CFG={
   refresh:30000
 };
 
-// ════════════════════ STATE ════════════════════
+// ââââââââââââââââââââ STATE ââââââââââââââââââââ
 let S={
   orders:[],laveurs:JSON.parse(localStorage.getItem('dc_laveurs')||'[]'),
   notifs:JSON.parse(localStorage.getItem('dc_notifs')||'[]'),
@@ -1222,7 +1222,7 @@ let S={
   lavRepFilter:'today',lavRepFrom:'',lavRepTo:''
 };
 
-// ════════════════════ LOGIN ════════════════════
+// ââââââââââââââââââââ LOGIN ââââââââââââââââââââ
 let loginTab='admin';
 function switchTab(t){
   loginTab=t;
@@ -1243,20 +1243,20 @@ function loginAdmin(){
     loadOrders();
     loadLaveurs();
     S.timer=setInterval(()=>{loadOrders();loadLaveurs();},CFG.refresh);
-  }else showErr('❌ Email ou mot de passe incorrect');
+  }else showErr('â Email ou mot de passe incorrect');
 }
-function pin(v){/* PIN désactivé — connexion par email/mot de passe */}
-function updPin(){/* PIN désactivé */}
+function pin(v){/* PIN dÃ©sactivÃ© â connexion par email/mot de passe */}
+function updPin(){/* PIN dÃ©sactivÃ© */}
 async function loginLaveur(){
   const email=(document.getElementById('iLavEmail').value||'').trim().toLowerCase();
   const pass=document.getElementById('iLavPass').value||'';
-  if(!email||!pass){showErr('❌ Email et mot de passe requis');return;}
-  showErr('⏳ Connexion...');
+  if(!email||!pass){showErr('â Email et mot de passe requis');return;}
+  showErr('â³ Connexion...');
   let user=null;
-  // 1) Check localStorage (même appareil que admin, ou déjà connecté avant)
+  // 1) Check localStorage (mÃªme appareil que admin, ou dÃ©jÃ  connectÃ© avant)
   const saved=localStorage.getItem('dc_laveurs');
   if(saved){try{const lv=JSON.parse(saved);user=lv.find(l=>(l.email||'').toLowerCase()===email&&l.password===pass)||null;}catch(e){}}
-  // 2) Check localStorage global (infos partagées via lien magic)
+  // 2) Check localStorage global (infos partagÃ©es via lien magic)
   if(!user){
     try{
       const sharedKey='dc_shared_'+btoa(email).replace(/=/g,'');
@@ -1288,7 +1288,7 @@ async function loginLaveur(){
     await loadOrders();renderLaveurOrders();renderLavNotifs();
     clearInterval(S.lavTimer);
     S.lavTimer=setInterval(()=>{loadOrders();renderLavNotifs();},8000);
-  }else{showErr('❌ Email ou mot de passe incorrect');setTimeout(()=>showErr(''),3000);}
+  }else{showErr('â Email ou mot de passe incorrect');setTimeout(()=>showErr(''),3000);}
 }
 function showErr(m){document.getElementById('loginErr').textContent=m;}
 function logout(){
@@ -1300,7 +1300,7 @@ function logout(){
   showErr('');showPage('loginPage');
 }
 
-// ════════════════════ NAVIGATION ════════════════════
+// ââââââââââââââââââââ NAVIGATION ââââââââââââââââââââ
 function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');}
 function toggleSidebar(){
   var sb=document.getElementById('mainSidebar');
@@ -1321,8 +1321,8 @@ function panel(id){
   document.querySelectorAll('.sb-btn').forEach(b=>b.classList.remove('on'));
   const b=document.getElementById('pb-'+id);if(b)b.classList.add('on');
   const titles={
-    fr:{overview:['DASHBOARD','Vue d\'ensemble'],orders:['COMMANDES','Toutes les réservations'],revenue:['REVENUS','Analyse financière'],factures:['FACTURES LAVEURS','Suivi par laveur'],laveurs:['ÉQUIPE','Gérer les laveurs']},
-    ar:{overview:['الرئيسية','نظرة عامة'],orders:['الطلبات','كل الحجوزات'],revenue:['الإيرادات','التحليل المالي'],factures:['فواتير الغسّالين','متابعة بالغسّال'],laveurs:['الفريق','إدارة الغسّالين']}
+    fr:{overview:['DASHBOARD','Vue d\'ensemble'],orders:['COMMANDES','Toutes les rÃ©servations'],revenue:['REVENUS','Analyse financiÃ¨re'],factures:['FACTURES LAVEURS','Suivi par laveur'],laveurs:['ÃQUIPE','GÃ©rer les laveurs']},
+    ar:{overview:['Ø§ÙØ±Ø¦ÙØ³ÙØ©','ÙØ¸Ø±Ø© Ø¹Ø§ÙØ©'],orders:['Ø§ÙØ·ÙØ¨Ø§Øª','ÙÙ Ø§ÙØ­Ø¬ÙØ²Ø§Øª'],revenue:['Ø§ÙØ¥ÙØ±Ø§Ø¯Ø§Øª','Ø§ÙØªØ­ÙÙÙ Ø§ÙÙØ§ÙÙ'],factures:['ÙÙØ§ØªÙØ± Ø§ÙØºØ³ÙØ§ÙÙÙ','ÙØªØ§Ø¨Ø¹Ø© Ø¨Ø§ÙØºØ³ÙØ§Ù'],laveurs:['Ø§ÙÙØ±ÙÙ','Ø¥Ø¯Ø§Ø±Ø© Ø§ÙØºØ³ÙØ§ÙÙÙ']}
   };
   const T=(titles[curLang]||titles.fr)[id];
   if(T){document.getElementById('mainTitle').textContent=T[0];document.getElementById('mainSub').textContent=T[1];}
@@ -1331,24 +1331,24 @@ function panel(id){
   closeSidebar();
 }
 
-// ════════════════════ LOAD FROM SHEET ════════════════════
-// ════════════════════ PUSH NOTIFICATIONS ════════════════════
+// ââââââââââââââââââââ LOAD FROM SHEET ââââââââââââââââââââ
+// ââââââââââââââââââââ PUSH NOTIFICATIONS ââââââââââââââââââââ
 function requestNotifPermission(){
   if(!('Notification' in window))return;
   if(Notification.permission==='default'){
     Notification.requestPermission().then(p=>{
-      if(p==='granted')showPush('🎉 DOMICLEAN','Notifications activées ! Vous recevrez les alertes de nouvelles commandes.','📋');
+      if(p==='granted')showPush('ð DOMICLEAN','Notifications activÃ©es ! Vous recevrez les alertes de nouvelles commandes.','ð');
     });
   }
 }
 
-function showPush(title,body,icon='🔔'){
+function showPush(title,body,icon='ð'){
   if(!('Notification' in window)||Notification.permission!=='granted')return;
   try{
     new Notification(title,{
       body,
       icon:'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">'+icon+'</text></svg>',
-      badge:'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🔔</text></svg>',
+      badge:'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">ð</text></svg>',
       vibrate:[200,100,200],
       requireInteraction:false,
       tag:'domiclean-'+Date.now()
@@ -1358,16 +1358,16 @@ function showPush(title,body,icon='🔔'){
 
 async function loadOrders(){
   const btn=document.getElementById('refBtn');
-  btn.innerHTML='<span class="spinning">🔄</span> Actualisation...';
+  btn.innerHTML='<span class="spinning">ð</span> Actualisation...';
   try{
     const r=await fetch(CFG.sheetUrl+'?action=getOrders&t='+Date.now());
     const d=await r.json();
     if(d.status==='ok'&&d.orders){
       const newCount=d.orders.length-S.lastCount;
       if(newCount>0&&S.lastCount>0){
-        addNotif(`🆕 ${newCount} nouvelle(s) commande(s) reçue(s) !`,'new');
+        addNotif(`ð ${newCount} nouvelle(s) commande(s) reÃ§ue(s) !`,'new');
         // PUSH notification
-        showPush('🆕 DOMICLEAN — Nouvelle commande !',`${newCount} nouvelle(s) commande(s) reçue(s). Cliquez pour voir.`,'📋');
+        showPush('ð DOMICLEAN â Nouvelle commande !',`${newCount} nouvelle(s) commande(s) reÃ§ue(s). Cliquez pour voir.`,'ð');
         // Sound alert
         playAlert();
       }
@@ -1376,13 +1376,13 @@ async function loadOrders(){
       localStorage.setItem('dc_orders',JSON.stringify(S.orders));
     }
   }catch(e){const sv=localStorage.getItem('dc_orders');if(sv)try{S.orders=JSON.parse(sv)}catch(e2){}}
-  btn.innerHTML='🔄 Actualiser';
+  btn.innerHTML='ð Actualiser';
   renderAll();
 }
 
 function saveLaveursLocal(){localStorage.setItem('dc_laveurs',JSON.stringify(S.laveurs));}
 async function loadLaveurs(){
-  // Charger depuis localStorage (source de vérité)
+  // Charger depuis localStorage (source de vÃ©ritÃ©)
   const saved=localStorage.getItem('dc_laveurs');
   if(saved){
     try{
@@ -1426,15 +1426,15 @@ async function updateStatus(idx,status,laveur,reason){
   form.append('status',status);if(laveur)form.append('laveur',laveur);if(reason)form.append('cancel_reason',reason);
   try{await fetch(CFG.sheetUrl,{method:'POST',mode:'no-cors',body:form});}catch(e){}
   renderAll();if(S.userType==='laveur')renderLaveurOrders();
-  if(status==='Terminé')addNotif(`✅ Commande de ${o.nom} terminée !`,'done');
-  if(status==='Annulé')addNotif(`❌ Commande de ${o.nom} annulée. Raison: ${reason||'—'}`,'cancel');
-  // If laveur is logged in and this is their order → push notification
+  if(status==='TerminÃ©')addNotif(`â Commande de ${o.nom} terminÃ©e !`,'done');
+  if(status==='AnnulÃ©')addNotif(`â Commande de ${o.nom} annulÃ©e. Raison: ${reason||'â'}`,'cancel');
+  // If laveur is logged in and this is their order â push notification
   if(S.userType==='laveur'&&o.laveur===S.curUser?.nom){
-    if(status==='En cours')showPush('👷 Nouvelle commande !',`${o.nom||'Client'} — ${o.total||''} — ${o.creneau||''}. Vérifiez l\'app !`,'🛋️');
+    if(status==='En cours')showPush('ð· Nouvelle commande !',`${o.nom||'Client'} â ${o.total||''} â ${o.creneau||''}. VÃ©rifiez l\'app !`,'ðï¸');
   }
 }
 
-// ════════════════════ RENDER ALL ════════════════════
+// ââââââââââââââââââââ RENDER ALL ââââââââââââââââââââ
 function renderAll(){
   renderStats();renderOrders();renderRecent();renderLaveurs();updPendBadge();
   renderChart(S.chartDays,'chartBars','chartTotal');
@@ -1446,23 +1446,23 @@ function renderBestLaveur(){
   if(!S.laveurs.length){c.innerHTML='<div class="empty-state">Aucun laveur</div>';return;}
   const scored=S.laveurs.map(l=>{
     const my=S.orders.filter(o=>o.laveur===l.nom);
-    const done=my.filter(o=>o.status==='Terminé');
+    const done=my.filter(o=>o.status==='TerminÃ©');
     const rev=done.reduce((s,o)=>s+getAmt(o),0);
     const rate=my.length>0?Math.round((done.length/my.length)*100):0;
     return{...l,done:done.length,rev,rate,total:my.length};
   }).filter(l=>l.done>0).sort((a,b)=>b.rev-a.rev);
-  if(!scored.length){c.innerHTML='<div class="empty-state">Pas encore de commandes terminées</div>';return;}
+  if(!scored.length){c.innerHTML='<div class="empty-state">Pas encore de commandes terminÃ©es</div>';return;}
   const best=scored[0];
   c.innerHTML=`<div style="background:linear-gradient(135deg,rgba(255,184,0,.1),rgba(255,184,0,.04));border:1px solid rgba(255,184,0,.3);border-radius:18px;padding:24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
     <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.6rem;color:#000;flex-shrink:0">${best.nom[0].toUpperCase()}</div>
     <div style="flex:1">
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.04em;color:var(--gold)">${best.nom} 🏆</div>
-      <div style="font-size:.82rem;color:var(--text2);margin-top:2px">${best.done} commandes terminées · Taux de réussite ${best.rate}%</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.04em;color:var(--gold)">${best.nom} ð</div>
+      <div style="font-size:.82rem;color:var(--text2);margin-top:2px">${best.done} commandes terminÃ©es Â· Taux de rÃ©ussite ${best.rate}%</div>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;text-align:center">
-      <div><div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--green)">${best.rev.toFixed(0)}</div><div style="font-size:.72rem;color:var(--text3)">DH générés</div></div>
-      <div><div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--blue)">${best.total}</div><div style="font-size:.72rem;color:var(--text3)">Assignées</div></div>
-      <div><div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--gold)">${best.rate}%</div><div style="font-size:.72rem;color:var(--text3)">Réussite</div></div>
+      <div><div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--green)">${best.rev.toFixed(0)}</div><div style="font-size:.72rem;color:var(--text3)">DH gÃ©nÃ©rÃ©s</div></div>
+      <div><div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--blue)">${best.total}</div><div style="font-size:.72rem;color:var(--text3)">AssignÃ©es</div></div>
+      <div><div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--gold)">${best.rate}%</div><div style="font-size:.72rem;color:var(--text3)">RÃ©ussite</div></div>
     </div>
   </div>
   ${scored.length>1?`<div style="margin-top:10px;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px">
@@ -1481,12 +1481,12 @@ function renderStats(){
   const o=S.orders;
   const wait=o.filter(x=>(x.status||'En attente')==='En attente').length;
   const prog=o.filter(x=>x.status==='En cours').length;
-  const done=o.filter(x=>x.status==='Terminé').length;
-  const report=o.filter(x=>x.status==='Reporté').length;
-  const cancel=o.filter(x=>x.status==='Annulé').length;
-  const rev=o.filter(x=>x.status==='Terminé').reduce((s,x)=>s+getAmt(x),0);
+  const done=o.filter(x=>x.status==='TerminÃ©').length;
+  const report=o.filter(x=>x.status==='ReportÃ©').length;
+  const cancel=o.filter(x=>x.status==='AnnulÃ©').length;
+  const rev=o.filter(x=>x.status==='TerminÃ©').reduce((s,x)=>s+getAmt(x),0);
   const today=new Date().toLocaleDateString('fr-FR');
-  const todayRev=o.filter(x=>x.status==='Terminé'&&(x.date_commande||'').includes(today)).reduce((s,x)=>s+getAmt(x),0);
+  const todayRev=o.filter(x=>x.status==='TerminÃ©'&&(x.date_commande||'').includes(today)).reduce((s,x)=>s+getAmt(x),0);
   document.getElementById('sTot').textContent=o.length;
   document.getElementById('sWait').textContent=wait;
   document.getElementById('sProg').textContent=prog;
@@ -1503,47 +1503,47 @@ function updPendBadge(){
 }
 function sbadge(s){
   const m={
-    'En attente':['sw','⏳'],
-    'En cours':['sp','🔵'],
-    'Terminé':['sd','✅'],
-    'Annulé':['sc2','❌'],
-    'Reporté':['sr','📅']
+    'En attente':['sw','â³'],
+    'En cours':['sp','ðµ'],
+    'TerminÃ©':['sd','â'],
+    'AnnulÃ©':['sc2','â'],
+    'ReportÃ©':['sr','ð']
   };
-  const [c,i]=m[s||'En attente']||['sw','⏳'];
+  const [c,i]=m[s||'En attente']||['sw','â³'];
   return `<span class="sbadge ${c}">${i} ${s||'En attente'}</span>`;
 }
 function oRow(o,idx){
-  const art=(o.articles||o.pack||'—');
-  const artS=art.length>38?art.substring(0,38)+'…':art;
+  const art=(o.articles||o.pack||'â');
+  const artS=art.length>38?art.substring(0,38)+'â¦':art;
   const s=o.status||'En attente';
   return `<div class="order-row">
     <div>
-      <div class="o-name">${o.nom||'—'}</div>
+      <div class="o-name">${o.nom||'â'}</div>
       <div class="o-phone">${o.telephone||''}</div>
-      <div class="o-phone" style="color:var(--cyan);margin-top:2px">⏰ ${o.creneau||'—'}</div>
+      <div class="o-phone" style="color:var(--cyan);margin-top:2px">â° ${o.creneau||'â'}</div>
     </div>
     <div>
       <div class="o-pack">${artS}</div>
-      <div class="o-meta">📅 ${o.date_rdv||''}</div>
-      ${o.cancel_reason?`<div class="o-meta" style="color:var(--red);margin-top:2px">❌ ${o.cancel_reason}</div>`:''}
+      <div class="o-meta">ð ${o.date_rdv||''}</div>
+      ${o.cancel_reason?`<div class="o-meta" style="color:var(--red);margin-top:2px">â ${o.cancel_reason}</div>`:''}
     </div>
-    <div class="o-price">${o.total||'—'}</div>
+    <div class="o-price">${o.total||'â'}</div>
     <div>
       ${sbadge(s)}
       <div style="display:flex;gap:4px;margin-top:6px;flex-wrap:wrap">
-        <button onclick="quickStatus(${idx},'En attente')" style="padding:2px 7px;border-radius:12px;border:1px solid rgba(255,184,0,.3);background:${s==='En attente'?'rgba(255,184,0,.15)':'transparent'};color:var(--gold);font-size:.65rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s">⏳</button>
-        <button onclick="quickStatus(${idx},'En cours')" style="padding:2px 7px;border-radius:12px;border:1px solid rgba(24,102,255,.3);background:${s==='En cours'?'rgba(24,102,255,.15)':'transparent'};color:var(--blue);font-size:.65rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s">🔵</button>
-        <button onclick="quickStatus(${idx},'Terminé')" style="padding:2px 7px;border-radius:12px;border:1px solid rgba(0,208,122,.3);background:${s==='Terminé'?'rgba(0,208,122,.15)':'transparent'};color:var(--green);font-size:.65rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s">✅</button>
-        <button onclick="openReporterOv(${idx})" style="padding:2px 7px;border-radius:12px;border:1px solid rgba(155,89,182,.3);background:${s==='Reporté'?'rgba(155,89,182,.15)':'transparent'};color:var(--purple);font-size:.65rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s">📅</button>
-        <button onclick="openAdminCancelOv(${idx})" style="padding:2px 7px;border-radius:12px;border:1px solid rgba(255,68,68,.3);background:${s==='Annulé'?'rgba(255,68,68,.15)':'transparent'};color:var(--red);font-size:.65rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s">❌</button>
+        <button onclick="quickStatus(${idx},'En attente')" style="padding:2px 7px;border-radius:12px;border:1px solid rgba(255,184,0,.3);background:${s==='En attente'?'rgba(255,184,0,.15)':'transparent'};color:var(--gold);font-size:.65rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s">â³</button>
+        <button onclick="quickStatus(${idx},'En cours')" style="padding:2px 7px;border-radius:12px;border:1px solid rgba(24,102,255,.3);background:${s==='En cours'?'rgba(24,102,255,.15)':'transparent'};color:var(--blue);font-size:.65rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s">ðµ</button>
+        <button onclick="quickStatus(${idx},'TerminÃ©')" style="padding:2px 7px;border-radius:12px;border:1px solid rgba(0,208,122,.3);background:${s==='TerminÃ©'?'rgba(0,208,122,.15)':'transparent'};color:var(--green);font-size:.65rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s">â</button>
+        <button onclick="openReporterOv(${idx})" style="padding:2px 7px;border-radius:12px;border:1px solid rgba(155,89,182,.3);background:${s==='ReportÃ©'?'rgba(155,89,182,.15)':'transparent'};color:var(--purple);font-size:.65rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s">ð</button>
+        <button onclick="openAdminCancelOv(${idx})" style="padding:2px 7px;border-radius:12px;border:1px solid rgba(255,68,68,.3);background:${s==='AnnulÃ©'?'rgba(255,68,68,.15)':'transparent'};color:var(--red);font-size:.65rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s">â</button>
       </div>
     </div>
-    <div class="o-laveur">${o.laveur||'—'}</div>
+    <div class="o-laveur">${o.laveur||'â'}</div>
     <div class="act-row">
-      <button class="act-btn" onclick="openEdit(${idx})" title="Modifier tout">✏️</button>
-      <button class="act-btn" onclick="openAssign(${idx})" title="Assigner laveur">👷</button>
-      <button class="act-btn" onclick="openReporterOv(${idx})" title="Reporter" style="color:var(--gold)">📅</button>
-      <button class="act-btn red-btn" onclick="deleteOrder(${idx})" title="Supprimer">🗑️</button>
+      <button class="act-btn" onclick="openEdit(${idx})" title="Modifier tout">âï¸</button>
+      <button class="act-btn" onclick="openAssign(${idx})" title="Assigner laveur">ð·</button>
+      <button class="act-btn" onclick="openReporterOv(${idx})" title="Reporter" style="color:var(--gold)">ð</button>
+      <button class="act-btn red-btn" onclick="deleteOrder(${idx})" title="Supprimer">ðï¸</button>
     </div>
   </div>`;
 }
@@ -1553,7 +1553,7 @@ function renderOrders(){
   if(S.dateFrom)list=list.filter(o=>{const d=parseDate(getDate(o));return d&&d>=new Date(S.dateFrom);});
   if(S.dateTo)list=list.filter(o=>{const d=parseDate(getDate(o));return d&&d<=new Date(S.dateTo);});
   const c=document.getElementById('ordersList');
-  c.innerHTML=list.length?list.map((o)=>oRow(o,S.orders.indexOf(o))).join(''):'<div class="empty-state">Aucune commande trouvée</div>';
+  c.innerHTML=list.length?list.map((o)=>oRow(o,S.orders.indexOf(o))).join(''):'<div class="empty-state">Aucune commande trouvÃ©e</div>';
 }
 function renderRecent(){
   const r=[...S.orders].reverse().slice(0,5);
@@ -1578,12 +1578,12 @@ function resetDateFilter(){
   renderOrders();
 }
 function cycleStatus(idx){
-  const statuses=['En attente','En cours','Terminé'];
+  const statuses=['En attente','En cours','TerminÃ©'];
   const cur=statuses.indexOf(S.orders[idx].status||'En attente');
   updateStatus(idx,statuses[(cur+1)%statuses.length],null,null);
 }
 function quickStatus(idx,status){
-  if(status==='Annulé'){openAdminCancelOv(idx);return;}
+  if(status==='AnnulÃ©'){openAdminCancelOv(idx);return;}
   updateStatus(idx,status,null,null);
 }
 function openAdminCancelOv(idx){
@@ -1592,7 +1592,7 @@ function openAdminCancelOv(idx){
   document.getElementById('cancelOv').classList.add('open');
 }
 
-// ════════════════════ CHART ════════════════════
+// ââââââââââââââââââââ CHART ââââââââââââââââââââ
 function chartPeriod(d,btn){S.chartDays=d;document.querySelectorAll('#panel-overview .chart-filters .cf-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderChart(d,'chartBars','chartTotal');}
 function chartPeriod2(d,btn){S.chartDays2=d;document.querySelectorAll('#panel-revenue .chart-filters .cf-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderChart(d,'chartBars2','chartTotal2');}
 
@@ -1604,7 +1604,7 @@ function renderChart(days,barsId,totalId){
     const d=new Date(now);d.setDate(d.getDate()-i);
     const lbl=d.toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit'});
     const rev=S.orders.filter(o=>{
-      if(o.status!=='Terminé')return false;
+      if(o.status!=='TerminÃ©')return false;
       const od=parseDate(o.date_commande||o.date_rdv||'');
       if(!od)return false;
       return od.toDateString()===d.toDateString();
@@ -1624,9 +1624,9 @@ function renderChart(days,barsId,totalId){
   tot.innerHTML=`Total sur ${days} jours : <strong>${totalRev.toFixed(0)} DH</strong>`;
 }
 
-// ════════════════════ REVENUE PANEL ════════════════════
+// ââââââââââââââââââââ REVENUE PANEL ââââââââââââââââââââ
 function renderRevenue(){
-  const o=S.orders.filter(x=>x.status==='Terminé');
+  const o=S.orders.filter(x=>x.status==='TerminÃ©');
   const now=new Date();
   const startWeek=new Date(now);startWeek.setDate(now.getDate()-now.getDay()+1);
   const startMonth=new Date(now.getFullYear(),now.getMonth(),1);
@@ -1643,14 +1643,14 @@ function renderRevenue(){
   if(!S.laveurs.length){c.innerHTML='<div class="empty-state">Aucun laveur</div>';return;}
   c.innerHTML=S.laveurs.map(l=>{
     const my=S.orders.filter(x=>x.laveur===l.nom);
-    const done=my.filter(x=>x.status==='Terminé');
-    const annul=my.filter(x=>x.status==='Annulé').length;
+    const done=my.filter(x=>x.status==='TerminÃ©');
+    const annul=my.filter(x=>x.status==='AnnulÃ©').length;
     const rev=done.reduce((s,x)=>s+getAmt(x),0);
     return `<div class="fac-row"><div style="font-weight:700">${l.nom}</div><div>${my.length}</div><div style="color:var(--green)">${done.length}</div><div style="color:var(--red)">${annul}</div><div class="fac-amount" style="color:var(--green);font-weight:800">${rev.toFixed(0)} DH</div></div>`;
-  }).join('')+`<div class="fac-row fac-total-row"><div>TOTAL</div><div>${S.orders.length}</div><div>${S.orders.filter(x=>x.status==='Terminé').length}</div><div>${S.orders.filter(x=>x.status==='Annulé').length}</div><div class="fac-amount">${S.orders.filter(x=>x.status==='Terminé').reduce((s,x)=>s+getAmt(x),0).toFixed(0)} DH</div></div>`;
+  }).join('')+`<div class="fac-row fac-total-row"><div>TOTAL</div><div>${S.orders.length}</div><div>${S.orders.filter(x=>x.status==='TerminÃ©').length}</div><div>${S.orders.filter(x=>x.status==='AnnulÃ©').length}</div><div class="fac-amount">${S.orders.filter(x=>x.status==='TerminÃ©').reduce((s,x)=>s+getAmt(x),0).toFixed(0)} DH</div></div>`;
 }
 
-// ════════════════════ FACTURES ════════════════════
+// ââââââââââââââââââââ FACTURES ââââââââââââââââââââ
 function renderFactureSelects(){
   const sel=document.getElementById('facLaveurSel');
   sel.innerHTML='<option value="">-- Choisir un laveur --</option>'+S.laveurs.map(l=>`<option value="${l.nom}">${l.nom}</option>`).join('');
@@ -1658,14 +1658,14 @@ function renderFactureSelects(){
 function renderFacture(){
   const nom=document.getElementById('facLaveurSel').value;
   const c=document.getElementById('factureContent');
-  if(!nom){c.innerHTML='<div class="empty-state">Sélectionnez un laveur</div>';return;}
+  if(!nom){c.innerHTML='<div class="empty-state">SÃ©lectionnez un laveur</div>';return;}
   const from=document.getElementById('facDateFrom').value;
   const to=document.getElementById('facDateTo').value;
-  let orders=S.orders.filter(o=>o.laveur===nom&&o.status==='Terminé');
+  let orders=S.orders.filter(o=>o.laveur===nom&&o.status==='TerminÃ©');
   if(from)orders=orders.filter(o=>{const d=parseDate(getDate(o));return d&&d>=new Date(from);});
   if(to)orders=orders.filter(o=>{const d=parseDate(getDate(o));return d&&d<=new Date(to);});
   const total=orders.reduce((s,o)=>s+getAmt(o),0);
-  const period=from&&to?`${from} → ${to}`:from?`Depuis ${from}`:to?`Jusqu'au ${to}`:'Toutes les périodes';
+  const period=from&&to?`${from} â ${to}`:from?`Depuis ${from}`:to?`Jusqu'au ${to}`:'Toutes les pÃ©riodes';
   const allMy=S.orders.filter(o=>o.laveur===nom);
   const rate=allMy.length>0?Math.round((orders.length/allMy.length)*100):0;
 
@@ -1674,15 +1674,15 @@ function renderFacture(){
     <div style="background:var(--card);border:1px solid var(--border);border-radius:18px;padding:24px;margin-bottom:16px">
       <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px">
         <div>
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.04em">🧾 FACTURE LAVEUR</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.04em">ð§¾ FACTURE LAVEUR</div>
           <div style="font-size:1.1rem;font-weight:800;margin-top:4px">${nom}</div>
-          <div style="font-size:.82rem;color:var(--text2);margin-top:4px">📅 Période : ${period}</div>
-          <div style="font-size:.82rem;color:var(--text2)">🖨️ Générée le : ${new Date().toLocaleDateString('fr-FR')} à ${new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}</div>
+          <div style="font-size:.82rem;color:var(--text2);margin-top:4px">ð PÃ©riode : ${period}</div>
+          <div style="font-size:.82rem;color:var(--text2)">ð¨ï¸ GÃ©nÃ©rÃ©e le : ${new Date().toLocaleDateString('fr-FR')} Ã  ${new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}</div>
         </div>
         <div style="text-align:right">
-          <div style="font-size:.78rem;color:var(--text2)">Commandes terminées</div>
+          <div style="font-size:.78rem;color:var(--text2)">Commandes terminÃ©es</div>
           <div style="font-family:'Bebas Neue',sans-serif;font-size:2.8rem;color:var(--green);line-height:1">${total.toFixed(0)} DH</div>
-          <div style="font-size:.78rem;color:var(--text2);margin-top:4px">${orders.length} commande(s) · Taux réussite ${rate}%</div>
+          <div style="font-size:.78rem;color:var(--text2);margin-top:4px">${orders.length} commande(s) Â· Taux rÃ©ussite ${rate}%</div>
         </div>
       </div>
 
@@ -1690,41 +1690,41 @@ function renderFacture(){
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px;padding-top:16px;border-top:1px solid var(--border)">
         <div style="text-align:center">
           <div style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--blue)">${allMy.length}</div>
-          <div style="font-size:.72rem;color:var(--text3)">Total assignées</div>
+          <div style="font-size:.72rem;color:var(--text3)">Total assignÃ©es</div>
         </div>
         <div style="text-align:center">
           <div style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--green)">${orders.length}</div>
-          <div style="font-size:.72rem;color:var(--text3)">Terminées</div>
+          <div style="font-size:.72rem;color:var(--text3)">TerminÃ©es</div>
         </div>
         <div style="text-align:center">
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--red)">${allMy.filter(o=>o.status==='Annulé').length}</div>
-          <div style="font-size:.72rem;color:var(--text3)">Annulées</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--red)">${allMy.filter(o=>o.status==='AnnulÃ©').length}</div>
+          <div style="font-size:.72rem;color:var(--text3)">AnnulÃ©es</div>
         </div>
         <div style="text-align:center">
           <div style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--gold)">${rate}%</div>
-          <div style="font-size:.72rem;color:var(--text3)">Taux réussite</div>
+          <div style="font-size:.72rem;color:var(--text3)">Taux rÃ©ussite</div>
         </div>
       </div>
     </div>
 
-    <!-- COMMANDES DÉTAILLÉES -->
+    <!-- COMMANDES DÃTAILLÃES -->
     <div class="facture-wrap">
       <div style="display:grid;grid-template-columns:.8fr 1fr 1.6fr .7fr .7fr .7fr;gap:8px;padding:12px 16px;background:rgba(255,255,255,.03);font-size:.68rem;font-weight:700;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--border)">
-        <div>DATE RDV</div><div>CLIENT</div><div>ARTICLES / SERVICE</div><div>CRÉNEAU</div><div>ADRESSE</div><div style="text-align:right">TOTAL</div>
+        <div>DATE RDV</div><div>CLIENT</div><div>ARTICLES / SERVICE</div><div>CRÃNEAU</div><div>ADRESSE</div><div style="text-align:right">TOTAL</div>
       </div>
       ${orders.length ? orders.map((o,idx)=>`
         <div style="display:grid;grid-template-columns:.8fr 1fr 1.6fr .7fr .7fr .7fr;gap:8px;padding:13px 16px;border-bottom:1px solid var(--border);font-size:.82rem;background:${idx%2===0?'transparent':'rgba(255,255,255,.01)'}">
-          <div style="color:var(--text2)">${o.date_rdv||o.date||'—'}</div>
+          <div style="color:var(--text2)">${o.date_rdv||o.date||'â'}</div>
           <div>
-            <div style="font-weight:700">${o.nom||'—'}</div>
+            <div style="font-weight:700">${o.nom||'â'}</div>
             <div style="font-size:.72rem;color:var(--text3)">${o.telephone||''}</div>
           </div>
-          <div style="color:var(--text2);font-size:.78rem;line-height:1.4">${o.articles||o.pack||'—'}</div>
-          <div style="color:var(--cyan);font-weight:600;font-size:.78rem">${o.creneau||'—'}</div>
-          <div style="color:var(--text2);font-size:.72rem">${(o.adresse||'—').substring(0,25)}</div>
-          <div style="font-weight:800;color:var(--green);text-align:right">${o.total||'—'}</div>
+          <div style="color:var(--text2);font-size:.78rem;line-height:1.4">${o.articles||o.pack||'â'}</div>
+          <div style="color:var(--cyan);font-weight:600;font-size:.78rem">${o.creneau||'â'}</div>
+          <div style="color:var(--text2);font-size:.72rem">${(o.adresse||'â').substring(0,25)}</div>
+          <div style="font-weight:800;color:var(--green);text-align:right">${o.total||'â'}</div>
         </div>`).join('')
-        : '<div class="empty-state">Aucune commande terminée pour cette période</div>'}
+        : '<div class="empty-state">Aucune commande terminÃ©e pour cette pÃ©riode</div>'}
       ${orders.length ? `
         <div style="display:grid;grid-template-columns:.8fr 1fr 1.6fr .7fr .7fr .7fr;gap:8px;padding:16px;background:rgba(0,208,122,.05);border-top:2px solid rgba(0,208,122,.25)">
           <div></div><div></div><div></div><div></div>
@@ -1734,7 +1734,7 @@ function renderFacture(){
     </div>`;
 }
 
-// ════════════════════ LAVEURS ════════════════════
+// ââââââââââââââââââââ LAVEURS ââââââââââââââââââââ
 function renderLaveurs(){
   const c=document.getElementById('lavList');
   document.getElementById('lavCount').textContent=S.laveurs.length+' laveur(s)';
@@ -1743,7 +1743,7 @@ function renderLaveurs(){
   // Find best performer
   const scores=S.laveurs.map(l=>{
     const my=S.orders.filter(o=>o.laveur===l.nom);
-    const done=my.filter(o=>o.status==='Terminé');
+    const done=my.filter(o=>o.status==='TerminÃ©');
     const rev=done.reduce((s,o)=>s+getAmt(o),0);
     const rate=my.length>0?Math.round((done.length/my.length)*100):0;
     return {nom:l.nom,done:done.length,rev,rate};
@@ -1752,23 +1752,23 @@ function renderLaveurs(){
 
   c.innerHTML=S.laveurs.map((l,i)=>{
     const my=S.orders.filter(o=>o.laveur===l.nom);
-    const done=my.filter(o=>o.status==='Terminé');
+    const done=my.filter(o=>o.status==='TerminÃ©');
     const inprog=my.filter(o=>o.status==='En cours').length;
-    const annul=my.filter(o=>o.status==='Annulé').length;
-    const report=my.filter(o=>o.status==='Reporté').length;
+    const annul=my.filter(o=>o.status==='AnnulÃ©').length;
+    const report=my.filter(o=>o.status==='ReportÃ©').length;
     const wait=my.filter(o=>(o.status||'En attente')==='En attente').length;
     const rev=done.reduce((s,o)=>s+getAmt(o),0);
     const rate=my.length>0?Math.round((done.length/my.length)*100):0;
     const isBest=l.nom===best.nom&&done.length>0;
     return `<div class="lav-card" style="${isBest?'border-color:var(--gold);box-shadow:0 0 24px rgba(255,184,0,.15)':''}">
-      ${isBest?`<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;font-size:.68rem;font-weight:800;padding:4px 14px;border-radius:0 0 12px 12px;position:absolute;top:0;left:50%;transform:translateX(-50%);white-space:nowrap;letter-spacing:.08em">🏆 MEILLEUR LAVEUR</div>`:''}
+      ${isBest?`<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;font-size:.68rem;font-weight:800;padding:4px 14px;border-radius:0 0 12px 12px;position:absolute;top:0;left:50%;transform:translateX(-50%);white-space:nowrap;letter-spacing:.08em">ð MEILLEUR LAVEUR</div>`:''}
       <div class="lav-top" style="${isBest?'margin-top:18px':''}">
         <div class="lav-av" style="${isBest?'background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000':''}">
           ${l.nom[0].toUpperCase()}
         </div>
         <div style="flex:1">
-          <div class="lav-name">${l.nom} ${isBest?'🏆':''}</div>
-          <div class="lav-pin">📧 ${l.email||'—'} ${l.phone?'· 📱 +'+l.phone.substring(0,6)+'..':''}${!l.email?'<span style="color:var(--red);font-size:.72rem"> ⚠️ Pas d\'email</span>':''}</div>
+          <div class="lav-name">${l.nom} ${isBest?'ð':''}</div>
+          <div class="lav-pin">ð§ ${l.email||'â'} ${l.phone?'Â· ð± +'+l.phone.substring(0,6)+'..':''}${!l.email?'<span style="color:var(--red);font-size:.72rem"> â ï¸ Pas d\'email</span>':''}</div>
         </div>
       </div>
 
@@ -1777,15 +1777,15 @@ function renderLaveurs(){
         <div class="ls-box"><div class="ls-val" style="color:var(--blue)">${my.length}</div><div class="ls-lbl">Total</div></div>
         <div class="ls-box"><div class="ls-val" style="color:var(--gold)">${wait}</div><div class="ls-lbl">Attente</div></div>
         <div class="ls-box"><div class="ls-val" style="color:var(--orange)">${inprog}</div><div class="ls-lbl">En cours</div></div>
-        <div class="ls-box"><div class="ls-val" style="color:var(--green)">${done.length}</div><div class="ls-lbl">Terminées</div></div>
-        <div class="ls-box"><div class="ls-val" style="color:var(--purple)">${report}</div><div class="ls-lbl">Reportées</div></div>
-        <div class="ls-box"><div class="ls-val" style="color:var(--red)">${annul}</div><div class="ls-lbl">Annulées</div></div>
+        <div class="ls-box"><div class="ls-val" style="color:var(--green)">${done.length}</div><div class="ls-lbl">TerminÃ©es</div></div>
+        <div class="ls-box"><div class="ls-val" style="color:var(--purple)">${report}</div><div class="ls-lbl">ReportÃ©es</div></div>
+        <div class="ls-box"><div class="ls-val" style="color:var(--red)">${annul}</div><div class="ls-lbl">AnnulÃ©es</div></div>
       </div>
 
       <!-- PERFORMANCE BAR -->
       <div style="margin-bottom:10px">
         <div style="display:flex;justify-content:space-between;font-size:.72rem;color:var(--text2);margin-bottom:4px">
-          <span>Taux de réussite</span><span style="font-weight:700;color:${rate>=70?'var(--green)':rate>=40?'var(--gold)':'var(--red)'}">${rate}%</span>
+          <span>Taux de rÃ©ussite</span><span style="font-weight:700;color:${rate>=70?'var(--green)':rate>=40?'var(--gold)':'var(--red)'}">${rate}%</span>
         </div>
         <div style="height:6px;background:rgba(255,255,255,.07);border-radius:10px;overflow:hidden">
           <div style="height:100%;width:${rate}%;background:${rate>=70?'var(--green)':rate>=40?'var(--gold)':'var(--red)'};border-radius:10px;transition:width .5s"></div>
@@ -1794,17 +1794,17 @@ function renderLaveurs(){
 
       <!-- REVENUE -->
       <div class="lav-rev" style="${isBest?'border-color:rgba(255,184,0,.3);background:rgba(255,184,0,.07)':''}">
-        <span class="lav-rev-lbl">💰 Revenus totaux</span>
+        <span class="lav-rev-lbl">ð° Revenus totaux</span>
         <span class="lav-rev-val" style="${isBest?'color:var(--gold)':''}">${rev.toFixed(0)} DH</span>
       </div>
 
       <!-- ACTIONS -->
       <div style="margin-top:10px">
-        <button onclick="openLavDetail(${i})" style="width:100%;padding:11px;border-radius:12px;border:none;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;font-size:.85rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;margin-bottom:8px;box-shadow:0 4px 16px rgba(24,102,255,.3);transition:all .2s">📋 Voir les commandes (${my.length})</button>
+        <button onclick="openLavDetail(${i})" style="width:100%;padding:11px;border-radius:12px;border:none;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;font-size:.85rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;margin-bottom:8px;box-shadow:0 4px 16px rgba(24,102,255,.3);transition:all .2s">ð Voir les commandes (${my.length})</button>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-          <button style="background:rgba(0,200,100,.1);border:1px solid rgba(0,200,100,.3);color:#00c864;padding:9px;border-radius:10px;font-size:.82rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;width:100%;margin-bottom:6px" onclick="copyLaveurLink(${i})">🔗 Copier lien WhatsApp</button>
-          <button class="lav-del" style="color:var(--blue);border-color:rgba(24,102,255,.3)" onclick="openEditLaveur(${i})">✏️ Modifier</button>
-          <button class="lav-del" onclick="delLaveur(${i})">🗑️ Supprimer</button>
+          <button style="background:rgba(0,200,100,.1);border:1px solid rgba(0,200,100,.3);color:#00c864;padding:9px;border-radius:10px;font-size:.82rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;width:100%;margin-bottom:6px" onclick="copyLaveurLink(${i})">ð Copier lien WhatsApp</button>
+          <button class="lav-del" style="color:var(--blue);border-color:rgba(24,102,255,.3)" onclick="openEditLaveur(${i})">âï¸ Modifier</button>
+          <button class="lav-del" onclick="delLaveur(${i})">ðï¸ Supprimer</button>
         </div>
       </div>
     </div>`;
@@ -1817,24 +1817,24 @@ function addLaveur(){
   const pass=(document.getElementById('nPass').value||'').trim();
   const phone=(document.getElementById('nPhone').value||'').replace(/\D/g,'');
   // Validations basiques
-  if(!nom){alert('❌ Entrez le nom du laveur.');return;}
-  if(!email){alert('❌ Entrez un email.');return;}
-  if(!pass){alert('❌ Entrez un mot de passe.');return;}
-  if(pass.length<4){alert('❌ Mot de passe minimum 4 caractères.');return;}
-  // Chercher si email existe déjà
+  if(!nom){alert('â Entrez le nom du laveur.');return;}
+  if(!email){alert('â Entrez un email.');return;}
+  if(!pass){alert('â Entrez un mot de passe.');return;}
+  if(pass.length<4){alert('â Mot de passe minimum 4 caractÃ¨res.');return;}
+  // Chercher si email existe dÃ©jÃ 
   const existIdx=S.laveurs.findIndex(l=>(l.email||'').toLowerCase().trim()===email);
   if(existIdx>=0){
     const existLav=S.laveurs[existIdx];
     if(!existLav.password||existLav.password===''){
-      // Laveur sans mot de passe (importé depuis Sheets) → remplacer automatiquement
+      // Laveur sans mot de passe (importÃ© depuis Sheets) â remplacer automatiquement
       S.laveurs[existIdx]={nom,email,password:pass,phone:phone||'',dateAdded:new Date().toLocaleDateString('fr-FR')};
       saveLaveursLocal();
       renderLaveurs();
       ['nNom','nEmail','nPass','nPhone'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
-      addNotif('👷 Laveur mis à jour: '+nom,'info');
-      // Générer le lien magic pour le laveur
-  const magicLink=window.location.origin+window.location.pathname+'#login='+btoa(nom+':'+email+':'+pass);
-  const msg='✅ '+nom+' ajouté!\n\n📱 Envoie ce lien au laveur par WhatsApp:\n'+magicLink+'\n\nOu il peut se connecter avec:\n   Email: '+email+'\n   Mot de passe: '+pass;
+      addNotif('ð· Laveur mis Ã  jour: '+nom,'info');
+      // GÃ©nÃ©rer le lien magic pour le laveur
+  const rawStr=nom+':'+email+':'+pass;const magicLink=window.location.origin+window.location.pathname+'#login='+btoa(unescape(encodeURIComponent(rawStr)));
+  const msg='â '+nom+' ajoutÃ©!\n\nð± Envoie ce lien au laveur par WhatsApp:\n'+magicLink+'\n\nOu il peut se connecter avec:\n   Email: '+email+'\n   Mot de passe: '+pass;
   alert(msg);
   // Copier le lien dans le presse-papier
   try{navigator.clipboard.writeText(magicLink);}catch(e){}
@@ -1845,14 +1845,14 @@ function addLaveur(){
       }catch(e){}
       return;
     }
-    // Laveur avec mot de passe → proposer modification
-    if(confirm('⚠️ Email déjà utilisé par: '+existLav.nom+'\n\nVoulez-vous modifier ce laveur?\n✅ OK = Modifier\n❌ Annuler = Ne rien faire')){
+    // Laveur avec mot de passe â proposer modification
+    if(confirm('â ï¸ Email dÃ©jÃ  utilisÃ© par: '+existLav.nom+'\n\nVoulez-vous modifier ce laveur?\nâ OK = Modifier\nâ Annuler = Ne rien faire')){
       S.laveurs[existIdx].nom=nom;
       S.laveurs[existIdx].password=pass;
       if(phone)S.laveurs[existIdx].phone=phone;
       saveLaveursLocal();renderLaveurs();
       ['nNom','nEmail','nPass','nPhone'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
-      alert('✅ '+nom+' modifié!');
+      alert('â '+nom+' modifiÃ©!');
     }
     return;
   }
@@ -1860,17 +1860,17 @@ function addLaveur(){
   const newLav={nom,email,password:pass,phone:phone||'',dateAdded:new Date().toLocaleDateString('fr-FR')};
   S.laveurs.push(newLav);
   saveLaveursLocal();
-  // Sauvegarder aussi en shared localStorage pour accès cross-device via magic link
+  // Sauvegarder aussi en shared localStorage pour accÃ¨s cross-device via magic link
   try{
     const sharedKey='dc_shared_'+btoa(email).replace(/=/g,'');
     localStorage.setItem(sharedKey,JSON.stringify({nom,email,password:pass,phone:phone||''}));
   }catch(e){}
   renderLaveurs();
   ['nNom','nEmail','nPass','nPhone'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
-  addNotif('👷 Laveur ajouté: '+nom,'info');
-  // Générer le lien magic pour le laveur
+  addNotif('ð· Laveur ajoutÃ©: '+nom,'info');
+  // GÃ©nÃ©rer le lien magic pour le laveur
   const magicLink=window.location.origin+window.location.pathname+'#login='+btoa(nom+':'+email+':'+pass);
-  const msg='✅ '+nom+' ajouté!\n\n📱 Envoie ce lien au laveur par WhatsApp:\n'+magicLink+'\n\nOu il peut se connecter avec:\n   Email: '+email+'\n   Mot de passe: '+pass;
+  const msg='â '+nom+' ajoutÃ©!\n\nð± Envoie ce lien au laveur par WhatsApp:\n'+magicLink+'\n\nOu il peut se connecter avec:\n   Email: '+email+'\n   Mot de passe: '+pass;
   alert(msg);
   // Copier le lien dans le presse-papier
   try{navigator.clipboard.writeText(magicLink);}catch(e){}
@@ -1890,7 +1890,7 @@ async function delLaveur(i){
   }catch(e){}
 }
 
-// ── EDIT LAVEUR ───────────────────────────────────────────────────
+// ââ EDIT LAVEUR âââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 function openEditLaveur(i){
   S.editLavIdx=i;const l=S.laveurs[i];
@@ -1907,34 +1907,34 @@ function saveEditLaveur(){
   const pass=(document.getElementById('elPass').value||'').trim();
   const phone=(document.getElementById('elPhone').value||'').replace(/\D/g,'');
   // Validations
-  if(!nom){alert('❌ Entrez le nom.');return;}
-  if(!email){alert('❌ Entrez un email.');return;}
-  if(pass&&pass.length<4){alert('❌ Mot de passe minimum 4 caractères.');return;}
-  // Récupérer laveur
+  if(!nom){alert('â Entrez le nom.');return;}
+  if(!email){alert('â Entrez un email.');return;}
+  if(pass&&pass.length<4){alert('â Mot de passe minimum 4 caractÃ¨res.');return;}
+  // RÃ©cupÃ©rer laveur
   const idx=S.editLavIdx;
-  if(idx===null||idx===undefined||!S.laveurs[idx]){alert('❌ Erreur: laveur introuvable.');return;}
+  if(idx===null||idx===undefined||!S.laveurs[idx]){alert('â Erreur: laveur introuvable.');return;}
   const oldNom=S.laveurs[idx].nom;
-  // METTRE À JOUR
+  // METTRE Ã JOUR
   S.laveurs[idx].nom=nom;
   S.laveurs[idx].email=email;
   if(phone)S.laveurs[idx].phone=phone;
   // Mot de passe: si fourni, remplacer; sinon garder l'ancien
   if(pass){
     S.laveurs[idx].password=pass;
-    console.log('[DOMICLEAN] Mot de passe changé pour',nom);
+    console.log('[DOMICLEAN] Mot de passe changÃ© pour',nom);
   }
-  // SAUVEGARDER IMMÉDIATEMENT
+  // SAUVEGARDER IMMÃDIATEMENT
   saveLaveursLocal();
-  // Mettre à jour les commandes si nom changé
+  // Mettre Ã  jour les commandes si nom changÃ©
   if(oldNom!==nom){
     S.orders.forEach(o=>{if(o.laveur===oldNom)o.laveur=nom;});
     localStorage.setItem('dc_orders',JSON.stringify(S.orders));
   }
   closeEditLaveur();
   renderAll();
-  addNotif('✏️ Laveur modifié: '+nom,'info');
-  alert('✅ '+nom+' modifié avec succès!'+(pass?'\n🔑 Nouveau mot de passe: '+pass:''));
-  // Sheets en arrière-plan
+  addNotif('âï¸ Laveur modifiÃ©: '+nom,'info');
+  alert('â '+nom+' modifiÃ© avec succÃ¨s!'+(pass?'\nð Nouveau mot de passe: '+pass:''));
+  // Sheets en arriÃ¨re-plan
   try{
     const form=new FormData();form.append('action','updateLaveur');
     form.append('rowIndex',S.laveurs[idx].rowIndex||'');
@@ -1944,10 +1944,10 @@ function saveEditLaveur(){
   }catch(e){}
 }
 
-// ════════════════════ EDIT ORDER MODAL ════════════════════
+// ââââââââââââââââââââ EDIT ORDER MODAL ââââââââââââââââââââ
 function openEdit(idx){
   S.editIdx=idx;const o=S.orders[idx];
-  document.getElementById('editOrderInfo').textContent=`${o.nom||'Client'} — ${o.total||''}`;
+  document.getElementById('editOrderInfo').textContent=`${o.nom||'Client'} â ${o.total||''}`;
   document.getElementById('eNom').value=o.nom||'';
   document.getElementById('eTel').value=o.telephone||'';
   document.getElementById('eAddr').value=o.adresse||'';
@@ -1957,7 +1957,7 @@ function openEdit(idx){
   document.getElementById('eStatus').value=o.status||'En attente';
   // Populate laveur dropdown
   const sel=document.getElementById('eLaveur');
-  sel.innerHTML='<option value="">— Non assigné —</option>'+S.laveurs.map(l=>`<option value="${l.nom}" ${o.laveur===l.nom?'selected':''}>${l.nom}</option>`).join('');
+  sel.innerHTML='<option value="">â Non assignÃ© â</option>'+S.laveurs.map(l=>`<option value="${l.nom}" ${o.laveur===l.nom?'selected':''}>${l.nom}</option>`).join('');
   // Creneau
   const cr=document.getElementById('eCreneau');
   for(let i=0;i<cr.options.length;i++)if(cr.options[i].value===o.creneau){cr.selectedIndex=i;break;}
@@ -1977,55 +1977,55 @@ function saveEdit(){
     laveur:document.getElementById('eLaveur').value
   };
   updateOrderFull(S.editIdx,fields);
-  addNotif(`✏️ Commande de ${fields.nom} modifiée`,'info');
+  addNotif(`âï¸ Commande de ${fields.nom} modifiÃ©e`,'info');
   closeEdit();
 }
 
-// ════════════════════ ASSIGN MODAL ════════════════════
+// ââââââââââââââââââââ ASSIGN MODAL ââââââââââââââââââââ
 function openAssign(idx){
   S.assignIdx=idx;S.selLav=null;
   const o=S.orders[idx];
-  document.getElementById('assignInfo').textContent=`${o.nom||'Client'} — ${o.total||''}`;
+  document.getElementById('assignInfo').textContent=`${o.nom||'Client'} â ${o.total||''}`;
   const c=document.getElementById('lavOpts');
   if(!S.laveurs.length){c.innerHTML='<div style="color:var(--text3);text-align:center;padding:16px">Aucun laveur disponible.</div>';}
   else c.innerHTML=S.laveurs.map(l=>`<div class="lav-opt" onclick="selLav('${l.nom}',this)">
     <div class="lo-av">${l.nom[0].toUpperCase()}</div>
     <div>
       <div class="lo-name">${l.nom}</div>
-      <div style="font-size:.72rem;margin-top:2px;color:var(--text3)">${(()=>{const my=S.orders.filter(o=>o.laveur===l.nom&&o.status==='En cours').length;return my>0?`<span style='color:var(--gold)'>⚡ ${my} en cours</span>`:'<span style="color:var(--green)">✅ Disponible</span>'})()}</div>
+      <div style="font-size:.72rem;margin-top:2px;color:var(--text3)">${(()=>{const my=S.orders.filter(o=>o.laveur===l.nom&&o.status==='En cours').length;return my>0?`<span style='color:var(--gold)'>â¡ ${my} en cours</span>`:'<span style="color:var(--green)">â Disponible</span>'})()}</div>
     </div>
-    <span class="lo-ck">✓</span>
+    <span class="lo-ck">â</span>
   </div>`).join('');
   document.getElementById('assignOv').classList.add('open');
 }
 function selLav(nom,el){S.selLav=nom;document.querySelectorAll('.lav-opt').forEach(e=>e.classList.remove('sel'));el.classList.add('sel');}
 function confirmAssign(){
-  if(!S.selLav){alert('Sélectionnez un laveur.');return;}
+  if(!S.selLav){alert('SÃ©lectionnez un laveur.');return;}
   const o=S.orders[S.assignIdx];
-  // Transfert direct : mise à jour statut + laveur
+  // Transfert direct : mise Ã  jour statut + laveur
   updateStatus(S.assignIdx,'En cours',S.selLav,null);
   // Notification admin plateforme uniquement
-  addNotif(`👷 Commande de ${o.nom||'client'} transférée à ${S.selLav}`,'assign');
-  showPush(`✅ Transféré à ${S.selLav}`,`${o.nom||'Client'} — ${o.total||''} — ${o.date_rdv||''} ${o.creneau||''}`,'👷');
-  // Notification plateforme pour le laveur (visible à sa prochaine connexion ou en live)
+  addNotif(`ð· Commande de ${o.nom||'client'} transfÃ©rÃ©e Ã  ${S.selLav}`,'assign');
+  showPush(`â TransfÃ©rÃ© Ã  ${S.selLav}`,`${o.nom||'Client'} â ${o.total||''} â ${o.date_rdv||''} ${o.creneau||''}`,'ð·');
+  // Notification plateforme pour le laveur (visible Ã  sa prochaine connexion ou en live)
   addLaveurNotif(S.selLav, {
     type:'assign',
-    msg:`🆕 Nouvelle commande assignée !`,
-    detail:`Client : ${o.nom||'—'} | Date : ${o.date_rdv||'—'} ${o.creneau||''} | Total : ${o.total||'—'}`,
+    msg:`ð Nouvelle commande assignÃ©e !`,
+    detail:`Client : ${o.nom||'â'} | Date : ${o.date_rdv||'â'} ${o.creneau||''} | Total : ${o.total||'â'}`,
     orderId: o.rowIndex||o.id||Date.now(),
     time: Date.now()
   });
-  // ✅ FIX: Si le laveur est connecté sur cette session → rafraîchir immédiatement
+  // â FIX: Si le laveur est connectÃ© sur cette session â rafraÃ®chir immÃ©diatement
   if(S.curUser&&S.userType==='laveur'&&S.curUser.nom===S.selLav){
     renderLaveurOrders();
     renderLavNotifs();
   }
-  // ✅ FIX: Note dans la console pour debug — la commande est sauvée dans Google Sheets
-  // Le laveur la verra au prochain cycle de polling (8s) ou à sa prochaine connexion
-  console.log(`[DOMICLEAN] Commande ${o.id||o.rowIndex} assignée à ${S.selLav} → Google Sheets mis à jour`);
+  // â FIX: Note dans la console pour debug â la commande est sauvÃ©e dans Google Sheets
+  // Le laveur la verra au prochain cycle de polling (8s) ou Ã  sa prochaine connexion
+  console.log(`[DOMICLEAN] Commande ${o.id||o.rowIndex} assignÃ©e Ã  ${S.selLav} â Google Sheets mis Ã  jour`);
   closeAssign();
 }
-// ═══════════ NOTIFICATIONS LAVEUR PLATEFORME ═══════════
+// âââââââââââ NOTIFICATIONS LAVEUR PLATEFORME âââââââââââ
 function addLaveurNotif(lavNom, notif){
   const key='dc_lav_notifs_'+lavNom;
   let arr=[];
@@ -2081,9 +2081,9 @@ function toggleLavNotif(){
 
 function closeAssign(){document.getElementById('assignOv').classList.remove('open');}
 
-// ════════════════════ LAVEUR PAGE ════════════════════
+// ââââââââââââââââââââ LAVEUR PAGE ââââââââââââââââââââ
 let lavRepFilter='today';
-// ════════════════════ LAVEUR TABS ════════════════════
+// ââââââââââââââââââââ LAVEUR TABS ââââââââââââââââââââ
 function lavTab(tab){
   document.querySelectorAll('.ltab-panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.lnav-btn').forEach(b=>b.classList.remove('active'));
@@ -2097,11 +2097,11 @@ function renderLaveurOrders(){
   if(!S.curUser||S.userType!=='laveur')return;
   const nom=S.curUser.nom;
   const my=S.orders.filter(o=>o.laveur===nom);
-  const done=my.filter(o=>o.status==='Terminé');
+  const done=my.filter(o=>o.status==='TerminÃ©');
   const nouvelles=my.filter(o=>(o.status||'En attente')==='En attente');
   const encours=my.filter(o=>o.status==='En cours');
-  const annul=my.filter(o=>o.status==='Annulé');
-  const report=my.filter(o=>o.status==='Reporté');
+  const annul=my.filter(o=>o.status==='AnnulÃ©');
+  const report=my.filter(o=>o.status==='ReportÃ©');
   const actives=[...nouvelles,...encours];
   const totalRev=done.reduce((s,o)=>s+getAmt(o),0);
   const rate=my.length>0?Math.round((done.length/my.length)*100):0;
@@ -2109,7 +2109,7 @@ function renderLaveurOrders(){
   // Hero card
   document.getElementById('lavRevBanner').textContent=totalRev.toFixed(0)+' DH';
   const rd=document.getElementById('lavRateDisp');
-  if(rd)rd.textContent=`Taux de réussite : ${rate}% · ${done.length}/${my.length} commandes`;
+  if(rd)rd.textContent=`Taux de rÃ©ussite : ${rate}% Â· ${done.length}/${my.length} commandes`;
   const av=document.getElementById('lavAvatarLetter');
   if(av)av.textContent=nom[0].toUpperCase();
 
@@ -2135,7 +2135,7 @@ function renderLaveurOrders(){
 
   lavReport(S.lavRepFilter||'today',null);
 
-  // Badges supplémentaires (anciennement dans le doublon)
+  // Badges supplÃ©mentaires (anciennement dans le doublon)
   document.getElementById('lmW').textContent=nouvelles.length;
   document.getElementById('lmP').textContent=encours.length;
   document.getElementById('lmD').textContent=done.length;
@@ -2143,7 +2143,7 @@ function renderLaveurOrders(){
   const lavRevBannerEl=document.getElementById('lavRevBanner');
   if(lavRevBannerEl)lavRevBannerEl.textContent=totalRev.toFixed(0)+' DH';
   const rd2=document.getElementById('lavRateDisp');
-  if(rd2)rd2.textContent=`Taux de réussite : ${rate}% · ${done.length}/${my.length}`;
+  if(rd2)rd2.textContent=`Taux de rÃ©ussite : ${rate}% Â· ${done.length}/${my.length}`;
 
   // Badge factures en attente (anciennement dans le wrapper _origRender)
   const pendingFac=getFactures().filter(f=>f.laveur===nom&&f.status==='pending').length;
@@ -2175,7 +2175,7 @@ function renderLavDonut(done,report,cancel,total,rate){
   set('donutCancel',cancelArr,cancelOffset);
   const pEl=document.getElementById('lavDonutPct');if(pEl)pEl.textContent=rate+'%';
   const l=(id,txt)=>{const el=document.getElementById(id);if(el)el.textContent=txt;};
-  l('legDone',`Terminées : ${done}`);l('legReport',`Reportées : ${report}`);l('legCancel',`Annulées : ${cancel}`);
+  l('legDone',`TerminÃ©es : ${done}`);l('legReport',`ReportÃ©es : ${report}`);l('legCancel',`AnnulÃ©es : ${cancel}`);
 }
 
 function lavChartPeriod(d,btn){
@@ -2198,7 +2198,7 @@ function renderLavRevChart(days,nom){
     const d=new Date(now);d.setDate(d.getDate()-i);
     const lbl=d.toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit'});
     const rev=S.orders.filter(o=>{
-      if(o.laveur!==nom||o.status!=='Terminé')return false;
+      if(o.laveur!==nom||o.status!=='TerminÃ©')return false;
       const od=parseDate(o.date_commande||o.date_rdv||'');
       return od&&od.toDateString()===d.toDateString();
     }).reduce((s,o)=>s+getAmt(o),0);
@@ -2223,44 +2223,44 @@ function renderLavTerminees(done){
   if(!sum||!list)return;
   const rev=done.reduce((s,o)=>s+getAmt(o),0);
   sum.innerHTML=`<div style="background:linear-gradient(135deg,rgba(0,208,122,.12),rgba(0,208,122,.04));border:1px solid rgba(0,208,122,.25);border-radius:14px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
-    <div><div style="font-size:.78rem;color:var(--text2);margin-bottom:4px">💰 Total revenus générés</div>
+    <div><div style="font-size:.78rem;color:var(--text2);margin-bottom:4px">ð° Total revenus gÃ©nÃ©rÃ©s</div>
     <div style="font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--green)">${rev.toFixed(0)} DH</div></div>
-    <div style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--green)">${done.length} ✅</div>
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--green)">${done.length} â</div>
   </div>`;
   renderLavList('lavTermineeList',done);
 }
 
-// [DUPLICATE SUPPRIMÉ - renderLaveurOrders définie une seule fois à la ligne 1918]
+// [DUPLICATE SUPPRIMÃ - renderLaveurOrders dÃ©finie une seule fois Ã  la ligne 1918]
 
 function renderLavList(containerId,orders){
   const c=document.getElementById(containerId);if(!c)return;
   const t=TR[curLang]||TR.fr;
-  if(!orders.length){c.innerHTML=`<div class="no-orders"><div class="no-ico">📭</div><p style="font-size:.85rem;color:var(--text3)">${t.empty_orders||'Aucune commande'}</p></div>`;return;}
+  if(!orders.length){c.innerHTML=`<div class="no-orders"><div class="no-ico">ð­</div><p style="font-size:.85rem;color:var(--text3)">${t.empty_orders||'Aucune commande'}</p></div>`;return;}
   c.innerHTML=orders.map(o=>{
     const idx=S.orders.indexOf(o);const s=o.status||'En attente';
     return `<div class="lav-ocard">
       <div class="loc-top">
-        <div><div class="loc-name">${o.nom||'—'}</div><div class="loc-pack">${(o.articles||o.pack||'').substring(0,50)}</div></div>
+        <div><div class="loc-name">${o.nom||'â'}</div><div class="loc-pack">${(o.articles||o.pack||'').substring(0,50)}</div></div>
         <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px">
           ${sbadge(s)}
-          <span style="background:rgba(0,200,255,.1);border:1px solid rgba(0,200,255,.25);color:var(--cyan);font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:10px">⏰ ${o.creneau||'—'}</span>
+          <span style="background:rgba(0,200,255,.1);border:1px solid rgba(0,200,255,.25);color:var(--cyan);font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:10px">â° ${o.creneau||'â'}</span>
         </div>
       </div>
       <div class="loc-info">
-        📞 <b>${o.telephone||'—'}</b><br>
-        📍 <b>${o.adresse||'—'}</b><br>
-        📅 <b>${o.date_rdv||o.date||'—'}</b><br>
-        💰 <b>${o.total||'—'}</b>
-        ${o.cancel_reason?`<br><div style="margin-top:6px;background:rgba(255,68,68,.08);border:1px solid rgba(255,68,68,.2);border-radius:8px;padding:7px 10px;font-size:.8rem;color:var(--red)">❌ <b>Raison :</b> ${o.cancel_reason}</div>`:''}
-        ${o.report_note?`<br><div style="margin-top:6px;background:rgba(155,89,182,.08);border:1px solid rgba(155,89,182,.2);border-radius:8px;padding:7px 10px;font-size:.8rem;color:var(--purple)">📅 <b>Report :</b> ${o.report_note}</div>`:''}
+        ð <b>${o.telephone||'â'}</b><br>
+        ð <b>${o.adresse||'â'}</b><br>
+        ð <b>${o.date_rdv||o.date||'â'}</b><br>
+        ð° <b>${o.total||'â'}</b>
+        ${o.cancel_reason?`<br><div style="margin-top:6px;background:rgba(255,68,68,.08);border:1px solid rgba(255,68,68,.2);border-radius:8px;padding:7px 10px;font-size:.8rem;color:var(--red)">â <b>Raison :</b> ${o.cancel_reason}</div>`:''}
+        ${o.report_note?`<br><div style="margin-top:6px;background:rgba(155,89,182,.08);border:1px solid rgba(155,89,182,.2);border-radius:8px;padding:7px 10px;font-size:.8rem;color:var(--purple)">ð <b>Report :</b> ${o.report_note}</div>`:''}
       </div>
       <div class="status-btns">
-        <button class="stbtn w ${s==='En attente'?'on':''}" onclick="setLavStatus(${idx},'En attente')">${t.btn_stw||'⏳'}</button>
-        <button class="stbtn p ${s==='En cours'?'on':''}" onclick="setLavStatus(${idx},'En cours')">${t.btn_stp||'🔵'}</button>
-        <button class="stbtn d ${s==='Terminé'?'on':''}" onclick="setLavStatus(${idx},'Terminé')">${t.btn_std||'✅'}</button>
-        <button class="stbtn a ${s==='Annulé'?'on':''}" onclick="openCancelOv(${idx})">${t.btn_sta||'❌'}</button>
+        <button class="stbtn w ${s==='En attente'?'on':''}" onclick="setLavStatus(${idx},'En attente')">${t.btn_stw||'â³'}</button>
+        <button class="stbtn p ${s==='En cours'?'on':''}" onclick="setLavStatus(${idx},'En cours')">${t.btn_stp||'ðµ'}</button>
+        <button class="stbtn d ${s==='TerminÃ©'?'on':''}" onclick="setLavStatus(${idx},'TerminÃ©')">${t.btn_std||'â'}</button>
+        <button class="stbtn a ${s==='AnnulÃ©'?'on':''}" onclick="openCancelOv(${idx})">${t.btn_sta||'â'}</button>
       </div>
-      <button onclick="openReporterOv(${idx})" style="width:100%;margin-top:8px;padding:9px;border-radius:10px;border:1.5px solid rgba(255,184,0,.3);background:rgba(255,184,0,.06);color:var(--gold);font-size:.8rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif">${t.btn_reporter||'📅 Reporter'}</button>
+      <button onclick="openReporterOv(${idx})" style="width:100%;margin-top:8px;padding:9px;border-radius:10px;border:1.5px solid rgba(255,184,0,.3);background:rgba(255,184,0,.06);color:var(--gold);font-size:.8rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif">${t.btn_reporter||'ð Reporter'}</button>
     </div>`;
   }).join('');
 }
@@ -2273,10 +2273,10 @@ function closeCancelOv(){document.getElementById('cancelOv').classList.remove('o
 function confirmCancel(){
   const r=document.getElementById('cancelReason').value.trim();
   if(!r){alert('Veuillez saisir une raison.');return;}
-  updateStatus(S.cancelIdx,'Annulé',null,r);closeCancelOv();
+  updateStatus(S.cancelIdx,'AnnulÃ©',null,r);closeCancelOv();
 }
 
-// ── NOUVELLE COMMANDE MANUELLE ────────────────────────────────────
+// ââ NOUVELLE COMMANDE MANUELLE ââââââââââââââââââââââââââââââââââââ
 function openNewOrder(){
   document.getElementById('noNom').value='';
   document.getElementById('noTel').value='';
@@ -2286,7 +2286,7 @@ function openNewOrder(){
   document.getElementById('noTotal').value='';
   // Populate laveur select
   const sel=document.getElementById('noLaveur');
-  sel.innerHTML='<option value="">— Non assigné —</option>'+S.laveurs.map(l=>`<option value="${l.nom}">${l.nom}</option>`).join('');
+  sel.innerHTML='<option value="">â Non assignÃ© â</option>'+S.laveurs.map(l=>`<option value="${l.nom}">${l.nom}</option>`).join('');
   document.getElementById('newOrderOv').classList.add('open');
 }
 function closeNewOrder(){document.getElementById('newOrderOv').classList.remove('open');}
@@ -2316,7 +2316,7 @@ async function saveNewOrder(){
   const form=new FormData();
   Object.keys(payload).forEach(k=>form.append(k,payload[k]||''));
   try{await fetch(CFG.sheetUrl,{method:'POST',mode:'no-cors',body:form});}catch(e){}
-  addNotif(`➕ Nouvelle commande ajoutée : ${nom}`,'info');
+  addNotif(`â Nouvelle commande ajoutÃ©e : ${nom}`,'info');
   closeNewOrder();
   renderAll();
   // Switch to orders panel
@@ -2325,7 +2325,7 @@ async function saveNewOrder(){
 function openReporterOv(idx){
   S.reporterIdx=idx;
   const o=S.orders[idx];
-  document.getElementById('reporterInfo').textContent=`${o.nom||'Client'} — Créneau actuel : ${o.creneau||'—'} (${o.date_rdv||'—'})`;
+  document.getElementById('reporterInfo').textContent=`${o.nom||'Client'} â CrÃ©neau actuel : ${o.creneau||'â'} (${o.date_rdv||'â'})`;
   // Pre-fill with current date
   document.getElementById('reporterDate').value=o.date_rdv||new Date().toISOString().split('T')[0];
   document.getElementById('reporterRaison').value='';
@@ -2342,21 +2342,21 @@ function confirmReporter(){
   if(!date){alert('Veuillez choisir une date.');return;}
   const o=S.orders[S.reporterIdx];
   const oldCreneau=o.creneau;const oldDate=o.date_rdv;
-  const note=raison?` — Raison: ${raison}`:'';
-  const reportNote=`Reporté de ${oldDate} ${oldCreneau} → ${date} ${creneau}${note}`;
+  const note=raison?` â Raison: ${raison}`:'';
+  const reportNote=`ReportÃ© de ${oldDate} ${oldCreneau} â ${date} ${creneau}${note}`;
   // Save report info for reminder
   const reminders=JSON.parse(localStorage.getItem('dc_reminders')||'[]');
   reminders.push({orderId:o.id||S.reporterIdx,nom:o.nom,date,creneau,notified:false});
   localStorage.setItem('dc_reminders',JSON.stringify(reminders));
-  updateOrderFull(S.reporterIdx,{date_rdv:date,creneau,status:'Reporté',report_note:reportNote});
-  addNotif(`📅 Commande de ${o.nom} reportée au ${date} – ${creneau}`,'info');
+  updateOrderFull(S.reporterIdx,{date_rdv:date,creneau,status:'ReportÃ©',report_note:reportNote});
+  addNotif(`ð Commande de ${o.nom} reportÃ©e au ${date} â ${creneau}`,'info');
   closeReporterOv();
 }
 
-// ── DELETE ORDER ──────────────────────────────────────────────────
+// ââ DELETE ORDER ââââââââââââââââââââââââââââââââââââââââââââââââââ
 function deleteOrder(idx){
   const o=S.orders[idx];
-  if(!confirm(`Supprimer définitivement la commande de ${o.nom||'ce client'} ?\nCette action est irréversible.`))return;
+  if(!confirm(`Supprimer dÃ©finitivement la commande de ${o.nom||'ce client'} ?\nCette action est irrÃ©versible.`))return;
   S.orders.splice(idx,1);
   localStorage.setItem('dc_orders',JSON.stringify(S.orders));
   // Send delete to sheet
@@ -2364,25 +2364,25 @@ function deleteOrder(idx){
   form.append('action','deleteOrder');
   form.append('rowIndex',o.rowIndex);
   try{fetch(CFG.sheetUrl,{method:'POST',mode:'no-cors',body:form});}catch(e){}
-  addNotif(`🗑️ Commande de ${o.nom||'client'} supprimée`,'info');
+  addNotif(`ðï¸ Commande de ${o.nom||'client'} supprimÃ©e`,'info');
   renderAll();
 }
 
-// ── REMINDER FOR REPORTED ORDERS ──────────────────────────────────
+// ââ REMINDER FOR REPORTED ORDERS ââââââââââââââââââââââââââââââââââ
 function checkReportedReminders(){
   const reminders=JSON.parse(localStorage.getItem('dc_reminders')||'[]');
   const today=new Date().toISOString().split('T')[0];
   let updated=false;
   reminders.forEach(r=>{
     if(!r.notified&&r.date===today){
-      addNotif(`🔔 RAPPEL — Commande reportée de ${r.nom} AUJOURD'HUI à ${r.creneau} !`,'reminder');
+      addNotif(`ð RAPPEL â Commande reportÃ©e de ${r.nom} AUJOURD'HUI Ã  ${r.creneau} !`,'reminder');
       r.notified=true;updated=true;
     }
     // Also remind 1 day before
     const tomorrow=new Date();tomorrow.setDate(tomorrow.getDate()+1);
     const tomorrowStr=tomorrow.toISOString().split('T')[0];
     if(!r.notifiedBefore&&r.date===tomorrowStr){
-      addNotif(`⏰ DEMAIN — Commande reportée de ${r.nom} à ${r.creneau}`,'reminder');
+      addNotif(`â° DEMAIN â Commande reportÃ©e de ${r.nom} Ã  ${r.creneau}`,'reminder');
       r.notifiedBefore=true;updated=true;
     }
   });
@@ -2393,7 +2393,7 @@ function checkReportedReminders(){
 function lavReport(period,btn){
   S.lavRepFilter=period;
   if(btn){document.querySelectorAll('.lrb-filters .filt-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');}
-  const now=new Date();const my=S.orders.filter(o=>o.laveur===S.curUser?.nom&&o.status==='Terminé');
+  const now=new Date();const my=S.orders.filter(o=>o.laveur===S.curUser?.nom&&o.status==='TerminÃ©');
   let filtered=my;
   if(period==='today'){const t=now.toLocaleDateString('fr-FR');filtered=my.filter(o=>(o.date_commande||'').includes(t));}
   else if(period==='week'){const sw=new Date(now);sw.setDate(now.getDate()-7);filtered=my.filter(o=>{const d=parseDate(o.date_commande||'');return d&&d>=sw;});}
@@ -2405,7 +2405,7 @@ function lavReport(period,btn){
 function lavReportCustom(){
   const from=document.getElementById('lavRepFrom').value;
   const to=document.getElementById('lavRepTo').value;
-  const my=S.orders.filter(o=>o.laveur===S.curUser?.nom&&o.status==='Terminé');
+  const my=S.orders.filter(o=>o.laveur===S.curUser?.nom&&o.status==='TerminÃ©');
   let filtered=my;
   if(from)filtered=filtered.filter(o=>{const d=parseDate(o.date_commande||'');return d&&d>=new Date(from);});
   if(to)filtered=filtered.filter(o=>{const d=parseDate(o.date_commande||'');return d&&d<=new Date(to);});
@@ -2414,7 +2414,7 @@ function lavReportCustom(){
   if(rd)rd.textContent=filtered.length;if(rr)rr.textContent=rev.toFixed(0)+' DH';
 }
 
-// ════════════════════ NOTIFICATIONS ════════════════════
+// ââââââââââââââââââââ NOTIFICATIONS ââââââââââââââââââââ
 function addNotif(msg,type){
   S.notifs.unshift({msg,type,time:new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'}),read:false});
   if(S.notifs.length>20)S.notifs.pop();
@@ -2424,11 +2424,11 @@ function addNotif(msg,type){
 function renderNotifs(){
   const c=document.getElementById('nList');
   if(!S.notifs.length){c.innerHTML='<div class="nd-empty">Aucune notification</div>';return;}
-  const ico={new:'🆕',done:'✅',assign:'👷',info:'ℹ️',cancel:'❌',reminder:'🔔'};
+  const ico={new:'ð',done:'â',assign:'ð·',info:'â¹ï¸',cancel:'â',reminder:'ð'};
   c.innerHTML=S.notifs.slice(0,10).map(n=>{
     const isReminder=n.type==='reminder';
     return `<div class="ni ${n.read?'':'unread'}" style="${isReminder?'background:rgba(255,184,0,.08);border-left:3px solid var(--gold);':''}">
-      <div class="ni-ico">${ico[n.type]||'🔔'}</div>
+      <div class="ni-ico">${ico[n.type]||'ð'}</div>
       <div><div class="ni-msg" style="${isReminder?'color:var(--gold);font-weight:700;':''}">${n.msg}</div><div class="ni-time">${n.time}</div></div>
     </div>`;
   }).join('');
@@ -2440,11 +2440,11 @@ function toggleNotif(){
 }
 function clearNotifs(){S.notifs=[];localStorage.setItem('dc_notifs','[]');renderNotifs();document.getElementById('nDrop').classList.remove('open');}
 
-// ════════════════════ FACTURES SYSTEM ════════════════════
+// ââââââââââââââââââââ FACTURES SYSTEM ââââââââââââââââââââ
 function getFactures(){return JSON.parse(localStorage.getItem('dc_factures')||'[]');}
 function saveFactures(f){localStorage.setItem('dc_factures',JSON.stringify(f));}
 
-// ── ADMIN: Switch sub-tabs ────────────────────────────────────────
+// ââ ADMIN: Switch sub-tabs ââââââââââââââââââââââââââââââââââââââââ
 function switchFacTab(tab,btn){
   ['list','create','view'].forEach(t=>{
     document.getElementById('fac-sub-'+t).style.display=t===tab?'block':'none';
@@ -2456,7 +2456,7 @@ function switchFacTab(tab,btn){
   if(tab==='view')renderFactureSelects();
 }
 
-// ── ADMIN: Populate create selects ───────────────────────────────
+// ââ ADMIN: Populate create selects âââââââââââââââââââââââââââââââ
 function renderFacCreateSelects(){
   const sel=document.getElementById('facNewLav');
   if(!sel)return;
@@ -2472,14 +2472,14 @@ function renderFacCreateSelects(){
   };
 }
 
-// ── ADMIN: Auto-fill preview ──────────────────────────────────────
+// ââ ADMIN: Auto-fill preview ââââââââââââââââââââââââââââââââââââââ
 function autoFillFac(){
   const nom=document.getElementById('facNewLav')?.value;
   const period=document.getElementById('facNewPeriod')?.value||'month';
   const prev=document.getElementById('facPreview');
   const pc=document.getElementById('facPreviewContent');
   if(!nom||!prev||!pc){if(prev)prev.style.display='none';return;}
-  let orders=S.orders.filter(o=>o.laveur===nom&&o.status==='Terminé');
+  let orders=S.orders.filter(o=>o.laveur===nom&&o.status==='TerminÃ©');
   const now=new Date();
   if(period==='week'){const sw=new Date(now);sw.setDate(now.getDate()-7);orders=orders.filter(o=>{const d=parseDate(o.date_commande||'');return d&&d>=sw;});}
   else if(period==='month'){const sm=new Date(now.getFullYear(),now.getMonth(),1);orders=orders.filter(o=>{const d=parseDate(o.date_commande||'');return d&&d>=sm;});}
@@ -2492,39 +2492,39 @@ function autoFillFac(){
   const total=orders.reduce((s,o)=>s+getAmt(o),0);
   prev.style.display='block';
   pc.innerHTML=`<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-    <div style="font-size:.85rem;color:var(--text2)">👷 <b style="color:var(--text)">${nom}</b> · ${orders.length} commande(s) terminée(s)</div>
+    <div style="font-size:.85rem;color:var(--text2)">ð· <b style="color:var(--text)">${nom}</b> Â· ${orders.length} commande(s) terminÃ©e(s)</div>
     <div style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--green)">${total.toFixed(0)} DH</div>
   </div>
-  ${orders.length?`<div style="margin-top:8px;font-size:.76rem;color:var(--text3)">${orders.map(o=>`• ${o.date_rdv||'—'} — ${o.nom||'—'} — ${o.total||'—'}`).join('<br>')}</div>`:'<div style="margin-top:6px;font-size:.78rem;color:var(--red)">⚠️ Aucune commande terminée sur cette période</div>'}`;
+  ${orders.length?`<div style="margin-top:8px;font-size:.76rem;color:var(--text3)">${orders.map(o=>`â¢ ${o.date_rdv||'â'} â ${o.nom||'â'} â ${o.total||'â'}`).join('<br>')}</div>`:'<div style="margin-top:6px;font-size:.78rem;color:var(--red)">â ï¸ Aucune commande terminÃ©e sur cette pÃ©riode</div>'}`;
   return {orders,total,nom,period};
 }
 
-// ── ADMIN: Create facture ─────────────────────────────────────────
+// ââ ADMIN: Create facture âââââââââââââââââââââââââââââââââââââââââ
 function createFacture(){
   const nom=document.getElementById('facNewLav')?.value;
-  if(!nom){alert('Sélectionnez un laveur.');return;}
+  if(!nom){alert('SÃ©lectionnez un laveur.');return;}
   const period=document.getElementById('facNewPeriod')?.value||'month';
   const note=document.getElementById('facNewNote')?.value.trim()||'';
-  let orders=S.orders.filter(o=>o.laveur===nom&&o.status==='Terminé');
+  let orders=S.orders.filter(o=>o.laveur===nom&&o.status==='TerminÃ©');
   const now=new Date();
   let periodLabel='Ce mois';
   if(period==='week'){const sw=new Date(now);sw.setDate(now.getDate()-7);orders=orders.filter(o=>{const d=parseDate(o.date_commande||'');return d&&d>=sw;});periodLabel='Cette semaine';}
   else if(period==='month'){const sm=new Date(now.getFullYear(),now.getMonth(),1);orders=orders.filter(o=>{const d=parseDate(o.date_commande||'');return d&&d>=sm;});periodLabel='Ce mois';}
-  else if(period==='all'){periodLabel='Toute la période';}
+  else if(period==='all'){periodLabel='Toute la pÃ©riode';}
   else if(period==='custom'){
     const from=document.getElementById('facNewFrom')?.value;
     const to=document.getElementById('facNewTo')?.value;
-    periodLabel=`${from||'—'} → ${to||'—'}`;
+    periodLabel=`${from||'â'} â ${to||'â'}`;
     if(from)orders=orders.filter(o=>{const d=parseDate(o.date_commande||'');return d&&d>=new Date(from);});
     if(to)orders=orders.filter(o=>{const d=parseDate(o.date_commande||'');return d&&d<=new Date(to);});
   }
-  if(!orders.length){alert('Aucune commande terminée sur cette période.');return;}
+  if(!orders.length){alert('Aucune commande terminÃ©e sur cette pÃ©riode.');return;}
   const total=orders.reduce((s,o)=>s+getAmt(o),0);
   const facture={
     id:'FAC-'+Date.now(),
     laveur:nom,
     periode:periodLabel,
-    commandes:orders.map(o=>({id:o.id,nom:o.nom,date:o.date_rdv||o.date||'—',creneau:o.creneau||'—',articles:(o.articles||o.pack||'—').substring(0,60),total:o.total||'—',adresse:o.adresse||'—'})),
+    commandes:orders.map(o=>({id:o.id,nom:o.nom,date:o.date_rdv||o.date||'â',creneau:o.creneau||'â',articles:(o.articles||o.pack||'â').substring(0,60),total:o.total||'â',adresse:o.adresse||'â'})),
     total:total.toFixed(0),
     note,
     status:'pending',
@@ -2534,59 +2534,59 @@ function createFacture(){
   const factures=getFactures();
   factures.unshift(facture);
   saveFactures(factures);
-  addNotif(`🧾 Facture créée pour ${nom} — ${total.toFixed(0)} DH`,'info');
-  showPush('🧾 Nouvelle facture !',`Facture de ${total.toFixed(0)} DH envoyée à ${nom}`,'🧾');
+  addNotif(`ð§¾ Facture crÃ©Ã©e pour ${nom} â ${total.toFixed(0)} DH`,'info');
+  showPush('ð§¾ Nouvelle facture !',`Facture de ${total.toFixed(0)} DH envoyÃ©e Ã  ${nom}`,'ð§¾');
   // Reset form
   document.getElementById('facNewLav').value='';
   document.getElementById('facNewNote').value='';
   document.getElementById('facPreview').style.display='none';
-  alert(`✅ Facture créée et envoyée à ${nom} !`);
+  alert(`â Facture crÃ©Ã©e et envoyÃ©e Ã  ${nom} !`);
   switchFacTab('list',document.getElementById('ftab-list'));
 }
 
-// ── ADMIN: Render facture list ────────────────────────────────────
+// ââ ADMIN: Render facture list ââââââââââââââââââââââââââââââââââââ
 function renderFacList(){
   const c=document.getElementById('facListContent');if(!c)return;
   let factures=getFactures();
   const filterLav=document.getElementById('facFilterLav')?.value||'';
   if(filterLav)factures=factures.filter(f=>f.laveur===filterLav);
-  if(!factures.length){c.innerHTML='<div class="empty-state">Aucune facture créée</div>';return;}
+  if(!factures.length){c.innerHTML='<div class="empty-state">Aucune facture crÃ©Ã©e</div>';return;}
   c.innerHTML=factures.map(f=>`
     <div class="fac-card ${f.status==='validated'?'validated':'pending'}">
       <div class="fac-card-head">
         <div>
-          <div class="fac-card-title">🧾 Facture ${f.id}</div>
-          <div class="fac-card-date">👷 ${f.laveur} · 📅 ${f.periode} · Créée le ${f.createdAt}</div>
-          ${f.validatedAt?`<div class="fac-card-date" style="color:var(--green)">✅ Validée le ${f.validatedAt}</div>`:''}
+          <div class="fac-card-title">ð§¾ Facture ${f.id}</div>
+          <div class="fac-card-date">ð· ${f.laveur} Â· ð ${f.periode} Â· CrÃ©Ã©e le ${f.createdAt}</div>
+          ${f.validatedAt?`<div class="fac-card-date" style="color:var(--green)">â ValidÃ©e le ${f.validatedAt}</div>`:''}
         </div>
-        <span class="fac-status-badge ${f.status==='validated'?'fac-validated':'fac-pending'}">${f.status==='validated'?'✅ Validée':'⏳ En attente'}</span>
+        <span class="fac-status-badge ${f.status==='validated'?'fac-validated':'fac-pending'}">${f.status==='validated'?'â ValidÃ©e':'â³ En attente'}</span>
       </div>
-      ${f.note?`<div class="fac-note">💬 ${f.note}</div>`:''}
+      ${f.note?`<div class="fac-note">ð¬ ${f.note}</div>`:''}
       <div class="fac-card-total">
-        <span class="fac-total-lbl">💰 Total — ${f.commandes.length} commande(s)</span>
+        <span class="fac-total-lbl">ð° Total â ${f.commandes.length} commande(s)</span>
         <span class="fac-total-val">${f.total} DH</span>
       </div>
       <div class="fac-card-body">
-        ${f.commandes.map(c=>`<div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--border)"><span>📋 ${c.nom||'—'} · ${c.date}</span><span style="color:var(--green);font-weight:700">${c.total}</span></div>`).join('')}
+        ${f.commandes.map(c=>`<div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--border)"><span>ð ${c.nom||'â'} Â· ${c.date}</span><span style="color:var(--green);font-weight:700">${c.total}</span></div>`).join('')}
       </div>
       <div class="fac-card-actions">
-        <button class="btn-fac-del" onclick="deleteFacture('${f.id}')" title="Supprimer">🗑️</button>
-        ${f.status==='pending'?`<div style="flex:1;font-size:.78rem;color:var(--gold);display:flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(255,184,0,.06);border-radius:10px;border:1px solid rgba(255,184,0,.2)">⏳ En attente de validation du laveur</div>`:
-        `<div style="flex:1;font-size:.78rem;color:var(--green);display:flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(0,208,122,.06);border-radius:10px;border:1px solid rgba(0,208,122,.2)">✅ Facture validée par le laveur</div>`}
+        <button class="btn-fac-del" onclick="deleteFacture('${f.id}')" title="Supprimer">ðï¸</button>
+        ${f.status==='pending'?`<div style="flex:1;font-size:.78rem;color:var(--gold);display:flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(255,184,0,.06);border-radius:10px;border:1px solid rgba(255,184,0,.2)">â³ En attente de validation du laveur</div>`:
+        `<div style="flex:1;font-size:.78rem;color:var(--green);display:flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(0,208,122,.06);border-radius:10px;border:1px solid rgba(0,208,122,.2)">â Facture validÃ©e par le laveur</div>`}
       </div>
     </div>`).join('');
 }
 
-// ── ADMIN: Delete facture ────────────────────────────────────────
+// ââ ADMIN: Delete facture ââââââââââââââââââââââââââââââââââââââââ
 function deleteFacture(id){
   if(!confirm('Supprimer cette facture ?'))return;
   const factures=getFactures().filter(f=>f.id!==id);
   saveFactures(factures);
   renderFacList();
-  addNotif('🗑️ Facture supprimée','info');
+  addNotif('ðï¸ Facture supprimÃ©e','info');
 }
 
-// ── LAVEUR: Render his factures ────────────────────────────────────
+// ââ LAVEUR: Render his factures ââââââââââââââââââââââââââââââââââââ
 function renderLavFactures(){
   const c=document.getElementById('lavFacturesList');if(!c)return;
   if(!S.curUser)return;
@@ -2597,51 +2597,51 @@ function renderLavFactures(){
   const badge=document.getElementById('lnav-badge-fac');
   if(badge){badge.textContent=pending;badge.style.display=pending>0?'flex':'none';}
   if(!factures.length){
-    c.innerHTML='<div class="no-orders"><div class="no-ico">🧾</div><p style="font-size:.85rem;color:var(--text3)">Aucune facture reçue</p></div>';
+    c.innerHTML='<div class="no-orders"><div class="no-ico">ð§¾</div><p style="font-size:.85rem;color:var(--text3)">Aucune facture reÃ§ue</p></div>';
     return;
   }
   c.innerHTML=factures.map(f=>`
     <div class="fac-card ${f.status==='validated'?'validated':'pending'}">
       <div class="fac-card-head">
         <div>
-          <div class="fac-card-title">🧾 Facture ${f.id}</div>
-          <div class="fac-card-date">📅 Période : ${f.periode}</div>
-          <div class="fac-card-date">Reçue le : ${f.createdAt}</div>
-          ${f.validatedAt?`<div class="fac-card-date" style="color:var(--green)">✅ Validée le ${f.validatedAt}</div>`:''}
+          <div class="fac-card-title">ð§¾ Facture ${f.id}</div>
+          <div class="fac-card-date">ð PÃ©riode : ${f.periode}</div>
+          <div class="fac-card-date">ReÃ§ue le : ${f.createdAt}</div>
+          ${f.validatedAt?`<div class="fac-card-date" style="color:var(--green)">â ValidÃ©e le ${f.validatedAt}</div>`:''}
         </div>
-        <span class="fac-status-badge ${f.status==='validated'?'fac-validated':'fac-pending'}">${f.status==='validated'?'✅ Validée':'⏳ À valider'}</span>
+        <span class="fac-status-badge ${f.status==='validated'?'fac-validated':'fac-pending'}">${f.status==='validated'?'â ValidÃ©e':'â³ Ã valider'}</span>
       </div>
-      ${f.note?`<div class="fac-note">💬 Message de l'admin : ${f.note}</div>`:''}
+      ${f.note?`<div class="fac-note">ð¬ Message de l'admin : ${f.note}</div>`:''}
       <div class="fac-card-total">
-        <span class="fac-total-lbl">💰 Mon total — ${f.commandes.length} commande(s)</span>
+        <span class="fac-total-lbl">ð° Mon total â ${f.commandes.length} commande(s)</span>
         <span class="fac-total-val">${f.total} DH</span>
       </div>
       <div class="fac-card-body" style="max-height:180px;overflow-y:auto">
-        <div style="font-size:.72rem;font-weight:700;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Détail des commandes</div>
+        <div style="font-size:.72rem;font-weight:700;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">DÃ©tail des commandes</div>
         ${f.commandes.map(o=>`<div style="display:grid;grid-template-columns:1fr auto;gap:8px;padding:7px 0;border-bottom:1px solid var(--border);font-size:.8rem">
-          <div><b>${o.nom||'—'}</b><div style="color:var(--text3);font-size:.72rem">📅 ${o.date} ⏰ ${o.creneau} · ${o.articles}</div></div>
+          <div><b>${o.nom||'â'}</b><div style="color:var(--text3);font-size:.72rem">ð ${o.date} â° ${o.creneau} Â· ${o.articles}</div></div>
           <div style="color:var(--green);font-weight:800;white-space:nowrap">${o.total}</div>
         </div>`).join('')}
       </div>
       ${f.status==='pending'?`
       <div class="fac-card-actions" style="margin-top:12px">
-        <button class="btn-validate" onclick="validateFacture('${f.id}')">✅ Valider cette facture</button>
+        <button class="btn-validate" onclick="validateFacture('${f.id}')">â Valider cette facture</button>
       </div>
-      <div style="font-size:.74rem;color:var(--text3);text-align:center;margin-top:8px">⚠️ La validation est définitive — vous ne pouvez pas modifier ou supprimer cette facture</div>`:
-      `<div style="margin-top:12px;text-align:center;font-size:.82rem;color:var(--green);font-weight:700">✅ Vous avez validé cette facture le ${f.validatedAt}</div>`}
+      <div style="font-size:.74rem;color:var(--text3);text-align:center;margin-top:8px">â ï¸ La validation est dÃ©finitive â vous ne pouvez pas modifier ou supprimer cette facture</div>`:
+      `<div style="margin-top:12px;text-align:center;font-size:.82rem;color:var(--green);font-weight:700">â Vous avez validÃ© cette facture le ${f.validatedAt}</div>`}
     </div>`).join('');
 }
 
-// ── LAVEUR: Validate facture ────────────────────────────────────────
+// ââ LAVEUR: Validate facture ââââââââââââââââââââââââââââââââââââââââ
 function validateFacture(id){
-  if(!confirm('Confirmer la validation de cette facture ? Cette action est définitive.'))return;
+  if(!confirm('Confirmer la validation de cette facture ? Cette action est dÃ©finitive.'))return;
   const factures=getFactures();
   const f=factures.find(x=>x.id===id);
   if(!f){alert('Facture introuvable.');return;}
   f.status='validated';
   f.validatedAt=new Date().toLocaleDateString('fr-FR')+' '+new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
   saveFactures(factures);
-  addNotif(`✅ Facture ${id} validée par ${S.curUser.nom}`,'done');
+  addNotif(`â Facture ${id} validÃ©e par ${S.curUser.nom}`,'done');
   renderLavFactures();
 }
 
@@ -2657,9 +2657,9 @@ panel=function(id){
   }
 }
 
-// [WRAPPER _origRender SUPPRIMÉ - badge factures intégré dans renderLaveurOrders principale]
+// [WRAPPER _origRender SUPPRIMÃ - badge factures intÃ©grÃ© dans renderLaveurOrders principale]
 
-// ════════════════════ LAVEUR DETAIL MODAL ════════════════════
+// ââââââââââââââââââââ LAVEUR DETAIL MODAL ââââââââââââââââââââ
 let _lavDetailNom='';
 let _lavDetailFilter='all';
 
@@ -2677,22 +2677,22 @@ function openLavDetail(idx){
   document.getElementById('lavDetailName').textContent=nom;
   // Compute stats
   const my=S.orders.filter(o=>o.laveur===nom);
-  const done=my.filter(o=>o.status==='Terminé');
+  const done=my.filter(o=>o.status==='TerminÃ©');
   const encours=my.filter(o=>o.status==='En cours');
   const attente=my.filter(o=>(o.status||'En attente')==='En attente');
-  const report=my.filter(o=>o.status==='Reporté');
-  const annul=my.filter(o=>o.status==='Annulé');
+  const report=my.filter(o=>o.status==='ReportÃ©');
+  const annul=my.filter(o=>o.status==='AnnulÃ©');
   const rev=done.reduce((s,o)=>s+getAmt(o),0);
   const rate=my.length>0?Math.round((done.length/my.length)*100):0;
-  document.getElementById('lavDetailSub').textContent=`${my.length} commande(s) · Taux de réussite ${rate}% · Revenus : ${rev.toFixed(0)} DH`;
+  document.getElementById('lavDetailSub').textContent=`${my.length} commande(s) Â· Taux de rÃ©ussite ${rate}% Â· Revenus : ${rev.toFixed(0)} DH`;
   // Mini stats
   document.getElementById('lavDetailStats').innerHTML=[
     {val:my.length,lbl:'Total',color:'var(--blue)'},
     {val:attente.length,lbl:'Attente',color:'var(--gold)'},
     {val:encours.length,lbl:'En cours',color:'var(--orange,#ff9800)'},
-    {val:done.length,lbl:'Terminées',color:'var(--green)'},
-    {val:report.length,lbl:'Reportées',color:'var(--purple,#9b59b6)'},
-    {val:annul.length,lbl:'Annulées',color:'var(--red)'},
+    {val:done.length,lbl:'TerminÃ©es',color:'var(--green)'},
+    {val:report.length,lbl:'ReportÃ©es',color:'var(--purple,#9b59b6)'},
+    {val:annul.length,lbl:'AnnulÃ©es',color:'var(--red)'},
   ].map(s=>`<div class="ld-stat-mini"><div class="val" style="color:${s.color}">${s.val}</div><div class="lbl">${s.lbl}</div></div>`).join('');
   renderLavDetailList();
   document.getElementById('lavDetailOv').classList.add('open');
@@ -2711,16 +2711,16 @@ function renderLavDetailList(){
   if(_lavDetailFilter!=='all')orders=orders.filter(o=>(o.status||'En attente')===_lavDetailFilter);
   if(!orders.length){
     c.innerHTML=`<div style="text-align:center;padding:40px;color:var(--text3)">
-      <div style="font-size:2rem;margin-bottom:8px">📭</div>
-      <div style="font-size:.9rem">Aucune commande${_lavDetailFilter!=='all'?' dans cette catégorie':''}</div>
+      <div style="font-size:2rem;margin-bottom:8px">ð­</div>
+      <div style="font-size:.9rem">Aucune commande${_lavDetailFilter!=='all'?' dans cette catÃ©gorie':''}</div>
     </div>`;
     return;
   }
   const statusColors={
-    'En attente':'var(--gold)','En cours':'var(--blue)','Terminé':'var(--green)','Annulé':'var(--red)','Reporté':'var(--purple,#9b59b6)'
+    'En attente':'var(--gold)','En cours':'var(--blue)','TerminÃ©':'var(--green)','AnnulÃ©':'var(--red)','ReportÃ©':'var(--purple,#9b59b6)'
   };
   const statusBg={
-    'En attente':'rgba(255,184,0,.1)','En cours':'rgba(24,102,255,.1)','Terminé':'rgba(0,208,122,.1)','Annulé':'rgba(255,68,68,.1)','Reporté':'rgba(155,89,182,.1)'
+    'En attente':'rgba(255,184,0,.1)','En cours':'rgba(24,102,255,.1)','TerminÃ©':'rgba(0,208,122,.1)','AnnulÃ©':'rgba(255,68,68,.1)','ReportÃ©':'rgba(155,89,182,.1)'
   };
   c.innerHTML=orders.map(o=>{
     const st=o.status||'En attente';
@@ -2729,22 +2729,22 @@ function renderLavDetailList(){
     return `<div class="ld-cmd-card">
       <div class="ld-cmd-head">
         <div>
-          <div class="ld-cmd-client">👤 ${o.nom||'—'}</div>
-          <div style="font-size:.75rem;color:var(--text3);margin-top:2px">🆔 ${o.id||o.rowIndex||'—'} · 📅 Commande : ${o.date_commande||'—'}</div>
+          <div class="ld-cmd-client">ð¤ ${o.nom||'â'}</div>
+          <div style="font-size:.75rem;color:var(--text3);margin-top:2px">ð ${o.id||o.rowIndex||'â'} Â· ð Commande : ${o.date_commande||'â'}</div>
         </div>
         <span style="background:${bg};color:${col};border:1px solid ${col};font-size:.74rem;font-weight:800;padding:5px 13px;border-radius:50px;white-space:nowrap">${st}</span>
       </div>
       <div class="ld-cmd-grid">
-        <div class="ld-cmd-row"><span class="ld-cmd-lbl">📞 Tél</span><span class="ld-cmd-val">${o.telephone||'—'}</span></div>
-        <div class="ld-cmd-row"><span class="ld-cmd-lbl">💰 Total</span><span class="ld-cmd-val" style="color:var(--green);font-weight:800">${o.total||'—'}</span></div>
-        <div class="ld-cmd-row"><span class="ld-cmd-lbl">📍 Adresse</span><span class="ld-cmd-val">${o.adresse||'—'}</span></div>
-        <div class="ld-cmd-row"><span class="ld-cmd-lbl">🗓️ Date RDV</span><span class="ld-cmd-val">${o.date_rdv||'—'}</span></div>
-        <div class="ld-cmd-row"><span class="ld-cmd-lbl">⏰ Créneau</span><span class="ld-cmd-val">${o.creneau||'—'}</span></div>
-        <div class="ld-cmd-row"><span class="ld-cmd-lbl">🌐 Source</span><span class="ld-cmd-val">${o.source||'—'}</span></div>
+        <div class="ld-cmd-row"><span class="ld-cmd-lbl">ð TÃ©l</span><span class="ld-cmd-val">${o.telephone||'â'}</span></div>
+        <div class="ld-cmd-row"><span class="ld-cmd-lbl">ð° Total</span><span class="ld-cmd-val" style="color:var(--green);font-weight:800">${o.total||'â'}</span></div>
+        <div class="ld-cmd-row"><span class="ld-cmd-lbl">ð Adresse</span><span class="ld-cmd-val">${o.adresse||'â'}</span></div>
+        <div class="ld-cmd-row"><span class="ld-cmd-lbl">ðï¸ Date RDV</span><span class="ld-cmd-val">${o.date_rdv||'â'}</span></div>
+        <div class="ld-cmd-row"><span class="ld-cmd-lbl">â° CrÃ©neau</span><span class="ld-cmd-val">${o.creneau||'â'}</span></div>
+        <div class="ld-cmd-row"><span class="ld-cmd-lbl">ð Source</span><span class="ld-cmd-val">${o.source||'â'}</span></div>
       </div>
-      ${o.articles?`<div style="margin-top:10px;padding:10px 12px;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;font-size:.82rem"><span style="color:var(--text3);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em">🛋️ Articles</span><div style="margin-top:4px;color:var(--text)">${o.articles}</div></div>`:''}
-      ${o.cancel_reason?`<div style="margin-top:8px;padding:9px 12px;background:rgba(255,68,68,.07);border:1px solid rgba(255,68,68,.2);border-radius:10px;font-size:.82rem;color:var(--red)">❌ <b>Raison annulation :</b> ${o.cancel_reason}</div>`:''}
-      ${o.report_note?`<div style="margin-top:8px;padding:9px 12px;background:rgba(155,89,182,.07);border:1px solid rgba(155,89,182,.2);border-radius:10px;font-size:.82rem;color:#9b59b6">📅 <b>Raison report :</b> ${o.report_note}</div>`:''}
+      ${o.articles?`<div style="margin-top:10px;padding:10px 12px;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;font-size:.82rem"><span style="color:var(--text3);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em">ðï¸ Articles</span><div style="margin-top:4px;color:var(--text)">${o.articles}</div></div>`:''}
+      ${o.cancel_reason?`<div style="margin-top:8px;padding:9px 12px;background:rgba(255,68,68,.07);border:1px solid rgba(255,68,68,.2);border-radius:10px;font-size:.82rem;color:var(--red)">â <b>Raison annulation :</b> ${o.cancel_reason}</div>`:''}
+      ${o.report_note?`<div style="margin-top:8px;padding:9px 12px;background:rgba(155,89,182,.07);border:1px solid rgba(155,89,182,.2);border-radius:10px;font-size:.82rem;color:#9b59b6">ð <b>Raison report :</b> ${o.report_note}</div>`:''}
     </div>`;
   }).join('');
 }
@@ -2753,7 +2753,7 @@ function closeLavDetail(){
   document.getElementById('lavDetailOv').classList.remove('open');
 }
 
-// ════════════════════ INIT ════════════════════
+// ââââââââââââââââââââ INIT ââââââââââââââââââââ
 document.addEventListener('click',e=>{
   if(!e.target.closest('.notif-bell')&&!e.target.closest('.notif-drop'))document.getElementById('nDrop').classList.remove('open');
   if(e.target===document.getElementById('editOv'))closeEdit();
@@ -2818,21 +2818,21 @@ function saveAdminPass(){
   const nw=(document.getElementById('cpNew').value||'').trim();
   const conf=(document.getElementById('cpConfirm').value||'').trim();
   if(!cur){alert('Entrez le mot de passe actuel.');return;}
-  if(cur!==currentPass){alert('❌ Mot de passe actuel incorrect.\nMot de passe actuel: '+currentPass);return;}
-  if(nw.length<4){alert('Nouveau mot de passe: minimum 4 caractères.');return;}
-  if(nw!==conf){alert('❌ Les deux nouveaux mots de passe ne correspondent pas.');return;}
+  if(cur!==currentPass){alert('â Mot de passe actuel incorrect.\nMot de passe actuel: '+currentPass);return;}
+  if(nw.length<4){alert('Nouveau mot de passe: minimum 4 caractÃ¨res.');return;}
+  if(nw!==conf){alert('â Les deux nouveaux mots de passe ne correspondent pas.');return;}
   localStorage.setItem('dc_admin_pass',nw);
   document.getElementById('changePassOv').classList.remove('open');
   ['cpCurrent','cpNew','cpConfirm'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
-  alert('✅ Mot de passe changé en: "'+nw+'"\nUtilisez ce mot de passe au prochain login.');
+  alert('â Mot de passe changÃ© en: "'+nw+'"\nUtilisez ce mot de passe au prochain login.');
 }
 
 function syncLaveursFromSheets(){
   // Sync MANUEL depuis Sheets - ajoute seulement les nouveaux
-  // N'écrase JAMAIS les laveurs locaux
+  // N'Ã©crase JAMAIS les laveurs locaux
   const btn=event.target;
   const origText=btn.innerHTML;
-  btn.innerHTML='⏳ Sync...';btn.disabled=true;
+  btn.innerHTML='â³ Sync...';btn.disabled=true;
   fetch(CFG.sheetUrl+'?action=getLaveurs&t='+Date.now())
     .then(r=>r.json())
     .then(d=>{
@@ -2844,12 +2844,12 @@ function syncLaveursFromSheets(){
           if(!found){S.laveurs.push(sl);added++;}
         });
         if(added>0){saveLaveursLocal();renderLaveurs();}
-        alert('✅ Sync terminé: '+added+' nouveau(x) laveur(s) ajouté(s) depuis Google Sheets.\nTotal: '+S.laveurs.length+' laveurs');
+        alert('â Sync terminÃ©: '+added+' nouveau(x) laveur(s) ajoutÃ©(s) depuis Google Sheets.\nTotal: '+S.laveurs.length+' laveurs');
       }else{
-        alert('ℹ️ Google Sheets: aucun laveur trouvé ou connexion impossible.\nTes laveurs locaux sont conservés.');
+        alert('â¹ï¸ Google Sheets: aucun laveur trouvÃ© ou connexion impossible.\nTes laveurs locaux sont conservÃ©s.');
       }
     })
-    .catch(()=>alert('❌ Impossible de contacter Google Sheets. Tes laveurs locaux sont conservés.'))
+    .catch(()=>alert('â Impossible de contacter Google Sheets. Tes laveurs locaux sont conservÃ©s.'))
     .finally(()=>{btn.innerHTML=origText;btn.disabled=false;});
 }
 
@@ -2858,43 +2858,43 @@ function cleanLaveursWithoutPass(){
   const before=S.laveurs.length;
   const withoutPass=S.laveurs.filter(l=>!l.password||l.password==='');
   if(withoutPass.length===0){
-    alert('✅ Aucun laveur sans mot de passe trouvé. Tout est propre!');
+    alert('â Aucun laveur sans mot de passe trouvÃ©. Tout est propre!');
     return;
   }
-  if(!confirm('🧹 Supprimer '+withoutPass.length+' laveur(s) sans mot de passe?\n\n'+
+  if(!confirm('ð§¹ Supprimer '+withoutPass.length+' laveur(s) sans mot de passe?\n\n'+
     withoutPass.map(l=>l.nom+' ('+l.email+')').join('\n')+
-    '\n\n⚠️ Ces laveurs viennent de Google Sheets et n\'ont pas de mot de passe.\nIls seront supprimés pour que vous puissiez les re-ajouter correctement.'
+    '\n\nâ ï¸ Ces laveurs viennent de Google Sheets et n\'ont pas de mot de passe.\nIls seront supprimÃ©s pour que vous puissiez les re-ajouter correctement.'
   ))return;
   S.laveurs=S.laveurs.filter(l=>l.password&&l.password!=='');
   saveLaveursLocal();
   renderLaveurs();
-  alert('✅ '+withoutPass.length+' laveur(s) nettoyé(s). Vous pouvez maintenant les re-ajouter avec un mot de passe.');
+  alert('â '+withoutPass.length+' laveur(s) nettoyÃ©(s). Vous pouvez maintenant les re-ajouter avec un mot de passe.');
 }
 
 
 function copyLaveurLink(i){
   const l=S.laveurs[i];
   if(!l){alert('Erreur: laveur introuvable');return;}
-  if(!l.password){alert('❌ Ce laveur n\'a pas de mot de passe.\nModifiez-le d\'abord pour lui assigner un mot de passe.');return;}
+  if(!l.password){alert('â Ce laveur n\'a pas de mot de passe.\nModifiez-le d\'abord pour lui assigner un mot de passe.');return;}
   const base=window.location.origin+window.location.pathname;
-  const link=base+'#login='+btoa(l.nom+':'+l.email+':'+l.password);
+  const raw=l.nom+':'+l.email+':'+l.password;const link=base+'#login='+btoa(unescape(encodeURIComponent(raw)));
   try{
     navigator.clipboard.writeText(link);
-    alert('✅ Lien copié!\n\nEnvoie ce lien à '+l.nom+' par WhatsApp:\n\n'+link+'\n\nIl/Elle clique dessus sur son téléphone et est connecté(e) automatiquement!');
+    alert('â Lien copiÃ©!\n\nEnvoie ce lien Ã  '+l.nom+' par WhatsApp:\n\n'+link+'\n\nIl/Elle clique dessus sur son tÃ©lÃ©phone et est connectÃ©(e) automatiquement!');
   }catch(e){
-    // Fallback si clipboard bloqué
-    prompt('Copie ce lien et envoie à '+l.nom+' par WhatsApp:',link);
+    // Fallback si clipboard bloquÃ©
+    prompt('Copie ce lien et envoie Ã  '+l.nom+' par WhatsApp:',link);
   }
 }
 
 
-// ═══ MAGIC LINK AUTO-LOGIN - connexion directe sans email/mdp ═══
+// âââ MAGIC LINK AUTO-LOGIN - connexion directe sans email/mdp âââ
 window.addEventListener('load',function(){
   var h=window.location.hash;
   if(!h||h.indexOf('login=')<0)return;
   try{
     var b64part=h.split('login=')[1];
-    var decoded=atob(b64part);
+    var decoded=decodeURIComponent(escape(atob(b64part)));
     var parts=decoded.split(':');
     var nom,email,pass;
     if(parts.length>=3){
@@ -2913,7 +2913,7 @@ window.addEventListener('load',function(){
     var usr={nom:nom,email:email,password:pass,phone:''};
     if(ei>=0){Object.assign(lv[ei],usr);}else{lv.push(usr);}
     localStorage.setItem('dc_laveurs',JSON.stringify(lv));
-    // Connexion directe - même scope que S, showPage, loadOrders
+    // Connexion directe - mÃªme scope que S, showPage, loadOrders
     S.curUser=usr;
     S.userType='laveur';
     document.getElementById('lavTag').textContent=nom;
@@ -2921,7 +2921,7 @@ window.addEventListener('load',function(){
     loadOrders().then(function(){renderLaveurOrders();renderLavNotifs();});
     clearInterval(S.lavTimer);
     S.lavTimer=setInterval(function(){loadOrders();renderLavNotifs();},8000);
-    console.log('[DOMICLEAN] ✅ Magic link login:',nom);
+    console.log('[DOMICLEAN] â Magic link login:',nom);
   }catch(e){console.log('[DOMICLEAN] Magic link error:',e);}
 });
 </script>
@@ -2929,7 +2929,7 @@ window.addEventListener('load',function(){
 <!-- CHANGE ADMIN PASSWORD MODAL -->
 <div class="ov" id="changePassOv">
   <div class="modal-box" style="max-width:380px">
-    <div class="modal-title">🔐 Changer mot de passe Admin</div>
+    <div class="modal-title">ð Changer mot de passe Admin</div>
     <div class="modal-sub">Entrez votre nouveau mot de passe</div>
     <div class="m-field">
       <label>Mot de passe actuel *</label>
@@ -2937,15 +2937,15 @@ window.addEventListener('load',function(){
     </div>
     <div class="m-field">
       <label>Nouveau mot de passe *</label>
-      <input class="m-input" id="cpNew" type="password" placeholder="Min. 6 caractères">
+      <input class="m-input" id="cpNew" type="password" placeholder="Min. 6 caractÃ¨res">
     </div>
     <div class="m-field">
       <label>Confirmer nouveau mot de passe *</label>
-      <input class="m-input" id="cpConfirm" type="password" placeholder="Répéter le mot de passe">
+      <input class="m-input" id="cpConfirm" type="password" placeholder="RÃ©pÃ©ter le mot de passe">
     </div>
     <div class="modal-btns">
       <button class="m-cancel" onclick="document.getElementById('changePassOv').classList.remove('open')">Annuler</button>
-      <button class="m-confirm" onclick="saveAdminPass()">💾 Enregistrer</button>
+      <button class="m-confirm" onclick="saveAdminPass()">ð¾ Enregistrer</button>
     </div>
   </div>
 </div>

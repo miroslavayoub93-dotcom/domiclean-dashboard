@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DOMICLEAN - Dashboard Pro</title>
+<title>DOMICLEAN – Dashboard Pro</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -2591,7 +2591,7 @@ function renderLavFactures(){
   const c=document.getElementById('lavFacturesList');if(!c)return;
   if(!S.curUser)return;
   const nom=S.curUser.nom;
-  const factures=getFactures().filter(f=>f.laveur===nom);
+  const factures=getFactures().filter(f=>(f.laveur||'').toLowerCase()===(nom||'').toLowerCase());
   // Update badge
   const pending=factures.filter(f=>f.status==='pending').length;
   const badge=document.getElementById('lnav-badge-fac');
@@ -2634,7 +2634,7 @@ function renderLavFactures(){
 
 // ── LAVEUR: Validate facture ────────────────────────────────────────
 function validateFacture(id){
-  if(!confirm('Confirmer la validation de cette facture ? Cette action est définitive.'))return;
+  // validation directe sans confirm (mobile compatible)
   const factures=getFactures();
   const f=factures.find(x=>x.id===id);
   if(!f){alert('Facture introuvable.');return;}

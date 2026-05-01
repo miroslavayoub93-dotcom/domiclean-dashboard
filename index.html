@@ -1829,7 +1829,7 @@ function addLaveur(){
       ['nNom','nEmail','nPass','nPhone'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
       addNotif('👷 Laveur mis à jour: '+nom,'info');
       // Générer le lien magic pour le laveur
-  const magicLink='https://miroslavayoub93-dotcom.github.io/domiclean-dashboard/#login='+btoa(unescape(encodeURIComponent(nom+':'+email+':'+pass)));
+  const magicLink='https://miroslavayoub93-dotcom.github.io/domiclean-dashboard/?login='+btoa(unescape(encodeURIComponent(nom+':'+email+':'+pass)));
   const msg='✅ '+nom+' ajouté!\n\n📱 Envoie ce lien au laveur par WhatsApp:\n'+magicLink+'\n\nOu il peut se connecter avec:\n   Email: '+email+'\n   Mot de passe: '+pass;
   alert(msg);
   // Copier le lien dans le presse-papier
@@ -1847,7 +1847,7 @@ function addLaveur(){
       if(phone)S.laveurs[existIdx].phone=phone;
       saveLaveursLocal();renderLaveurs();
       ['nNom','nEmail','nPass','nPhone'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
-      const mlEx='https://miroslavayoub93-dotcom.github.io/domiclean-dashboard/#login='+btoa(unescape(encodeURIComponent(nom+':'+email+':'+pass)));
+      const mlEx='https://miroslavayoub93-dotcom.github.io/domiclean-dashboard/?login='+btoa(unescape(encodeURIComponent(nom+':'+email+':'+pass)));
       try{navigator.clipboard.writeText(mlEx);}catch(e){}
       alert('✅ '+nom+' modifié!\n\n🔗 Lien copié:\n'+mlEx);l)el.value='';});
       alert('✅ '+nom+' modifié!');
@@ -1867,7 +1867,7 @@ function addLaveur(){
   ['nNom','nEmail','nPass','nPhone'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
   addNotif('👷 Laveur ajouté: '+nom,'info');
   // Générer le lien magic pour le laveur
-  const magicLink=window.location.origin+window.location.pathname+'#login='+btoa(nom+':'+email+':'+pass);
+  const magicLink=window.location.origin+window.location.pathname+'?login='+btoa(nom+':'+email+':'+pass);
   const msg='✅ '+nom+' ajouté!\n\n📱 Envoie ce lien au laveur par WhatsApp:\n'+magicLink+'\n\nOu il peut se connecter avec:\n   Email: '+email+'\n   Mot de passe: '+pass;
   alert(msg);
   // Copier le lien dans le presse-papier
@@ -2770,12 +2770,12 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(le)le.addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('iLavPass').focus();});
 });
 const sv=localStorage.getItem('dc_orders');if(sv)try{S.orders=JSON.parse(sv)}catch(e){}
-// Auto-login depuis lien magic (URL hash #login=base64)
+// Auto-login depuis lien magic (URL hash ?login=base64)
 // Format: nom:email:pass OU email:pass
 (function(){
   try{
     const hash=window.location.hash;
-    if(hash&&hash.startsWith('#login=')){
+    if(hash&&hash.startsWith('?login=')){
       const decoded=atob(hash.slice(7));
       const parts=decoded.split(':');
       let nom,email,pass;
@@ -2875,7 +2875,7 @@ function copyLaveurLink(i){
   if(!l){alert('Erreur: laveur introuvable');return;}
   if(!l.password){alert('❌ Ce laveur n\'a pas de mot de passe.\nModifiez-le d\'abord pour lui assigner un mot de passe.');return;}
   const base=window.location.origin+window.location.pathname;
-  const link='https://miroslavayoub93-dotcom.github.io/domiclean-dashboard/#login='+btoa(unescape(encodeURIComponent(l.nom+':'+l.email+':'+l.password)));
+  const link='https://miroslavayoub93-dotcom.github.io/domiclean-dashboard/?login='+btoa(unescape(encodeURIComponent(l.nom+':'+l.email+':'+l.password)));
   try{
     navigator.clipboard.writeText(link);
     alert('✅ Lien copié!\n\nEnvoie ce lien à '+l.nom+' par WhatsApp:\n\n'+link+'\n\nIl/Elle clique dessus sur son téléphone et est connecté(e) automatiquement!');
@@ -2887,27 +2887,35 @@ function copyLaveurLink(i){
 
 
 // ═══ MAGIC LINK AUTO-LOGIN - connexion directe sans email/mdp ═══
-window.addEventListener('load',function(){
-  var h=window.location.hash;
-  if(!h||h.indexOf('login=')<0)return;
-  try{
-    var b64part=h.split('login=')[1];
-    var decoded=atob(b64part);
-    var parts=decoded.split(':');
-    var nom,email,pass;
-    if(parts.length>=3){
-      nom=parts[0];
-      email=parts[1].toLowerCase();
-      pass=parts.slice(2).join(':');
-    }else if(parts.length===2){
-      email=parts[0].toLowerCase();
-      pass=parts[1];
-      nom=email.split('@')[0].toUpperCase();
-    }else{return;}
-    history.replaceState(null,null,window.location.pathname);
-    // Sauvegarder dans localStorage pour prochaines connexions
-    var lv=[];try{lv=JSON.parse(localStorage.getItem('dc_laveurs')||'[]');}catch(x){}
+window.addEventListener('load', function() {
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var loginParam = params.get('login');
+    if (!loginParam && window.location.hash.indexOf('login=') > -1) {
+      loginParam = window.location.hash.split('login=')[1];
+    }
+    if (!loginParam) return;
+    var decoded = decodeURIComponent(escape(atob(loginParam)));
+    var parts = decoded.split(':');
+    var nom, email, pass;
+    if (parts.length >= 3) { nom=parts[0]; email=parts[1].toLowerCase(); pass=parts.slice(2).join(':'); }
+    else if (parts.length === 2) { email=parts[0].toLowerCase(); pass=parts[1]; nom=email.split('@')[0].toUpperCase(); }
+    else return;
+    window.history.replaceState({}, '', window.location.pathname);
+    var lv=[]; try{lv=JSON.parse(localStorage.getItem('dc_laveurs')||'[]');}catch(x){}
     var ei=lv.findIndex(function(l){return(l.email||'').toLowerCase()===email;});
+    var usr={nom:nom,email:email,password:pass,phone:''};
+    if(ei>=0){Object.assign(lv[ei],usr);}else{lv.push(usr);}
+    localStorage.setItem('dc_laveurs',JSON.stringify(lv));
+    S.curUser=usr; S.userType='laveur';
+    document.getElementById('lavTag').textContent=nom;
+    showPage('laveurPage');
+    loadOrders().then(function(){renderLaveurOrders();renderLavNotifs();});
+    clearInterval(S.lavTimer);
+    S.lavTimer=setInterval(function(){loadOrders();renderLavNotifs();},8000);
+    console.log('[OK] Magic link login:',nom);
+  } catch(e) { console.log('[ERR] Magic link:',e); }
+});
     var usr={nom:nom,email:email,password:pass,phone:''};
     if(ei>=0){Object.assign(lv[ei],usr);}else{lv.push(usr);}
     localStorage.setItem('dc_laveurs',JSON.stringify(lv));

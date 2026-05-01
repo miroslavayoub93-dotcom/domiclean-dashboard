@@ -1833,7 +1833,7 @@ function addLaveur(){
       ['nNom','nEmail','nPass','nPhone'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
       addNotif('👷 Laveur mis à jour: '+nom,'info');
       // Générer le lien magic pour le laveur
-  const magicLink=window.location.origin+window.location.pathname+'#login='+btoa(nom+':'+email+':'+pass);
+  const magicLink='https://miroslavayoub93-dotcom.github.io/domiclean-dashboard/#login='+btoa(unescape(encodeURIComponent(nom+':'+email+':'+pass)));
   const msg='✅ '+nom+' ajouté!\n\n📱 Envoie ce lien au laveur par WhatsApp:\n'+magicLink+'\n\nOu il peut se connecter avec:\n   Email: '+email+'\n   Mot de passe: '+pass;
   alert(msg);
   // Copier le lien dans le presse-papier
@@ -2877,7 +2877,7 @@ function copyLaveurLink(i){
   if(!l){alert('Erreur: laveur introuvable');return;}
   if(!l.password){alert('❌ Ce laveur n\'a pas de mot de passe.\nModifiez-le d\'abord pour lui assigner un mot de passe.');return;}
   const base=window.location.origin+window.location.pathname;
-  const link=base+'#login='+btoa(l.nom+':'+l.email+':'+l.password);
+  const link='https://miroslavayoub93-dotcom.github.io/domiclean-dashboard/#login='+btoa(unescape(encodeURIComponent(l.nom+':'+l.email+':'+l.password)));
   try{
     navigator.clipboard.writeText(link);
     alert('✅ Lien copié!\n\nEnvoie ce lien à '+l.nom+' par WhatsApp:\n\n'+link+'\n\nIl/Elle clique dessus sur son téléphone et est connecté(e) automatiquement!');

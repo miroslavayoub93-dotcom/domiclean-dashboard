@@ -1381,15 +1381,17 @@ async function loadOrders(){
 }
 
 function saveLaveursLocal(){localStorage.setItem('dc_laveurs',JSON.stringify(S.laveurs));}
-async function loadLaveurs(){
-  // Charger depuis localStorage (source de vérité)
+async async function loadLaveurs(){
   const saved=localStorage.getItem('dc_laveurs');
-  if(saved){
-    try{
-      const parsed=JSON.parse(saved);
-      if(Array.isArray(parsed))S.laveurs=parsed;
-    }catch(e){S.laveurs=[];}
-  }
+  if(saved){try{const parsed=JSON.parse(saved);if(Array.isArray(parsed)&&parsed.length>0){S.laveurs=parsed;renderLaveurs();return;}}catch(e){}}
+  try{
+    const r=await fetch(CFG.sheetUrl+'?action=getLaveurs&t='+Date.now());
+    const d=await r.json();
+    if(d.laveurs&&Array.isArray(d.laveurs)&&d.laveurs.length>0){
+      S.laveurs=d.laveurs.map(sl=>{const local=(JSON.parse(localStorage.getItem('dc_laveurs')||'[]')).find(l=>(l.email||'').toLowerCase()===(sl.email||'').toLowerCase());return local?{...sl,...local}:{...sl,password:sl.password||''};});
+      saveLaveursLocal();
+    }
+  }catch(e){}
   renderLaveurs();
 }
 function playAlert(){
@@ -1846,12 +1848,14 @@ function addLaveur(){
       return;
     }
     // Laveur avec mot de passe → proposer modification
-    if(confirm('⚠️ Email déjà utilisé par: '+existLav.nom+'\n\nVoulez-vous modifier ce laveur?\n✅ OK = Modifier\n❌ Annuler = Ne rien faire')){
-      S.laveurs[existIdx].nom=nom;
-      S.laveurs[existIdx].password=pass;
+    // Modifier directement (mobile compatible)
+      S.laveurs[existIdx].nom=nom;S.laveurs[existIdx].password=pass;
       if(phone)S.laveurs[existIdx].phone=phone;
       saveLaveursLocal();renderLaveurs();
       ['nNom','nEmail','nPass','nPhone'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+      const mlEx='https://miroslavayoub93-dotcom.github.io/domiclean-dashboard/#login='+btoa(unescape(encodeURIComponent(nom+':'+email+':'+pass)));
+      try{navigator.clipboard.writeText(mlEx);}catch(e){}
+      alert('✅ '+nom+' modifié!\n\n🔗 Lien copié:\n'+mlEx);l)el.value='';});
       alert('✅ '+nom+' modifié!');
     }
     return;

@@ -1242,7 +1242,7 @@ function loginAdmin(){
     requestNotifPermission();
     loadOrders();
     loadLaveurs();
-    S.timer=setInterval(()=>{loadOrders();loadLaveurs();},CFG.refresh);
+    S.timer=setInterval(()=>{loadOrders();},CFG.refresh);
   }else showErr('❌ Email ou mot de passe incorrect');
 }
 function pin(v){/* PIN désactivé — connexion par email/mot de passe */}
@@ -1381,16 +1381,10 @@ async function loadOrders(){
 }
 
 function saveLaveursLocal(){localStorage.setItem('dc_laveurs',JSON.stringify(S.laveurs));}
-async async function loadLaveurs(){
-  const saved=localStorage.getItem('dc_laveurs');
-  if(saved){try{const parsed=JSON.parse(saved);if(Array.isArray(parsed)&&parsed.length>0){S.laveurs=parsed;renderLaveurs();return;}}catch(e){}}
+async function loadLaveurs(){
   try{
-    const r=await fetch(CFG.sheetUrl+'?action=getLaveurs&t='+Date.now());
-    const d=await r.json();
-    if(d.laveurs&&Array.isArray(d.laveurs)&&d.laveurs.length>0){
-      S.laveurs=d.laveurs.map(sl=>{const local=(JSON.parse(localStorage.getItem('dc_laveurs')||'[]')).find(l=>(l.email||'').toLowerCase()===(sl.email||'').toLowerCase());return local?{...sl,...local}:{...sl,password:sl.password||''};});
-      saveLaveursLocal();
-    }
+    const saved=localStorage.getItem('dc_laveurs');
+    if(saved){const parsed=JSON.parse(saved);if(Array.isArray(parsed))S.laveurs=parsed;}
   }catch(e){}
   renderLaveurs();
 }

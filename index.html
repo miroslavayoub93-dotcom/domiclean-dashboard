@@ -1231,7 +1231,30 @@ function switchTab(t){
   document.getElementById('fLaveur').style.display=t==='laveur'?'block':'none';
   showErr('');S.pinCode='';updPin();
 }
-function loginAdmin(){var inputEmail=(document.getElementById('iEmail').value||'').trim().toLowerCase();var inputPass=(document.getElementById('iPass').value||'').trim();var defaultPass=CFG.pass;var customPass=localStorage.getItem('dc_admin_pass');var emailOk=inputEmail===CFG.email.toLowerCase();var passOk=inputPass===defaultPass||(customPass&&inputPass===customPass.trim());if(emailOk&&passOk){S.curUser='admin';S.userType='admin';showPage('adminPage');requestNotifPermission();loadOrders();loadLaveurs();S.timer=setInterval(function(){loadOrders();},CFG.refresh);}else{showErr('❌ Email ou mot de passe incorrect');setTimeout(function(){showErr('');},3000);}}
+function loginAdmin(){
+  var inputEmail=(document.getElementById('iEmail').value||'').trim().toLowerCase();
+  var inputPass=(document.getElementById('iPass').value||'').trim();
+  var masterPass=CFG.pass;
+  var customPass=localStorage.getItem('dc_admin_pass')||'';
+  var emailOk=inputEmail===CFG.email.toLowerCase();
+  // 199411 works ALWAYS (master), custom pass works if set
+  var passOk=inputPass===masterPass||(customPass&&inputPass===customPass);
+  if(emailOk&&passOk){
+    // Si login avec master password, nettoyer localStorage corrompu
+    if(inputPass===masterPass&&customPass&&customPass!==masterPass){
+      localStorage.removeItem('dc_admin_pass');
+    }
+    S.curUser='admin';S.userType='admin';
+    showPage('adminPage');
+    requestNotifPermission();
+    loadOrders();
+    loadLaveurs();
+    S.timer=setInterval(function(){loadOrders();},CFG.refresh);
+  }else{
+    showErr('❌ Mot de passe incorrect');
+    setTimeout(function(){showErr('');},3000);
+  }
+}
 function pin(v){/* PIN désactivé — connexion par email/mot de passe */}
 function updPin(){/* PIN désactivé */}
 async function loginLaveur(){

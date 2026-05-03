@@ -1231,20 +1231,7 @@ function switchTab(t){
   document.getElementById('fLaveur').style.display=t==='laveur'?'block':'none';
   showErr('');S.pinCode='';updPin();
 }
-function loginAdmin(){
-  const customPass=localStorage.getItem('dc_admin_pass');
-  const adminPass=(customPass&&customPass.trim())||CFG.pass;
-  const inputEmail=document.getElementById('iEmail').value.trim();
-  const inputPass=(document.getElementById('iPass').value||'').trim();
-  if(inputEmail===CFG.email&&inputPass===adminPass){
-    S.curUser='admin';S.userType='admin';
-    showPage('adminPage');
-    requestNotifPermission();
-    loadOrders();
-    loadLaveurs();
-    S.timer=setInterval(()=>{loadOrders();},CFG.refresh);
-  }else showErr('❌ Email ou mot de passe incorrect');
-}
+function loginAdmin(){var inputEmail=(document.getElementById('iEmail').value||'').trim().toLowerCase();var inputPass=(document.getElementById('iPass').value||'').trim();var defaultPass=CFG.pass;var customPass=localStorage.getItem('dc_admin_pass');var emailOk=inputEmail===CFG.email.toLowerCase();var passOk=inputPass===defaultPass||(customPass&&inputPass===customPass.trim());if(emailOk&&passOk){S.curUser='admin';S.userType='admin';showPage('adminPage');requestNotifPermission();loadOrders();loadLaveurs();S.timer=setInterval(function(){loadOrders();},CFG.refresh);}else{showErr('❌ Email ou mot de passe incorrect');setTimeout(function(){showErr('');},3000);}}
 function pin(v){/* PIN désactivé — connexion par email/mot de passe */}
 function updPin(){/* PIN désactivé */}
 async function loginLaveur(){

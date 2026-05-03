@@ -1232,28 +1232,26 @@ function switchTab(t){
   showErr('');S.pinCode='';updPin();
 }
 function loginAdmin(){
-  var inputEmail=(document.getElementById('iEmail').value||'').trim().toLowerCase();
-  var inputPass=(document.getElementById('iPass').value||'').trim();
-  var masterPass=CFG.pass;
-  var customPass=localStorage.getItem('dc_admin_pass')||'';
-  var emailOk=inputEmail===CFG.email.toLowerCase();
-  // 199411 works ALWAYS (master), custom pass works if set
-  var passOk=inputPass===masterPass||(customPass&&inputPass===customPass);
-  if(emailOk&&passOk){
-    // Si login avec master password, nettoyer localStorage corrompu
-    if(inputPass===masterPass&&customPass&&customPass!==masterPass){
-      localStorage.removeItem('dc_admin_pass');
+  try{
+    var inputEmail=(document.getElementById('iEmail').value||'').trim().toLowerCase();
+    var inputPass=(document.getElementById('iPass').value||'').trim();
+    var defaultPass=CFG.pass;
+    var customPass=localStorage.getItem('dc_admin_pass')||'';
+    var emailOk=(inputEmail===CFG.email.toLowerCase());
+    var passOk=(inputPass===defaultPass)||(customPass!==''&&inputPass===customPass);
+    if(emailOk&&passOk){
+      if(customPass&&customPass!==defaultPass&&inputPass===defaultPass){localStorage.removeItem('dc_admin_pass');}
+      S.curUser='admin';S.userType='admin';
+      showPage('adminPage');
+      try{requestNotifPermission();}catch(e){}
+      loadOrders();loadLaveurs();
+      clearInterval(S.timer);
+      S.timer=setInterval(function(){loadOrders();},CFG.refresh);
+    }else{
+      showErr('❌ Email ou mot de passe incorrect');
+      setTimeout(function(){showErr('');},3000);
     }
-    S.curUser='admin';S.userType='admin';
-    showPage('adminPage');
-    requestNotifPermission();
-    loadOrders();
-    loadLaveurs();
-    S.timer=setInterval(function(){loadOrders();},CFG.refresh);
-  }else{
-    showErr('❌ Mot de passe incorrect');
-    setTimeout(function(){showErr('');},3000);
-  }
+  }catch(err){console.error('loginAdmin:',err);showErr('❌ Erreur: '+err.message);}
 }
 function pin(v){/* PIN désactivé — connexion par email/mot de passe */}
 function updPin(){/* PIN désactivé */}
